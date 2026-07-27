@@ -2,7 +2,6 @@ import os
 import time
 import streamlit as st
 import db_connection as db
-import streamlit as st
 from db_connection import clear_active_registry, discard_pending_path
 
 import monitor_thread
