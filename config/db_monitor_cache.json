@@ -95,7 +95,7 @@
         "drive": "/dev/mapper/ol-home",
         "mount_point": "/home",
         "total": 124.396,
-        "used": 36.121,
+        "used": 36.122,
         "free": 88.275,
         "pct": 30.0,
         "fs_type": "xfs",
@@ -107,74 +107,74 @@
     ],
     "processes": [
       {
-        "pid": "18592",
-        "name": "C:\\Users\\KTS\\AppData\\Local\\Programs\\antigravity\\Antigravity.exe --type=renderer --user-data-dir=C:\\Users\\KTS\\AppData\\Roaming\\Antigravity --standard-schemes=plugin --secure-schemes=plugin --cors-schemes=plugin --fetch-schemes=plugin --service-worker-schemes=plugin --code-cache-schemes=plugin --app-path=C:\\Users\\KTS\\AppData\\Local\\Programs\\antigravity\\resources\\app.asar --enable-sandbox --remote-debugging-port=0 --video-capture-use-gpu-memory-buffer --lang=en-US --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=4 --time-ticks-at-unix-epoch=-1784176076155769 --launch-time-ticks=954166255205 --field-trial-handle=1588,i,7726373642509388076,14502099043088464719,262144 --enable-features=EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker --disable-features=DropInputEventsWhilePaintHolding,LocalNetworkAccessChecks,NetworkServiceSandbox,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --pseudonymization-salt-handle=1612,i,8002687107007804116,5153071119878403456,4 --trace-process-track-uuid=3190708990060038890 --mojo-platform-channel-handle=3344 /prefetch:1",
-        "username": "DESKTOP-CNENURG\\KTS",
-        "cpu": 142.3,
-        "mem": 3.43
-      },
-      {
-        "pid": "42200",
-        "name": "C:\\Users\\KTS\\AppData\\Local\\Programs\\Python\\Python310\\python.exe C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\Scripts\\streamlit.exe run app.py --server.port=8501 --server.address=0.0.0.0",
-        "username": "DESKTOP-CNENURG\\KTS",
-        "cpu": 73.2,
-        "mem": 0.88
+        "pid": "0",
+        "name": "System Idle Process",
+        "username": "NT AUTHORITY\\SYSTEM",
+        "cpu": 157.8,
+        "mem": 0.0
       },
       {
         "pid": "4716",
         "name": "MsMpEng.exe",
         "username": "",
-        "cpu": 66.1,
-        "mem": 1.97
+        "cpu": 98.4,
+        "mem": 2.03
+      },
+      {
+        "pid": "18592",
+        "name": "C:\\Users\\KTS\\AppData\\Local\\Programs\\antigravity\\Antigravity.exe --type=renderer --user-data-dir=C:\\Users\\KTS\\AppData\\Roaming\\Antigravity --standard-schemes=plugin --secure-schemes=plugin --cors-schemes=plugin --fetch-schemes=plugin --service-worker-schemes=plugin --code-cache-schemes=plugin --app-path=C:\\Users\\KTS\\AppData\\Local\\Programs\\antigravity\\resources\\app.asar --enable-sandbox --remote-debugging-port=0 --video-capture-use-gpu-memory-buffer --lang=en-US --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=4 --time-ticks-at-unix-epoch=-1784176076155769 --launch-time-ticks=954166255205 --field-trial-handle=1588,i,7726373642509388076,14502099043088464719,262144 --enable-features=EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker --disable-features=DropInputEventsWhilePaintHolding,LocalNetworkAccessChecks,NetworkServiceSandbox,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --pseudonymization-salt-handle=1612,i,8002687107007804116,5153071119878403456,4 --trace-process-track-uuid=3190708990060038890 --mojo-platform-channel-handle=3344 /prefetch:1",
+        "username": "DESKTOP-CNENURG\\KTS",
+        "cpu": 74.4,
+        "mem": 3.54
       },
       {
         "pid": "17756",
         "name": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -Command Get-ChildItem -Path C:\\Users\\KTS\\Desktop -Directory -Recurse -ErrorAction SilentlyContinue | Where-Object { .Name -like '*dashboard*' } | Select-Object Name, FullName",
         "username": "DESKTOP-CNENURG\\KTS",
-        "cpu": 65.9,
-        "mem": 0.48
+        "cpu": 71.1,
+        "mem": 0.52
       },
       {
         "pid": "14448",
         "name": "svchost.exe",
         "username": "",
-        "cpu": 58.6,
+        "cpu": 61.6,
         "mem": 0.19
+      },
+      {
+        "pid": "38140",
+        "name": "C:\\Users\\KTS\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe c:\\Users\\KTS\\.vscode\\extensions\\ms-python.vscode-pylance-2026.3.1\\dist\\server.bundle.js --cancellationReceive=file:01f9231e87875e7fdcc2a977092a835a8515414b23 --node-ipc --clientProcessId=1340",
+        "username": "DESKTOP-CNENURG\\KTS",
+        "cpu": 51.7,
+        "mem": 9.48
+      },
+      {
+        "pid": "39196",
+        "name": "C:\\Users\\KTS\\AppData\\Local\\Programs\\antigravity\\resources\\bin\\language_server.exe --standalone --override_ide_name antigravity --subclient_type hub --override_ide_version 2.3.1 --override_user_agent_name antigravity --https_server_port 0 --csrf_token 3fd4480a-3368-4536-ae7f-c0beaf70bf6e --app_data_dir antigravity --api_server_url https://generativelanguage.googleapis.com --cloud_code_endpoint https://daily-cloudcode-pa.googleapis.com --enable_sidecars",
+        "username": "DESKTOP-CNENURG\\KTS",
+        "cpu": 40.5,
+        "mem": 8.54
+      },
+      {
+        "pid": "31488",
+        "name": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe --type=renderer --pdf-upsell-enabled --video-capture-use-gpu-memory-buffer --lang=en-US --js-flags=--ms-user-locale=en_IN --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=7 --time-ticks-at-unix-epoch=-1784176076155769 --launch-time-ticks=949643284602 --skip-read-main-dll --metrics-shmem-handle=6160,i,2444558830040307089,8364953595323849058,2097152 --field-trial-handle=2520,i,7811458693787606323,2522580983778907810,262144 --variations-seed-version --pseudonymization-salt-handle=2536,i,13743373647773951820,1770990451749499185,4 --trace-process-track-uuid=3190708992871164437 --mojo-platform-channel-handle=3832 /prefetch:1",
+        "username": "DESKTOP-CNENURG\\KTS",
+        "cpu": 27.1,
+        "mem": 1.92
       },
       {
         "pid": "4",
         "name": "System",
         "username": "NT AUTHORITY\\SYSTEM",
-        "cpu": 54.3,
+        "cpu": 20.6,
         "mem": 0.03
       },
       {
-        "pid": "0",
-        "name": "System Idle Process",
-        "username": "NT AUTHORITY\\SYSTEM",
-        "cpu": 38.1,
-        "mem": 0.0
-      },
-      {
-        "pid": "44616",
-        "name": "C:\\Users\\KTS\\AppData\\Local\\Programs\\antigravity\\Antigravity.exe",
+        "pid": "3300",
+        "name": " /updateInstalled /background",
         "username": "DESKTOP-CNENURG\\KTS",
-        "cpu": 18.0,
-        "mem": 0.53
-      },
-      {
-        "pid": "3064",
-        "name": "C:\\Users\\KTS\\AppData\\Local\\Programs\\antigravity\\Antigravity.exe --type=gpu-process --user-data-dir=C:\\Users\\KTS\\AppData\\Roaming\\Antigravity --gpu-preferences=SAAAAAAAAADgAAAEAAAAAAAAAAAAAGAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --field-trial-handle=1588,i,7726373642509388076,14502099043088464719,262144 --enable-features=EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker --disable-features=DropInputEventsWhilePaintHolding,LocalNetworkAccessChecks,NetworkServiceSandbox,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --pseudonymization-salt-handle=1612,i,8002687107007804116,5153071119878403456,4 --trace-process-track-uuid=3190708988185955192 --mojo-platform-channel-handle=1620 /prefetch:2",
-        "username": "DESKTOP-CNENURG\\KTS",
-        "cpu": 17.1,
-        "mem": 0.95
-      },
-      {
-        "pid": "44524",
-        "name": "dwm.exe",
-        "username": "",
-        "cpu": 12.9,
-        "mem": 0.48
+        "cpu": 15.6,
+        "mem": 0.34
       }
     ],
     "system_res": {
@@ -213,7 +213,7 @@
     "tooltip_reasons": [
       "ORA error:   Result = ORA-0\n"
     ],
-    "last_refresh": "2026-07-27 18:18:12",
+    "last_refresh": "2026-07-27 18:23:29",
     "arc_log_type": "FRA",
     "arc_dest_name": "/home/oracle/u01/app/oracle/fast_recovery_area",
     "arc_limit_gb": 8.06,
