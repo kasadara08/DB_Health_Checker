@@ -1,0 +1,5 @@
+{
+  "user": "yuvarani",
+  "password": "welcome123",
+  "dsn": "localhost:1521/ORCL"
+}

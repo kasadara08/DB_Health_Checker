@@ -1,0 +1,2466 @@
+--- EMAIL ALERT SENT ---
+Date: 2026-07-15 12:29:05.662227
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-15 12:29:05
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT SENT ---
+Date: 2026-07-15 12:29:05.664230
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-15 12:29:05
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+--- EMAIL ALERT SENT ---
+Date: 2026-07-15 16:43:51.472694
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-15 16:43:51
+
+ORA Error Code   : ORA-12012
+Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_717672.trc:
+ORA-12012: error on auto execute of job "SYS"."ORA$AT_SQ_SQL_SW_263"
+ORA-38153: Software edition is incompatible with SQL plan management.
+ORA-06512: at "SYS.DBMS_SPM_INTERNAL", line 6014
+ORA-06512: at "SYS.DBMS_SPM", line 2781
+ORA-06512: at line 34
+
+
+Action: Please investigate immediately.
+-----------------------
+--- EMAIL ALERT SENT ---
+Date: 2026-07-15 17:11:13.379143
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: fa182
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-15 17:11:13
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT SENT ---
+Date: 2026-07-15 17:11:13.386309
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: fa182
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-15 17:11:13
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+--- EMAIL ALERT SENT ---
+Date: 2026-07-16 10:31:15.969819
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-16 10:31:15
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT SENT ---
+Date: 2026-07-16 10:31:16.003564
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-16 10:31:15
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+--- EMAIL ALERT SENT ---
+Date: 2026-07-16 11:59:15.443109
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-16 11:59:15
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT SENT ---
+Date: 2026-07-16 11:59:15.448112
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-16 11:59:15
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-16 14:18:27.944722
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-16 14:18:27
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-16 14:18:27.960044
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-16 14:18:27
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-16 14:18:56.932680
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: kasorcl
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-16 14:18:56
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-16 14:18:56.936191
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: kasorcl
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-16 14:18:56
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+SMTP Send Error: Connection Refused: No SMTP server listening at localhost:25. Is the SMTP server running?
+
+SMTP Send Error: Connection Refused: No SMTP server listening at localhost:25. Is the SMTP server running?
+
+SMTP Auth Error: SMTP Authentication Failed: Wrong username or password. Server: smtp.office365.com:587. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0315.INDP287.PROD.OUTLOOK.COM 2026-07-16T08:51:54.393Z 08DEE280031480EC]')
+
+SMTP Auth Error: SMTP Authentication Failed: Wrong username or password. Server: smtp.office365.com:587. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0276.INDP287.PROD.OUTLOOK.COM 2026-07-16T08:52:07.425Z 08DEE28BDA3A9CDF]')
+
+SMTP Auth Error: SMTP Authentication Failed: Wrong username or password. Server: smtp.office365.com:587. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PNYPR01CA0039.INDPRD01.PROD.OUTLOOK.COM 2026-07-16T08:53:27.206Z 08DEE2A42AB04002]')
+
+SMTP Send Error: Sender Refused: The mail server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (451, b'5.7.3 STARTTLS is required to send mail [PN3PR01CA0178.INDPRD01.PROD.OUTLOOK.COM 2026-07-16T08:54:00.241Z 08DEE09E69B09719]', 'yuvarani.skannan@kasadara.com')
+
+SMTP Send Error: Sender Refused: The mail server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (451, b'5.7.3 STARTTLS is required to send mail [MA5P287CA0319.INDP287.PROD.OUTLOOK.COM 2026-07-17T05:21:39.669Z 08DEE2864E64943D]', 'yuvarani.skannan@kasadara.com')
+
+SMTP Send Error: Sender Refused: The mail server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5PR01CA0309.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T05:32:05.841Z 08DEE280829F76C3]', 'yuvarani.skannan@kasadara.com')
+
+SMTP Send Error: Sender Refused: The mail server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN4P287CA0035.INDP287.PROD.OUTLOOK.COM 2026-07-17T06:24:54.306Z 08DEE287D3A2D0B5]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-17 12:41:01.011975
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-17 12:41:00
+
+ORA Error Code   : ORA-12012
+Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_114389.trc:
+ORA-12012: error on auto execute of job "SYS"."ORA$AT_SQ_SQL_SW_303"
+ORA-38153: Software edition is incompatible with SQL plan management.
+ORA-06512: at "SYS.DBMS_SPM_INTERNAL", line 6014
+ORA-06512: at "SYS.DBMS_SPM", line 2781
+ORA-06512: at line 34
+
+
+Action: Please investigate immediately.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-17 12:41:02.467553
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-17 12:41:02
+
+ORA Error Code   : ORA-12012
+Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_114389.trc:
+ORA-12012: error on auto execute of job "SYS"."ORA$AT_SQ_SQL_SW_303"
+ORA-38153: Software edition is incompatible with SQL plan management.
+ORA-06512: at "SYS.DBMS_SPM_INTERNAL", line 6014
+ORA-06512: at "SYS.DBMS_SPM", line 2781
+ORA-06512: at line 34
+
+
+Action: Please investigate immediately.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-17 12:41:06.752456
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-17 12:41:06
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-17 12:41:12.168362
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-17 12:41:06
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-17 12:41:12.908453
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-17 12:41:12
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-17 12:41:18.612002
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-17 12:41:12
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-17 12:47:27.025728
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: fa182
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-17 12:47:27
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-17 12:47:32.868521
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: fa182
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-17 12:47:27
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-17 13:02:59.563967
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : unknown
+Database Name: kasorcl
+Host Name    : unknown
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-17 13:02:59
+
+ORA Error Code   : ORA-12012
+Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_114389.trc:
+ORA-12012: error on auto execute of job "SYS"."ORA$AT_SQ_SQL_SW_303"
+ORA-38153: Software edition is incompatible with SQL plan management.
+ORA-06512: at "SYS.DBMS_SPM_INTERNAL", line 6014
+ORA-06512: at "SYS.DBMS_SPM", line 2781
+ORA-06512: at line 34
+
+
+Action: Please investigate immediately.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-17 13:26:08.056190
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-17 13:26:08
+
+ORA Error Code   : ORA-12012
+Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_114389.trc:
+ORA-12012: error on auto execute of job "SYS"."ORA$AT_SQ_SQL_SW_303"
+ORA-38153: Software edition is incompatible with SQL plan management.
+ORA-06512: at "SYS.DBMS_SPM_INTERNAL", line 6014
+ORA-06512: at "SYS.DBMS_SPM", line 2781
+ORA-06512: at line 34
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: Network Error: Cannot reach SMTP server smtp.office.com:587. Detail: [Errno 11001] getaddrinfo failed
+
+--- EMAIL ALERT ---
+Date: 2026-07-17 13:26:08.266572
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-17 13:26:08
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: Network Error: Cannot reach SMTP server smtp.office.com:587. Detail: [Errno 11001] getaddrinfo failed
+
+--- EMAIL ALERT ---
+Date: 2026-07-17 13:26:08.405631
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-17 13:26:08
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+SMTP Send Error: Network Error: Cannot reach SMTP server smtp.office.com:587. Detail: [Errno 11001] getaddrinfo failed
+
+--- EMAIL ALERT ---
+Date: 2026-07-17 18:05:23.798401
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : unknown
+Database Name: ORCL_Arthi
+Host Name    : unknown
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-17 18:05:23
+
+ORA Error Code   : ORA-06512
+Complete Message : ORA-06512: at "SYS.DBMS_QOPATCH", line 2309
+
+
+Action: Please investigate immediately.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-17 18:05:24.161235
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : unknown
+Database Name: ORCL_Arthi
+Host Name    : unknown
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-17 18:05:23
+
+ORA Error Code   : ORA-29400
+Complete Message : ORA-29400: data cartridge error
+
+
+Action: Please investigate immediately.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-17 18:05:24.636247
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : unknown
+Database Name: ORCL_Arthi
+Host Name    : unknown
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-17 18:05:23
+
+ORA Error Code   : ORA-06510
+Complete Message : ORA-06510: PL/SQL: unhandled user-defined exception
+
+
+Action: Please investigate immediately.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-17 18:05:25.069681
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : unknown
+Database Name: ORCL_Arthi
+Host Name    : unknown
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-17 18:05:23
+
+ORA Error Code   : ORA-29913
+Complete Message : ORA-29913: error in executing ODCIEXTTABLEFETCH callout
+
+
+Action: Please investigate immediately.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-17 18:05:25.798101
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: orcl
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-17 18:05:25
+
+Problem: The Oracle Database instance 'orcl' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-17 18:05:26.031056
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: orcl
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-17 18:05:25
+
+Problem: The Oracle Listener for DB 'orcl' is DOWN.
+-----------------------
+SMTP Send Error: Unexpected email error: UnboundLocalError: local variable '_ssl' referenced before assignment
+
+SMTP Send Error: Network Error: Cannot reach SMTP server smtp.office365.com:587. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN3PR01CA0135.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T13:11:57.285Z 08DEE2BB2F5CACF6]')
+
+SMTP Send Error: Network Error: Cannot reach SMTP server smtp.office365.com:587. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN2PR01CA0244.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T13:18:56.189Z 08DEE2AFF18F01AF]')
+
+SMTP Send Error: Network Error: Cannot reach SMTP server smtp.office365.com:587. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4P287CA0079.INDP287.PROD.OUTLOOK.COM 2026-07-17T13:22:58.025Z 08DEE289ED3BDDD1]')
+
+SMTP Send Error: Network Error: Cannot reach SMTP server smtp.office365.com:587. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0064.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T13:25:06.737Z 08DEE292A8E7CBAA]')
+
+SMTP Send Error: Network Error: Cannot reach SMTP server smtp.office365.com:587. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0076.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T13:26:38.993Z 08DEE2A371225F3A]')
+
+SMTP Send Error: Network Error: Cannot reach SMTP server smtp.office365.com:587. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4P287CA0020.INDP287.PROD.OUTLOOK.COM 2026-07-17T13:29:32.392Z 08DEE28EF7DDB1EC]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 18:52:59.436902
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 18:52:59
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-19 18:53:00.427448
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 18:52:59
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. For Office 365, ensure SMTP AUTH is enabled in Admin Center and use an App Password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0051.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T14:48:13.873Z 08DEE5425CD989EB]')
+
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN2PR01CA0209.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T14:59:15.070Z 08DEE562CC3B1F7E]')
+
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5PR01CA0282.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:02:34.899Z 08DEE56C609B569E]', 'yuvarani.skannan@kasadara.com')
+
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5PR01CA0130.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:03:04.359Z 08DEE56211CAB6B9]', 'yuvarani.skannan@kasadara.com')
+
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA0PR01CA0089.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:15:33.978Z 08DEE568C1C4FEFC]', 'yuvarani.skannan@kasadara.com')
+
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0199.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:15:39.714Z 08DEE55356003D94]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 20:45:50.417617
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 20:45:50
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0066.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:15:55.053Z 08DEE5484342E146]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 20:45:55.844970
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 20:45:50
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5PR01CA0123.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:16:00.469Z 08DEE5478CECCE31]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 20:46:01.427159
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 20:46:01
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA0PR01CA0123.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:16:05.988Z 08DEE54FED4B9D03]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 20:46:06.892267
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 20:46:01
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0195.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:16:11.495Z 08DEE53900E432E0]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 20:46:12.291909
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-19 20:46:12
+
+ORA Error Code   : ORA-06512
+Complete Message : ORA-06512: at "SYS.DBMS_QOPATCH", line 2309
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PNYP287CA0073.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:16:17.014Z 08DEE54A052F0696]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 20:46:17.938689
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-19 20:46:12
+
+ORA Error Code   : ORA-29400
+Complete Message : ORA-29400: data cartridge error
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN4PR01CA0079.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:16:22.706Z 08DEE500A037E031]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 20:46:23.542543
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-19 20:46:12
+
+ORA Error Code   : ORA-06510
+Complete Message : ORA-06510: PL/SQL: unhandled user-defined exception
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN2PR01CA0044.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:16:28.250Z 08DEE5563EB66B2D]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 20:46:29.119559
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-19 20:46:12
+
+ORA Error Code   : ORA-29913
+Complete Message : ORA-29913: error in executing ODCIEXTTABLEFETCH callout
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5PR01CA0049.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:16:33.738Z 08DEE5417C3AF9F9]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 20:46:34.596459
+Subject: Critical Alert - Database Down
+Body:
+Server Name: orcl
+Database Name: orcl
+Host Name: orcl
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 20:46:34
+
+Problem: The Oracle Database instance 'orcl' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5PR01CA0002.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:16:39.266Z 08DEE5526BF816D9]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 20:46:39.982382
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: orcl
+Database Name: orcl
+Host Name: orcl
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 20:46:34
+
+Problem: The Oracle Listener for DB 'orcl' is DOWN.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0014.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:16:44.933Z 08DEE55C71A11F39]', 'yuvarani.skannan@kasadara.com')
+
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN1PEPF000067F8.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:20:54.087Z 08DEE57411A842C0]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:08:58.665314
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 21:08:58
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:09:03.623789
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 21:09:03
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN2PR01CA0210.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:03.506Z 08DEE54A75A85C2C]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:09:04.340591
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 21:08:58
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0171.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:39:08.306Z 08DEE53682261BD6]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:09:09.005241
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 21:09:03
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0175.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:39:08.955Z 08DEE53C9046E3C4]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:09:09.674446
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 21:09:09
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN3PR01CA0111.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:13.795Z 08DEE5894A7C255A]', 'mohanraj.krishnasamy@kasadara.com')
+
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA0PR01CA0117.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:14.311Z 08DEE569E2F74235]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:09:15.107774
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 21:09:09
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:09:19.472774
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 21:09:19
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN4PR01CA0021.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:20.011Z 08DEE500E17F370E]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:09:20.876698
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-19 21:09:20
+
+ORA Error Code   : ORA-06512
+Complete Message : ORA-06512: at "SYS.DBMS_QOPATCH", line 2309
+
+
+Action: Please investigate immediately.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:09:23.860024
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 21:09:23
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:09:24.468644
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 21:09:24
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN2PR01CA0239.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:24.314Z 08DEE58197CC1110]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:09:25.143313
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 21:09:19
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN2PR01CA0229.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:28.623Z 08DEE559A199907E]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:09:29.532435
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 21:09:23
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN2PR01CA0237.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:29.951Z 08DEE556A9C19873]', 'mohanraj.krishnasamy@kasadara.com')
+
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN2PR01CA0239.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:30.715Z 08DEE58197CC1112]', 'mohanraj.krishnasamy@kasadara.com')
+
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN3PR01CA0167.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:34.380Z 08DEE5664620F020]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:09:35.404035
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 21:09:24
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0237.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:39:35.606Z 08DEE5378B171B9B]', 'mohanraj.krishnasamy@kasadara.com')
+
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PNYP287CA0082.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:39:40.149Z 08DEE53874546957]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:09:59.896957
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 21:09:59
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN3PR01CA0055.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:40:04.648Z 08DEE55523733E28]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:10:05.459526
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 21:09:59
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [BN1PR12CA0011.namprd12.prod.outlook.com 2026-07-19T15:40:12.511Z 08DEE57A4EA90B1B]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:10:13.439167
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 21:10:13
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PNYPR01CA0028.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:40:18.250Z 08DEE57805FB74A8]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-19 21:10:19.035533
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-19 21:10:13
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [BN9PR03CA0434.namprd03.prod.outlook.com 2026-07-19T15:40:25.910Z 08DEE53D8CC1986F]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 10:56:31.918078
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 10:56:31
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0133.INDP287.PROD.OUTLOOK.COM 2026-07-20T05:26:36.072Z 08DEE55D94D724D5]', 'mohanraj.krishnasamy@kasadara.com')
+
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0141.INDP287.PROD.OUTLOOK.COM 2026-07-20T05:26:37.314Z 08DEE55794C3584E]', 'mohanraj.krishnasamy@kasadara.com')
+
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0136.INDP287.PROD.OUTLOOK.COM 2026-07-20T05:26:38.583Z 08DEE554EDB4801B]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 10:58:10.250803
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 10:58:10
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN3PEPF0000017E.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T05:28:15.806Z 08DEE56F1372A5A9]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 10:58:16.226060
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 10:58:10
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA1PR01CA0183.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T05:28:21.867Z 08DEE58B28848A49]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 10:58:27.481450
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 10:58:27
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5PR01CA0117.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T05:28:32.965Z 08DEE53F3817B0E7]', 'mohanraj.krishnasamy@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 10:58:33.429116
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 10:58:27
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5PR01CA0123.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T05:28:38.895Z 08DEE5478CF0396B]', 'mohanraj.krishnasamy@kasadara.com')
+
+SMTP Send Error: SMTP Data Error: Server rejected email content. Detail: (554, b'5.2.252 SendAsDenied; mohanraj.krishnasamy@kasadara.com not allowed to send as yuvarani.skannan@kasadara.com; STOREDRV.Submission.Exception:SendAsDeniedException.MapiExceptionSendAsDenied; Failed to process message due to a permanent exception with message [BeginDiagnosticData]Cannot submit message. 1.84300:01000000, 1.84300:0B000000, 1.84300:0A000000, 1.84300:0A000000, 1.84300:0E000000, 1.84300:32000000, 1.73948:00000000, 5.71140:67000000446F526F70730000, 1.108572:00000000, 0.117068:07000000, 1.79180:0B000000, 1.79180:0A000000, 1.79180:0A000000, 1.79180:0E000000, 1.79180:32000000, 1.79180:FA000000, 255.73100:76657200, 5.95292:67000000446F526F7073006E, 8.111356:9552F9FE86593ECC1F1F572B2F8F6BAC0BAFA94C, 0.38698:00000000, 1.41134:86000000, 1.98628:00000000, 1.41134:86000000, 1.98628:00000000, 1.41134:86000000, 1.98628:00000000, 1.41134:46000000, 1.98628:00000000, 0.37692:00000000, 0.44092:00000000, 0.41232:00000000, 0.60208:86000000, 0.37136:00000000, 0.34608:86000000, 0.55056:00000000, 0.42768:57791700, 0.56112:00000000, 0.52807:01000000, 0.46663:00000000, 1.41134:46000000, 1.98628:00000000, 7.36354:010000000000010900000000, 1.46439:0A000000, 1.115228:00000000, 0.104668:86000000, 1.44903:25000000, 1.115228:00000000, 0.57310:00000000, 0.38878:1F000000, 5.50564:00000000532D312D352D32312D323437323733333932382D323932373032383939372D343131363735303332372D3132353733313331001000000000, 5.33016:DC040000534F424F207269676874732068617665206265656E20636865636B65642062757420617265206E6F74206772616E74656400111001000000, 7.40748:010000000000010B59E41700, 7.57132:000000000000000000000000, 4.39640:DC040000, 1.63016:32000000, 8.45434:839F567BD14D884591B0B99DE61740FD86000000, 0.104348:00000000, 5.46798:040000004D61696C4974656D5375626D697373696F6E001086000000, 7.51330:6B147C5230E6DE0886000000, 5.10786:0000000031352E32312E303232332E3030353A504E34503238374D42353036373A35303930643234392D373434622D343035322D393437392D3061363863383533303837383A3133393933363A2E4E45542031302E302E3900000000, 0.39570:00000000, 1.55954:0B000000, 0.40818:02000000, 1.33010:0B000000, 2.54258:00000000, 0.59634:02000000, 1.56562:00000000, 1.33010:0B000000, 2.54258:00000000, 0.59634:56000000, 1.56562:00000000, 1.55954:0A000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:00000000, 1.56562:00000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:00000000, 1.56562:00000000, 1.55954:0A000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:00000000, 1.56562:00000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:07000000, 1.56562:00000000, 1.64146:0E000000, 1.33010:0E000000, 2.54258:00000000, 1.33010:0E000000, 2.54258:00000000, 1.64146:32000000, 1.33010:32000000, 2.54258:DC040000, 1.33010:32000000, 2.54258:DC040000, 255.79500:0E000000, 0.100684:0E000000, 255.66700:00000000, 5.95292:67000000446F526F7073006E, 8.111356:9552F9FE86593ECC1F1F572B2F8F6BAC0BAFA94C, 0.38698:00000000, 1.41134:86000000, 1.98628:00000000, 1.41134:86000000, 1.98628:00000000, 1.41134:86000000, 1.98628:00000000, 1.41134:46000000, 1.98628:00000000, 0.37692:00000000, 0.44092:00000000, 0.41232:00000000, 0.60208:86000000, 0.37136:00000000, 0.34608:86000000, 0.55056:00000000, 0.42768:57791700, 0.56112:00000000, 0.52807:01000000, 0.46663:00000000, 1.41134:46000000, 1.98628:00000000, 7.36354:010000000000010900000000, 1.46439:0A000000, 1.115228:00000000, 0.104668:86000000, 1.44903:25000000, 1.115228:00000000, 0.57310:00000000, 0.38878:1F000000, 5.50564:00000000532D312D352D32312D323437323733333932382D323932373032383939372D343131363735303332372D3132353733313331001000000000, 5.33016:DC040000534F424F207269676874732068617665206265656E20636865636B65642062757420617265206E6F74206772616E74656400111001000000, 7.40748:010000000000010B59E41700, 7.57132:000000000000000000000000, 4.39640:DC040000, 1.63016:32000000, 8.45434:839F567BD14D884591B0B99DE61740FD86000000, 0.104348:00000000, 5.46798:040000004D61696C4974656D5375626D697373696F6E001086000000, 7.51330:6B147C5230E6DE0886000000, 5.10786:0000000031352E32312E303232332E3030353A504E34503238374D42353036373A35303930643234392D373434622D343035322D393437392D3061363863383533303837383A3133393933363A2E4E45542031302E302E3900000000, 0.39570:00000000, 1.55954:0B000000, 0.40818:02000000, 1.33010:0B000000, 2.54258:00000000, 0.59634:02000000, 1.56562:00000000, 1.33010:0B000000, 2.54258:00000000, 0.59634:56000000, 1.56562:00000000, 1.55954:0A000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:00000000, 1.56562:00000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:00000000, 1.56562:00000000, 1.55954:0A000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:00000000, 1.56562:00000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:07000000, 1.56562:00000000, 1.64146:0E000000, 1.33010:0E000000, 2.54258:00000000, 1.33010:0E000000, 2.54258:00000000, 1.64146:32000000, 1.33010:32000000, 2.54258:DC040000, 1.33010:32000000, 2.54258:DC040000, 255.97900:9E000000, 4.120460:DC040000, 1.52466:02000000, 1.52466:02000000, 1.42738:05000000, 0.37698:08000000, 1.42738:05000000, 0.37698:75000000, 1.52466:01000000, 0.60402:02000000, 1.52466:01000000[EndDiagnosticData] [Hostname=PN4P287MB5067.INDP287.PROD.OUTLOOK.COM]')
+
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0071.INDP287.PROD.OUTLOOK.COM 2026-07-20T07:59:00.492Z 08DEE56148CAA8B2]')
+
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0012.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:15:54.943Z 08DEE5573AA6EDE1]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 15:46:03.305256
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 15:46:03
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN3PR01CA0169.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T10:16:09.285Z 08DEE53B8808FCE3]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 15:46:09.303910
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 15:46:03
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN3PR01CA0175.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T10:16:15.125Z 08DEE57F03510FE9]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 15:46:15.339800
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 15:46:15
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PNYP287CA0110.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:16:21.869Z 08DEE55E70B10DF5]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 15:46:21.730200
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 15:46:15
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN3PR01CA0095.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T10:16:27.668Z 08DEE57D501B6C20]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 15:46:27.593304
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 15:46:27
+
+ORA Error Code   : ORA-06512
+Complete Message : ORA-06512: at "SYS.DBMS_QOPATCH", line 2309
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN3PR01CA0107.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T10:16:33.587Z 08DEE58EBEF1D958]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 15:46:33.586164
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 15:46:27
+
+ORA Error Code   : ORA-29400
+Complete Message : ORA-29400: data cartridge error
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4P287CA0118.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:16:39.542Z 08DEE53D21CCEB6E]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 15:46:39.479356
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 15:46:27
+
+ORA Error Code   : ORA-06510
+Complete Message : ORA-06510: PL/SQL: unhandled user-defined exception
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4P287CA0119.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:16:45.364Z 08DEE54CA839858A]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 15:46:45.565827
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 15:46:27
+
+ORA Error Code   : ORA-29913
+Complete Message : ORA-29913: error in executing ODCIEXTTABLEFETCH callout
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4PR01CA0081.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T10:16:51.496Z 08DEE53926B36FF1]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 15:46:51.811158
+Subject: Critical Alert - Database Down
+Body:
+Server Name: orcl
+Database Name: orcl
+Host Name: orcl
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 15:46:51
+
+Problem: The Oracle Database instance 'orcl' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN3PR01CA0165.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T10:16:57.722Z 08DEE55BC5F2F9B3]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 15:46:57.713836
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: orcl
+Database Name: orcl
+Host Name: orcl
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 15:46:51
+
+Problem: The Oracle Listener for DB 'orcl' is DOWN.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0188.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:17:03.445Z 08DEE5510D498B24]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:01:16.997266
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 16:01:16
+
+ORA Error Code   : ORA-12012
+Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_151669.trc:
+ORA-12012: error on auto execute of job "SYS"."ORA$AT_SQ_SQL_SW_483"
+ORA-38153: Software edition is incompatible with SQL plan management.
+ORA-06512: at "SYS.DBMS_SPM_INTERNAL", line 6014
+ORA-06512: at "SYS.DBMS_SPM", line 2781
+ORA-06512: at line 34
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0140.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T10:31:22.483Z 08DEE53883ACF2FD]')
+
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0302.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:37:48.523Z 08DEE5004D9739A7]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:08:29.887875
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 16:08:29
+
+ORA Error Code   : ORA-12012
+Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_151669.trc:
+ORA-12012: error on auto execute of job "SYS"."ORA$AT_SQ_SQL_SW_483"
+ORA-38153: Software edition is incompatible with SQL plan management.
+ORA-06512: at "SYS.DBMS_SPM_INTERNAL", line 6014
+ORA-06512: at "SYS.DBMS_SPM", line 2781
+ORA-06512: at line 34
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0167.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:38:40.536Z 08DEE5562E33C8AD]', 'yuvarani.skannan@kasadara.com')
+
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0167.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:38:48.235Z 08DEE5562E33C8B9]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:09:07.383737
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 16:09:07
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0221.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:39:18.728Z 08DEE55665DBD2A4]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:09:19.119616
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 16:09:07
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+SMTP Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0310.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:39:30.121Z 08DEE54212E376DA]', 'yuvarani.skannan@kasadara.com')
+
+Graph API Send Error: Graph API Error [ErrorAccessDenied]: Access is denied. Check credentials and try again.
+
+Graph API Send Error: Graph API Error [ErrorAccessDenied]: Access is denied. Check credentials and try again.
+
+SMTP OAuth2 Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0154.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:49:45.526Z 08DEE5392DC535AC]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:30:34.714247
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 16:30:34
+
+ORA Error Code   : ORA-12012
+Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_151669.trc:
+ORA-12012: error on auto execute of job "SYS"."ORA$AT_SQ_SQL_SW_483"
+ORA-38153: Software edition is incompatible with SQL plan management.
+ORA-06512: at "SYS.DBMS_SPM_INTERNAL", line 6014
+ORA-06512: at "SYS.DBMS_SPM", line 2781
+ORA-06512: at line 34
+
+
+Action: Please investigate immediately.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:30:34.820687
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 16:30:34
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:30:34.902373
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 16:30:34
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:30:34.992214
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 16:30:34
+
+ORA Error Code   : ORA-06512
+Complete Message : ORA-06512: at "SYS.DBMS_QOPATCH", line 2309
+
+
+Action: Please investigate immediately.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:30:35.116502
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 16:30:34
+
+ORA Error Code   : ORA-29400
+Complete Message : ORA-29400: data cartridge error
+
+
+Action: Please investigate immediately.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:30:35.237566
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 16:30:34
+
+ORA Error Code   : ORA-06510
+Complete Message : ORA-06510: PL/SQL: unhandled user-defined exception
+
+
+Action: Please investigate immediately.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:30:35.331129
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 16:30:34
+
+ORA Error Code   : ORA-29913
+Complete Message : ORA-29913: error in executing ODCIEXTTABLEFETCH callout
+
+
+Action: Please investigate immediately.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:30:35.484772
+Subject: Critical Alert - Database Down
+Body:
+Server Name: orcl
+Database Name: orcl
+Host Name: orcl
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 16:30:35
+
+Problem: The Oracle Database instance 'orcl' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:30:35.717882
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: orcl
+Database Name: orcl
+Host Name: orcl
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 16:30:35
+
+Problem: The Oracle Listener for DB 'orcl' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:32:29.366545
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 16:32:29
+
+ORA Error Code   : ORA-12012
+Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_151669.trc:
+ORA-12012: error on auto execute of job "SYS"."ORA$AT_SQ_SQL_SW_483"
+ORA-38153: Software edition is incompatible with SQL plan management.
+ORA-06512: at "SYS.DBMS_SPM_INTERNAL", line 6014
+ORA-06512: at "SYS.DBMS_SPM", line 2781
+ORA-06512: at line 34
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP OAuth2 Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4PR01CA0090.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:02:34.428Z 08DEE53E747C6671]', 'yuvarani.skannan@kasadara.com')
+
+SMTP OAuth2 Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PNYP287CA0111.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:02:40.427Z 08DEE540615A488E]', 'yuvarani.skannan@kasadara.com')
+
+SMTP OAuth2 Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4PR01CA0090.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:02:49.634Z 08DEE53E747C66C2]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:34:07.860488
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 16:34:07
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+SMTP OAuth2 Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0185.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:04:19.140Z 08DEE54A87E1A2FA]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:34:19.530487
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 16:34:07
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+SMTP OAuth2 Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0217.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:04:31.207Z 08DEE54E3F59F545]', 'yuvarani.skannan@kasadara.com')
+
+SMTP OAuth2 Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0018.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:11:36.850Z 08DEE5507AA1B471]', 'yuvarani.skannan@kasadara.com')
+
+SMTP OAuth2 Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0351.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:11:54.580Z 08DEE53EE97A297F]', 'yuvarani.skannan@kasadara.com')
+
+SMTP OAuth2 Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0295.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:12:45.334Z 08DEE54E28253358]', 'yuvarani.skannan@kasadara.com')
+
+Graph API Send Error: Graph API Error [ErrorAccessDenied]: Access is denied. Check credentials and try again.
+
+SMTP OAuth2 Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0228.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:15:39.355Z 08DEE546729256F7]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:45:43.398928
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 16:45:43
+
+ORA Error Code   : ORA-12012
+Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_151669.trc:
+ORA-12012: error on auto execute of job "SYS"."ORA$AT_SQ_SQL_SW_483"
+ORA-38153: Software edition is incompatible with SQL plan management.
+ORA-06512: at "SYS.DBMS_SPM_INTERNAL", line 6014
+ORA-06512: at "SYS.DBMS_SPM", line 2781
+ORA-06512: at line 34
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP OAuth2 Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0003.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:15:54.902Z 08DEE53AA0DE4339]', 'yuvarani.skannan@kasadara.com')
+
+SMTP OAuth2 Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0015.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:15:55.795Z 08DEE544FB77B4B1]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:50:50.197820
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 16:50:50
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+SMTP OAuth2 Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0110.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:21:02.337Z 08DEE53BA88E755A]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:51:02.475275
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 16:50:50
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+SMTP OAuth2 Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.3 Authentication unsuccessful [MA0PR01CA0091.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:21:13.617Z 08DEE544ED92EB52]', 'yuvarani.skannan@kasadara.com')
+
+SMTP OAuth2 Send Error: Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.3 Authentication unsuccessful [PN4PR01CA0032.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:22:00.957Z 08DEE5542BF09D44]', 'yuvarani.skannan@kasadara.com')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:57:53.927645
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 16:57:53
+
+ORA Error Code   : ORA-12012
+Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_151669.trc:
+ORA-12012: error on auto execute of job "SYS"."ORA$AT_SQ_SQL_SW_483"
+ORA-38153: Software edition is incompatible with SQL plan management.
+ORA-06512: at "SYS.DBMS_SPM_INTERNAL", line 6014
+ORA-06512: at "SYS.DBMS_SPM", line 2781
+ORA-06512: at line 34
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA5P287CA0334.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:27:54.392Z 08DEE50216ED8EEE]')
+
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA5P287CA0327.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:28:01.773Z 08DEE552EBB9EB18]')
+
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA5P287CA0334.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:28:04.552Z 08DEE50216ED8F00]')
+
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [PN3PR01CA0119.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:28:25.567Z 08DEE56445B50AAD]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:59:01.166203
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 16:59:01
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA5P287CA0155.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:29:06.724Z 08DEE564129CBC48]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 16:59:07.002043
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 16:59:01
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA5P287CA0149.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:29:12.604Z 08DEE5396852B45C]')
+
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [PN3PR01CA0161.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:35:26.370Z 08DEE549380679E9]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 17:05:29.672596
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 17:05:29
+
+ORA Error Code   : ORA-12012
+Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_151669.trc:
+ORA-12012: error on auto execute of job "SYS"."ORA$AT_SQ_SQL_SW_483"
+ORA-38153: Software edition is incompatible with SQL plan management.
+ORA-06512: at "SYS.DBMS_SPM_INTERNAL", line 6014
+ORA-06512: at "SYS.DBMS_SPM", line 2781
+ORA-06512: at line 34
+
+
+Action: Please investigate immediately.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-20 17:05:30.790088
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 17:05:30
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA0PR01CA0101.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:35:35.370Z 08DEE55C6D660F4A]')
+
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA0PR01CA0105.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:35:36.365Z 08DEE5047804D749]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 17:05:36.495674
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 17:05:30
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA0PR01CA0047.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:35:39.919Z 08DEE5651EC04575]')
+
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA0PR01CA0048.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:35:42.078Z 08DEE553CDE7D5BF]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 17:07:43.187510
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 17:07:43
+
+ORA Error Code   : ORA-12012
+Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_151669.trc:
+ORA-12012: error on auto execute of job "SYS"."ORA$AT_SQ_SQL_SW_483"
+ORA-38153: Software edition is incompatible with SQL plan management.
+ORA-06512: at "SYS.DBMS_SPM_INTERNAL", line 6014
+ORA-06512: at "SYS.DBMS_SPM", line 2781
+ORA-06512: at line 34
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [PN2PR01CA0198.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:37:49.212Z 08DEE55658C29CEC]')
+
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0094.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T13:09:10.876Z 08DEE537F76999E7]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 20:44:58.017982
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 20:44:58
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4P287CA0073.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:15:04.267Z 08DEE5661496B094]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 20:45:03.956632
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 20:44:58
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN0PR01CA0037.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T15:15:09.957Z 08DEE5484E13C7C1]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 21:14:00.112968
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 21:14:00
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN2PR01CA0196.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T15:44:06.256Z 08DEE66E17E13568]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 21:14:05.925948
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 21:14:00
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA1PR01CA0184.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T15:44:12.166Z 08DEE5515268BFB7]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 21:14:11.976021
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 21:14:11
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0303.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:44:17.909Z 08DEE55379C2D193]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 21:14:17.664095
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 21:14:11
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0008.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:44:23.625Z 08DEE670A3A3E40C]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 21:14:23.330133
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 21:14:23
+
+ORA Error Code   : ORA-06512
+Complete Message : ORA-06512: at "SYS.DBMS_QOPATCH", line 2309
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0126.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:44:29.339Z 08DEE55D3E0A6454]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 21:14:28.997567
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 21:14:23
+
+ORA Error Code   : ORA-29400
+Complete Message : ORA-29400: data cartridge error
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [DM6PR07CA0077.namprd07.prod.outlook.com 2026-07-20T15:44:39.187Z 08DEE57F770DEC6B]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 21:14:39.366189
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 21:14:23
+
+ORA Error Code   : ORA-06510
+Complete Message : ORA-06510: PL/SQL: unhandled user-defined exception
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PNYPR01CA0067.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T15:44:45.476Z 08DEE500B344E3CD]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 21:14:45.220858
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 21:14:23
+
+ORA Error Code   : ORA-29913
+Complete Message : ORA-29913: error in executing ODCIEXTTABLEFETCH callout
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0025.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:44:51.195Z 08DEE55FDFAD9136]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 21:14:50.989802
+Subject: Critical Alert - Database Down
+Body:
+Server Name: orcl
+Database Name: orcl
+Host Name: orcl
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 21:14:50
+
+Problem: The Oracle Database instance 'orcl' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0245.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:44:57.145Z 08DEE00CB458B621]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 21:14:56.869829
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: orcl
+Database Name: orcl
+Host Name: orcl
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-20 21:14:50
+
+Problem: The Oracle Listener for DB 'orcl' is DOWN.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0236.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:45:03.009Z 08DEE548686BAAE9]')
+
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0004.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T15:45:53.211Z 08DEE567890F5DB9]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-20 21:35:43.961518
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-20 21:35:43
+
+ORA Error Code   : ORA-12012
+Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_151669.trc:
+ORA-12012: error on auto execute of job "SYS"."ORA$AT_SQ_SQL_SW_483"
+ORA-38153: Software edition is incompatible with SQL plan management.
+ORA-06512: at "SYS.DBMS_SPM_INTERNAL", line 6014
+ORA-06512: at "SYS.DBMS_SPM", line 2781
+ORA-06512: at line 34
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4P287CA0062.INDP287.PROD.OUTLOOK.COM 2026-07-20T16:05:51.623Z 08DEE558EB9225BB]')
+
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0245.INDP287.PROD.OUTLOOK.COM 2026-07-21T05:14:28.979Z 08DEE00CB45CEE96]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-21 16:36:59.683983
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-21 16:36:59
+
+ORA Error Code   : ORA-12012
+Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_183544.trc:
+ORA-12012: error on auto execute of job "SYS"."ORA$AT_SQ_SQL_SW_503"
+ORA-38153: Software edition is incompatible with SQL plan management.
+ORA-06512: at "SYS.DBMS_SPM_INTERNAL", line 6014
+ORA-06512: at "SYS.DBMS_SPM", line 2781
+ORA-06512: at line 34
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0274.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:05.257Z 08DEE6D5011F0DF3]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-21 16:37:05.412446
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-21 16:37:05
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0267.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:07:10.914Z 08DEE68C4339B4DA]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-21 16:37:11.193188
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.4.164
+Database Name: fa182
+Host Name: 10.10.4.164
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-21 16:37:05
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0271.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:07:16.597Z 08DEE6D87C3A92EB]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-21 16:37:17.172393
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-21 16:37:17
+
+ORA Error Code   : ORA-06512
+Complete Message : ORA-06512: at "SYS.DBMS_QOPATCH", line 2309
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN2PR01CA0210.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:22.919Z 08DEE6CB874CA512]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-21 16:37:23.143261
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-21 16:37:17
+
+ORA Error Code   : ORA-29400
+Complete Message : ORA-29400: data cartridge error
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN2PR01CA0208.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:28.684Z 08DEE6E7F7F69ED8]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-21 16:37:28.896513
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-21 16:37:17
+
+ORA Error Code   : ORA-06510
+Complete Message : ORA-06510: PL/SQL: unhandled user-defined exception
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0249.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:34.639Z 08DEE6CF39ABEBF5]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-21 16:37:35.033910
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : ORCL_Arthi
+Database Name: ORCL_Arthi
+Host Name    : ORCL_Arthi
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-21 16:37:17
+
+ORA Error Code   : ORA-29913
+Complete Message : ORA-29913: error in executing ODCIEXTTABLEFETCH callout
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0250.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:40.342Z 08DEE6D58C341342]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-21 16:37:40.766156
+Subject: Critical Alert - Database Down
+Body:
+Server Name: orcl
+Database Name: orcl
+Host Name: orcl
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-21 16:37:40
+
+Problem: The Oracle Database instance 'orcl' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0052.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:46.299Z 08DEE5DE9F827E57]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-21 16:37:46.636103
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: orcl
+Database Name: orcl
+Host Name: orcl
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-21 16:37:40
+
+Problem: The Oracle Listener for DB 'orcl' is DOWN.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0080.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:07:52.414Z 08DEE2A9172B1F8B]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-21 17:18:54.756985
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: kasorcl
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-21 17:18:54
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4P287CA0080.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:49:00.775Z 08DEE6C82D5D1D56]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-21 17:19:01.145028
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: kasorcl
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-21 17:18:54
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0069.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:49:06.704Z 08DEE6CCF7C0A14B]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-21 17:19:07.192301
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: fa182
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-21 17:19:07
+
+Problem: The Oracle Database instance 'fa182' is DOWN or unreachable.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0048.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:49:12.756Z 08DEE6D5424D5363]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-21 17:19:13.317731
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: fa182
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-21 17:19:07
+
+Problem: The Oracle Listener for DB 'fa182' is DOWN.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0174.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:49:18.968Z 08DEE6B315434584]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-21 20:12:11.622785
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-21 20:12:11
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-21 20:12:11.773336
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-21 20:12:11
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-21 20:23:36.657081
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: SA
+Host Name    : 10.10.10.11
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-21 20:23:36
+
+ORA Error Code   : ORA-12012
+Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_183544.trc:
+ORA-12012: error on auto execute of job "SYS"."ORA$AT_SQ_SQL_SW_503"
+ORA-38153: Software edition is incompatible with SQL plan management.
+ORA-06512: at "SYS.DBMS_SPM_INTERNAL", line 6014
+ORA-06512: at "SYS.DBMS_SPM", line 2781
+ORA-06512: at line 34
+
+
+Action: Please investigate immediately.
+-----------------------
+SMTP Send Error: SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0209.INDPRD01.PROD.OUTLOOK.COM 2026-07-22T07:55:21.899Z 08DEE6D31FABF37A]')
+
+--- EMAIL ALERT ---
+Date: 2026-07-22 13:45:34.278196
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-22 13:45:34
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-22 13:45:34.383788
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-22 13:45:34
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-22 19:36:06.281251
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-22 19:36:06
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-22 19:36:06.401546
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-22 19:36:06
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-22 20:53:09.395625
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-22 20:53:09
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-22 20:53:09.467607
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-22 20:53:09
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-22 22:00:08.251862
+Subject: Critical Alert - Blocking Session Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : Blocking Session
+Severity     : Critical
+Date & Time  : 2026-07-22 22:00:08
+
+Blocking Sessions Detected: 1
+
+Session Details:
+  SID=2 Serial=58882 User=None Blocking SID=249 Status=ACTIVE
+
+Action: Investigate blocking sessions in v$session immediately.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-23 17:48:25.111174
+Subject: Critical Alert - ORA Error Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : ORA Error
+Severity     : Critical
+Date & Time  : 2026-07-23 17:48:25
+
+ORA Error Code   : ORA-0
+Complete Message :   Result = ORA-0
+
+
+Action: Please investigate immediately.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-24 19:48:32.088504
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-24 19:48:32
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-24 19:48:32.203147
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-07-24 19:48:32
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-07-27 18:07:31.374273
+Subject: Critical Alert - Blocking Session Detected
+Body:
+Server Name  : 10.10.10.11
+Database Name: kasorcl
+Host Name    : 10.10.10.11
+Alert Type   : Blocking Session
+Severity     : Critical
+Date & Time  : 2026-07-27 18:07:31
+
+Blocking Sessions Detected: 1
+
+Session Details:
+  SID=870 Serial=32659 User=SYS Blocking SID=2 Status=ACTIVE
+
+Action: Investigate blocking sessions in v$session immediately.
+-----------------------

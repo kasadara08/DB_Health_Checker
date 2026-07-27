@@ -1,0 +1,82 @@
+{
+    "10.10.10.11:kasorcl": {
+        "db_down": false,
+        "listener_down": false,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [
+            "ORA-12012",
+            "ORA-0"
+        ],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa182": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "ORCL_Arthi:ORCL_Arthi": {
+        "db_down": false,
+        "listener_down": false,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [
+            "ORA-06512",
+            "ORA-29400",
+            "ORA-06510",
+            "ORA-29913"
+        ],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "orcl:orcl": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:kasorcl": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:fa182": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.10.11:SA": {
+        "db_down": false,
+        "listener_down": false,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [
+            "ORA-12012"
+        ],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    }
+}

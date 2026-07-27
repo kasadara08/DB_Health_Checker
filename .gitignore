@@ -1,0 +1,10 @@
+# Python envs
+venv/
+__pycache__/
+*.pyc
+
+# Local logs and caches
+*.log
+scratch/
+.idea/
+.vscode/

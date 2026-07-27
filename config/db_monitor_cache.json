@@ -1,0 +1,224 @@
+{
+  "kasorcl": {
+    "db": "UP",
+    "listener": "UP",
+    "backup": "PENDING",
+    "balance_ts": [
+      {
+        "name": "SYSTEM",
+        "pct": 2.88,
+        "used_mb": 944.94,
+        "free_mb": 31823.05,
+        "total_mb": 32767.98,
+        "allocated_mb": 950.0,
+        "location": "/home/oracle/u01/app/oracle/oradata/KASORCL/datafile/o1_mf_system_o4wf2co6_.dbf"
+      },
+      {
+        "name": "SYSAUX",
+        "pct": 2.02,
+        "used_mb": 660.63,
+        "free_mb": 32107.36,
+        "total_mb": 32767.98,
+        "allocated_mb": 710.0,
+        "location": "/home/oracle/u01/app/oracle/oradata/KASORCL/datafile/o1_mf_sysaux_o4wf34qc_.dbf"
+      },
+      {
+        "name": "USERS",
+        "pct": 0.13,
+        "used_mb": 42.13,
+        "free_mb": 32725.86,
+        "total_mb": 32767.98,
+        "allocated_mb": 45.0,
+        "location": "/home/oracle/u01/app/oracle/oradata/KASORCL/datafile/o1_mf_users_o4wf3ntq_.dbf"
+      },
+      {
+        "name": "HRDATA",
+        "pct": 0.01,
+        "used_mb": 2.56,
+        "free_mb": 32765.42,
+        "total_mb": 32767.98,
+        "allocated_mb": 5120.0,
+        "location": "/home/oracle/u01/app/oracle/oradata/KASORCL/datafile/HRDATA_01.dbf"
+      },
+      {
+        "name": "SHDATA",
+        "pct": 0.01,
+        "used_mb": 1.75,
+        "free_mb": 32766.23,
+        "total_mb": 32767.98,
+        "allocated_mb": 5120.0,
+        "location": "/home/oracle/u01/app/oracle/oradata/KASORCL/datafile/SHDATA_01.dbf"
+      }
+    ],
+    "full_ts": [],
+    "drives": [
+      {
+        "drive": "/dev/mapper/ol-root",
+        "mount_point": "/",
+        "total": 69.966,
+        "used": 15.002,
+        "free": 54.964,
+        "pct": 22.0,
+        "fs_type": "xfs",
+        "uuid": "",
+        "stype": "Linux",
+        "state": "ACTIVE",
+        "source": "ssh"
+      },
+      {
+        "drive": "/dev/sda2",
+        "mount_point": "/boot",
+        "total": 0.99,
+        "used": 0.658,
+        "free": 0.332,
+        "pct": 67.0,
+        "fs_type": "xfs",
+        "uuid": "",
+        "stype": "Linux",
+        "state": "ACTIVE",
+        "source": "ssh"
+      },
+      {
+        "drive": "/dev/sda1",
+        "mount_point": "/boot/efi",
+        "total": 0.585,
+        "used": 0.006,
+        "free": 0.579,
+        "pct": 1.0,
+        "fs_type": "vfat",
+        "uuid": "",
+        "stype": "Linux",
+        "state": "ACTIVE",
+        "source": "ssh"
+      },
+      {
+        "drive": "/dev/mapper/ol-home",
+        "mount_point": "/home",
+        "total": 124.396,
+        "used": 36.121,
+        "free": 88.275,
+        "pct": 30.0,
+        "fs_type": "xfs",
+        "uuid": "",
+        "stype": "Linux",
+        "state": "ACTIVE",
+        "source": "ssh"
+      }
+    ],
+    "processes": [
+      {
+        "pid": "18592",
+        "name": "C:\\Users\\KTS\\AppData\\Local\\Programs\\antigravity\\Antigravity.exe --type=renderer --user-data-dir=C:\\Users\\KTS\\AppData\\Roaming\\Antigravity --standard-schemes=plugin --secure-schemes=plugin --cors-schemes=plugin --fetch-schemes=plugin --service-worker-schemes=plugin --code-cache-schemes=plugin --app-path=C:\\Users\\KTS\\AppData\\Local\\Programs\\antigravity\\resources\\app.asar --enable-sandbox --remote-debugging-port=0 --video-capture-use-gpu-memory-buffer --lang=en-US --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=4 --time-ticks-at-unix-epoch=-1784176076155769 --launch-time-ticks=954166255205 --field-trial-handle=1588,i,7726373642509388076,14502099043088464719,262144 --enable-features=EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker --disable-features=DropInputEventsWhilePaintHolding,LocalNetworkAccessChecks,NetworkServiceSandbox,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --pseudonymization-salt-handle=1612,i,8002687107007804116,5153071119878403456,4 --trace-process-track-uuid=3190708990060038890 --mojo-platform-channel-handle=3344 /prefetch:1",
+        "username": "DESKTOP-CNENURG\\KTS",
+        "cpu": 142.3,
+        "mem": 3.43
+      },
+      {
+        "pid": "42200",
+        "name": "C:\\Users\\KTS\\AppData\\Local\\Programs\\Python\\Python310\\python.exe C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\Scripts\\streamlit.exe run app.py --server.port=8501 --server.address=0.0.0.0",
+        "username": "DESKTOP-CNENURG\\KTS",
+        "cpu": 73.2,
+        "mem": 0.88
+      },
+      {
+        "pid": "4716",
+        "name": "MsMpEng.exe",
+        "username": "",
+        "cpu": 66.1,
+        "mem": 1.97
+      },
+      {
+        "pid": "17756",
+        "name": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -Command Get-ChildItem -Path C:\\Users\\KTS\\Desktop -Directory -Recurse -ErrorAction SilentlyContinue | Where-Object { .Name -like '*dashboard*' } | Select-Object Name, FullName",
+        "username": "DESKTOP-CNENURG\\KTS",
+        "cpu": 65.9,
+        "mem": 0.48
+      },
+      {
+        "pid": "14448",
+        "name": "svchost.exe",
+        "username": "",
+        "cpu": 58.6,
+        "mem": 0.19
+      },
+      {
+        "pid": "4",
+        "name": "System",
+        "username": "NT AUTHORITY\\SYSTEM",
+        "cpu": 54.3,
+        "mem": 0.03
+      },
+      {
+        "pid": "0",
+        "name": "System Idle Process",
+        "username": "NT AUTHORITY\\SYSTEM",
+        "cpu": 38.1,
+        "mem": 0.0
+      },
+      {
+        "pid": "44616",
+        "name": "C:\\Users\\KTS\\AppData\\Local\\Programs\\antigravity\\Antigravity.exe",
+        "username": "DESKTOP-CNENURG\\KTS",
+        "cpu": 18.0,
+        "mem": 0.53
+      },
+      {
+        "pid": "3064",
+        "name": "C:\\Users\\KTS\\AppData\\Local\\Programs\\antigravity\\Antigravity.exe --type=gpu-process --user-data-dir=C:\\Users\\KTS\\AppData\\Roaming\\Antigravity --gpu-preferences=SAAAAAAAAADgAAAEAAAAAAAAAAAAAGAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --field-trial-handle=1588,i,7726373642509388076,14502099043088464719,262144 --enable-features=EnableTransparentHwndEnlargement,PdfUseShowSaveFilePicker --disable-features=DropInputEventsWhilePaintHolding,LocalNetworkAccessChecks,NetworkServiceSandbox,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation --variations-seed-version --pseudonymization-salt-handle=1612,i,8002687107007804116,5153071119878403456,4 --trace-process-track-uuid=3190708988185955192 --mojo-platform-channel-handle=1620 /prefetch:2",
+        "username": "DESKTOP-CNENURG\\KTS",
+        "cpu": 17.1,
+        "mem": 0.95
+      },
+      {
+        "pid": "44524",
+        "name": "dwm.exe",
+        "username": "",
+        "cpu": 12.9,
+        "mem": 0.48
+      }
+    ],
+    "system_res": {
+      "num_cpus": 10,
+      "cpu_host_used_pct": 0.3,
+      "cpu_host_free_pct": 99.7,
+      "cpu_oracle_used_pct": 0.0,
+      "ram_total_gb": 9.59,
+      "ram_used_gb": 9.4,
+      "ram_free_gb": 0.19,
+      "ram_oracle_gb": 2.42,
+      "session_count": 112
+    },
+    "arc_pct": 10.47,
+    "arc_configured": true,
+    "arc_used_mb": 0.0,
+    "arc_limit_mb": 0.0,
+    "arc_free_mb": 0.0,
+    "has_blocking": false,
+    "blocking_details": [],
+    "ora_errors": [
+      "  Result = ORA-0\n",
+      "  Result = ORA-0\n",
+      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_386415.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_669\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n",
+      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_382225.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_666\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n",
+      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_377925.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_663\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n",
+      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_373722.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_643\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n",
+      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_369512.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_623\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n",
+      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_361339.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_615\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n",
+      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_357291.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_612\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n",
+      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_352854.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_609\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n"
+    ],
+    "deadlock_detected": false,
+    "session_maxed": false,
+    "alert_log_errors": [],
+    "tooltip_reasons": [
+      "ORA error:   Result = ORA-0\n"
+    ],
+    "last_refresh": "2026-07-27 18:18:12",
+    "arc_log_type": "FRA",
+    "arc_dest_name": "/home/oracle/u01/app/oracle/fast_recovery_area",
+    "arc_limit_gb": 8.06,
+    "arc_used_gb": 0.84,
+    "arc_free_gb": 7.220000000000001,
+    "mount_error": null
+  }
+}
