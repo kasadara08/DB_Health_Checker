@@ -8,7 +8,7 @@ from db_connection import (
     get_txt_path, save_txt_path, load_db_names, read_db_file_to_df,
     get_registry_history, save_pending_path, confirm_pending_path,
     discard_pending_path, get_pending_path, get_previous_registry,
-    clear_active_registry
+    clear_active_registry, get_reporting_db_config, check_reporting_db_status
 )
 
 @st.dialog("📂 Open Instance Control Console")
@@ -1085,6 +1085,30 @@ def render_home_page():
             else:
                 critical_count += 1
             cfg = get_config_for_db(db)
+
+            # ── Inject live reporting DB status (with 30s session cache) ──
+            rpt_cache_key = f"_rpt_status_{db}"
+            rpt_cache_ts_key = f"_rpt_status_ts_{db}"
+            rpt_ttl = 120  # seconds
+            now_ts = time.time()
+            if (
+                rpt_cache_key not in st.session_state
+                or now_ts - st.session_state.get(rpt_cache_ts_key, 0) > rpt_ttl
+            ):
+                try:
+                    rpt_result = check_reporting_db_status(db)
+                except Exception:
+                    rpt_result = {"configured": False, "status": "NOT_CONFIGURED", "reporting_db_name": "", "error": ""}
+                st.session_state[rpt_cache_key] = rpt_result
+                st.session_state[rpt_cache_ts_key] = now_ts
+            else:
+                rpt_result = st.session_state[rpt_cache_key]
+
+            stats["reporting_status"]    = rpt_result.get("status", "NOT_CONFIGURED")
+            stats["reporting_db_name"]   = rpt_result.get("reporting_db_name", "")
+            stats["reporting_configured"] = rpt_result.get("configured", False)
+            stats["reporting_error"]     = rpt_result.get("error", "")
+
             db_list_data.append({
                 "name": db,
                 "status_info": stats,
@@ -1542,49 +1566,72 @@ def render_home_page():
                 error_html += '<div class="db-error-msg" style="color:#ef4444; font-weight:800; margin-top:4px;">❌ host username and password is wrong</div>'
 
             # ── Reporting DB section ─────────────────────────────────────────
-            rpt_status  = stats.get("reporting_status", "NOT_CONFIGURED")
-            rpt_db_name = stats.get("reporting_db_name", "")
+            rpt_status     = stats.get("reporting_status", "NOT_CONFIGURED")
+            rpt_db_name    = stats.get("reporting_db_name", "")
             rpt_configured = stats.get("reporting_configured", False)
+            rpt_error      = stats.get("reporting_error", "")
 
+            # Always build the section — show status, error, or "Not Configured"
             if rpt_configured and rpt_db_name:
                 if rpt_status == "UP":
-                    rpt_dot   = "dot-green"
-                    rpt_val   = "val-green"
-                    rpt_arrow = "⇧"
-                    rpt_bar_color = "#10b981"
-                    rpt_badge_bg  = "rgba(16,185,129,0.10)"
+                    rpt_dot          = "dot-green"
+                    rpt_val          = "val-green"
+                    rpt_arrow        = "⇧"
+                    rpt_badge_bg     = "rgba(16,185,129,0.10)"
                     rpt_badge_border = "rgba(16,185,129,0.35)"
+                    rpt_status_label = "UP"
+                    rpt_status_color = "#10b981"
+                    rpt_error_html   = ""
                 else:
-                    rpt_dot   = "dot-red"
-                    rpt_val   = "val-red"
-                    rpt_arrow = "⇩"
-                    rpt_bar_color = "#ef4444"
-                    rpt_badge_bg  = "rgba(239,68,68,0.08)"
+                    rpt_dot          = "dot-red"
+                    rpt_val          = "val-red"
+                    rpt_arrow        = "⇩"
+                    rpt_badge_bg     = "rgba(239,68,68,0.08)"
                     rpt_badge_border = "rgba(239,68,68,0.30)"
+                    rpt_status_label = "DOWN"
+                    rpt_status_color = "#ef4444"
+                    # Trim error message for card display
+                    err_short = (rpt_error[:60] + "…") if len(rpt_error) > 60 else rpt_error
+                    rpt_error_html = (
+                        f'<div style="margin-top:4px; font-size:0.57rem; color:#ef4444; '
+                        f'word-break:break-word; line-height:1.3;" title="{rpt_error}">'
+                        f'⚠ {err_short}</div>'
+                    ) if err_short else (
+                        '<div style="margin-top:4px; font-size:0.57rem; color:#ef4444;">⚠ Connection failed</div>'
+                    )
 
                 reporting_section_html = (
                     f'<div style="margin-top:8px; border-top: 1.5px solid var(--border-color); padding-top:7px;">'
                     f'<div style="font-size:0.6rem; font-weight:700; color:var(--text-secondary); '
-                    f'text-transform:uppercase; letter-spacing:0.06em; margin-bottom:5px;">'
-                    f'📊 Reporting DB</div>'
-                    f'<div style="display:flex; align-items:center; justify-content:space-between; '
-                    f'background:{rpt_badge_bg}; border:1px solid {rpt_badge_border}; '
+                    f'text-transform:uppercase; letter-spacing:0.06em; margin-bottom:5px;">📊 Reporting DB</div>'
+                    f'<div style="background:{rpt_badge_bg}; border:1px solid {rpt_badge_border}; '
                     f'border-radius:6px; padding:5px 8px;">'
+                    f'<div style="display:flex; align-items:center; justify-content:space-between;">'
                     f'<div style="display:flex; flex-direction:column; min-width:0; flex:1;">'
                     f'<span style="font-size:0.68rem; font-weight:700; color:var(--text-primary); '
                     f'white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" '
                     f'title="{rpt_db_name}">{rpt_db_name}</span>'
                     f'<span style="font-size:0.58rem; color:var(--text-secondary); margin-top:1px;">Reporting Instance</span>'
                     f'</div>'
-                    f'<div style="display:flex; align-items:center; gap:5px; flex-shrink:0; margin-left:6px;">'
+                    f'<div style="display:flex; align-items:center; gap:4px; flex-shrink:0; margin-left:6px;">'
                     f'<span class="{rpt_dot}"></span>'
+                    f'<span style="font-size:0.65rem; font-weight:700; color:{rpt_status_color};">{rpt_status_label}</span>'
                     f'<span class="{rpt_val}" style="font-size:1.05rem; line-height:1;">{rpt_arrow}</span>'
-                    f'</div>'
-                    f'</div>'
-                    f'</div>'
+                    f'</div></div>'
+                    f'{rpt_error_html}'
+                    f'</div></div>'
                 )
             else:
-                reporting_section_html = ""
+                # Not configured — show a subtle "not configured" row
+                reporting_section_html = (
+                    '<div style="margin-top:8px; border-top: 1.5px solid var(--border-color); padding-top:7px;">'
+                    '<div style="font-size:0.6rem; font-weight:700; color:var(--text-secondary); '
+                    'text-transform:uppercase; letter-spacing:0.06em; margin-bottom:4px;">📊 Reporting DB</div>'
+                    '<div style="font-size:0.62rem; color:var(--text-secondary); font-style:italic; '
+                    'padding:3px 6px; background:rgba(128,128,128,0.06); border-radius:5px;">'
+                    '— Not Configured</div></div>'
+                )
+
 
             card_html = (
                 f'<a href="?selected_db={db}" target="_self" style="text-decoration:none; color:inherit; display:block;">'
