@@ -530,29 +530,105 @@ def get_reporting_db_config(db_name: str) -> dict:
 def check_reporting_db_status(db_name: str) -> dict:
     """
     Attempt a lightweight connection to the reporting DB configured for `db_name`.
-    Returns a dict:
-        { "configured": bool, "status": "UP"/"DOWN"/"NOT_CONFIGURED", "reporting_db_name": str, "error": str }
+    Tries three methods in order:
+      1. SYSDBA mode (correct for sys users)
+      2. DEFAULT_AUTH mode (fallback if remote SYSDBA is disabled on target DB)
+      3. TCP listener ping (checks if listener port is reachable at all)
+    Returns:
+        { "configured": bool, "status": "UP"/"DOWN"/"NOT_CONFIGURED",
+          "reporting_db_name": str, "error": str }
     """
     cfg = get_reporting_db_config(db_name)
     if cfg is None:
         return {"configured": False, "status": "NOT_CONFIGURED", "reporting_db_name": "", "error": ""}
 
+    rpt_name = cfg["db_name"]
+    user     = cfg["user"]
+    password = cfg["password"]
+    dsn      = cfg["dsn"]
+    host     = cfg["host"]
+    port     = cfg["port"]
+    svc      = cfg["service_name"]
+
+    def _parse_ora_error(e):
+        """Return a human-readable error string from an oracledb.DatabaseError."""
+        try:
+            error_obj = e.args[0]
+            if hasattr(error_obj, "code"):
+                code   = error_obj.code
+                detail = getattr(error_obj, "message", str(e)).strip()
+                ora    = f"ORA-{code:05d}"
+                if code == 1017:
+                    return f"[{ora}] Invalid username or password", code
+                elif code == 12541:
+                    return f"[{ora}] Listener not running at {host}:{port}", code
+                elif code in (12170, 12535):
+                    return f"[{ora}] Connection timed out to {host}:{port}", code
+                elif code == 12154:
+                    return f"[{ora}] Service '{svc}' not found in TNS", code
+                elif code == 12505:
+                    return f"[{ora}] Listener at {host} doesn't know service '{svc}'", code
+                elif code == 1034:
+                    return f"[{ora}] Database instance is DOWN or not started", code
+                elif code == 28000:
+                    return f"[{ora}] Account '{user}' is locked", code
+                elif code == 28001:
+                    return f"[{ora}] Password for '{user}' has expired", code
+                elif code == 28009:
+                    return f"[{ora}] SYS must connect as SYSDBA — remote SYSDBA may be disabled on target", code
+                return f"[{ora}] {detail}", code
+        except Exception:
+            pass
+        return str(e), 0
+
+    # Codes that mean the DB listener IS reachable but it's an auth/config issue
+    # — no point retrying with a different mode for these
+    AUTH_CODES = {1017, 28000, 28001, 1034, 12505, 12154}
+
+    last_error = ""
+
+    # ── Attempt 1: Correct mode for username (SYSDBA for sys, DEFAULT otherwise)
     try:
-        mode = get_oracle_mode(cfg["user"])
+        mode = get_oracle_mode(user)
         conn = oracledb.connect(
-            user=cfg["user"],
-            password=cfg["password"],
-            dsn=cfg["dsn"],
-            mode=mode,
-            tcp_connect_timeout=5
+            user=user, password=password, dsn=dsn,
+            mode=mode, tcp_connect_timeout=5
         )
         conn.close()
-        return {"configured": True, "status": "UP", "reporting_db_name": cfg["db_name"], "error": ""}
+        return {"configured": True, "status": "UP", "reporting_db_name": rpt_name, "error": ""}
     except oracledb.DatabaseError as e:
-        err_msg = str(e.args[0].message if hasattr(e.args[0], "message") else e)
-        return {"configured": True, "status": "DOWN", "reporting_db_name": cfg["db_name"], "error": err_msg}
+        last_error, code = _parse_ora_error(e)
+        if code in AUTH_CODES:
+            return {"configured": True, "status": "DOWN", "reporting_db_name": rpt_name, "error": last_error}
     except Exception as e:
-        return {"configured": True, "status": "DOWN", "reporting_db_name": cfg["db_name"], "error": str(e)}
+        last_error = str(e)
+
+    # ── Attempt 2: DEFAULT_AUTH mode (fallback if remote SYSDBA is disabled) ──
+    try:
+        conn = oracledb.connect(
+            user=user, password=password, dsn=dsn,
+            mode=oracledb.DEFAULT_AUTH, tcp_connect_timeout=5
+        )
+        conn.close()
+        return {"configured": True, "status": "UP", "reporting_db_name": rpt_name, "error": ""}
+    except oracledb.DatabaseError as e:
+        last_error, code = _parse_ora_error(e)
+        if code in AUTH_CODES:
+            return {"configured": True, "status": "DOWN", "reporting_db_name": rpt_name, "error": last_error}
+    except Exception as e:
+        last_error = str(e)
+
+    # ── Attempt 3: TCP listener ping only (check if port is reachable at all) ─
+    try:
+        import socket as _sock
+        s = _sock.create_connection((host, int(port)), timeout=3)
+        s.close()
+        # Listener port is open but Oracle login blocked — still DOWN
+        last_error = f"Listener UP at {host}:{port} but Oracle login failed. {last_error}"
+    except Exception:
+        last_error = f"Cannot reach {host}:{port} — {last_error}"
+
+    return {"configured": True, "status": "DOWN", "reporting_db_name": rpt_name, "error": last_error}
 
 
 def get_api_connection(db_name: str):
