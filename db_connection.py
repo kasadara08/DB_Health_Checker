@@ -641,9 +641,13 @@ def get_db_connection():
         print(f"Failed to establish direct connection: {e}")
         return None
 
-def execute_query(query, params=None):
+def execute_query(query, params=None, conn=None):
     """Safely execute a query, returning records and description."""
-    conn = get_db_connection()
+    should_close = False
+    if conn is None:
+        conn = get_db_connection()
+        should_close = True
+        
     if conn is None:
         return None, "Database Connection Failed"
     
@@ -657,18 +661,20 @@ def execute_query(query, params=None):
         records = cursor.fetchall()
         cols = [col[0] for col in cursor.description]
         cursor.close()
-        conn.close()
+        if should_close:
+            conn.close()
         return records, cols
     except Exception as e:
-        try:
-            conn.close()
-        except Exception:
-            pass
+        if should_close:
+            try:
+                conn.close()
+            except Exception:
+                pass
         return None, str(e)
 
-def execute_query_to_df(query, params=None):
+def execute_query_to_df(query, params=None, conn=None):
     """Safely execute a query and return it as a pandas DataFrame with normalized columns."""
-    records, cols = execute_query(query, params)
+    records, cols = execute_query(query, params, conn=conn)
     if records is None:
         # Return empty DataFrame
         return pd.DataFrame()

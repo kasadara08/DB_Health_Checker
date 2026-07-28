@@ -192,10 +192,10 @@ SELECT name, value FROM v$parameter WHERE name = 'sessions'
 """
 
 
-def get_arc_log_info():
+def get_arc_log_info(conn=None):
     """Fetch archive log info dynamically using v$archive_dest and either v$recovery_file_dest or v$archived_log."""
     try:
-        df_dest = execute_query_to_df("SELECT destination FROM v$archive_dest WHERE dest_id = 1")
+        df_dest = execute_query_to_df("SELECT destination FROM v$archive_dest WHERE dest_id = 1", conn=conn)
         dest = df_dest.iloc[0]["DESTINATION"] if not df_dest.empty and pd.notna(df_dest.iloc[0]["DESTINATION"]) else ""
         
         arc_info = {
@@ -210,7 +210,7 @@ def get_arc_log_info():
         }
         
         if dest == "USE_DB_RECOVERY_FILE_DEST":
-            df_fra = execute_query_to_df("SELECT name, ROUND(space_limit/1024/1024/1024,2) AS allocated_gb, ROUND(space_used/1024/1024/1024,2) AS used_gb, ROUND((space_used/space_limit)*100,2) AS pct_used FROM v$recovery_file_dest")
+            df_fra = execute_query_to_df("SELECT name, ROUND(space_limit/1024/1024/1024,2) AS allocated_gb, ROUND(space_used/1024/1024/1024,2) AS used_gb, ROUND((space_used/space_limit)*100,2) AS pct_used FROM v$recovery_file_dest", conn=conn)
             if not df_fra.empty:
                 row = df_fra.iloc[0]
                 arc_info.update({
@@ -223,7 +223,7 @@ def get_arc_log_info():
                 })
                 arc_info["arc_free_gb"] = max(0.0, arc_info["arc_limit_gb"] - arc_info["arc_used_gb"])
         elif dest:
-            df_arch = execute_query_to_df("SELECT COUNT(*) AS archive_logs, ROUND(SUM(blocks*block_size)/1024/1024/1024,2) AS size_gb FROM v$archived_log")
+            df_arch = execute_query_to_df("SELECT COUNT(*) AS archive_logs, ROUND(SUM(blocks*block_size)/1024/1024/1024,2) AS size_gb FROM v$archived_log", conn=conn)
             if not df_arch.empty:
                 row = df_arch.iloc[0]
                 arc_info.update({
@@ -240,26 +240,26 @@ def get_arc_log_info():
 
 
 
-def get_max_sessions():
+def get_max_sessions(conn=None):
     """Fetch the max sessions parameter from v$parameter."""
     try:
-        df = execute_query_to_df(QUERY_MAX_SESSIONS)
+        df = execute_query_to_df(QUERY_MAX_SESSIONS, conn=conn)
         if not df.empty:
             return int(float(df.iloc[0]["VALUE"]))
     except Exception:
         pass
     return 0
 
-def get_db_status():
+def get_db_status(conn=None):
     """Fetch database status and details."""
-    df = execute_query_to_df(QUERY_DB_STATUS)
+    df = execute_query_to_df(QUERY_DB_STATUS, conn=conn)
     if df.empty:
         return {"STATUS": "DOWN", "INSTANCE_NAME": "UNKNOWN", "HOST_NAME": "UNKNOWN", "VERSION": "UNKNOWN", "STARTUP_TIME": "UNKNOWN"}
     return df.iloc[0].to_dict()
 
-def get_session_stats():
+def get_session_stats(conn=None):
     """Fetch current session stats."""
-    df = execute_query_to_df(QUERY_SESSION_STATS)
+    df = execute_query_to_df(QUERY_SESSION_STATS, conn=conn)
     stats = {"ACTIVE": 0, "INACTIVE": 0, "TOTAL": 0}
     if df.empty:
         return stats
@@ -271,27 +271,27 @@ def get_session_stats():
         stats["TOTAL"] += count
     return stats
 
-def get_tablespace_utilization():
+def get_tablespace_utilization(conn=None):
     """Fetch tablespace utilization metrics."""
-    df = execute_query_to_df(QUERY_TABLESPACES)
+    df = execute_query_to_df(QUERY_TABLESPACES, conn=conn)
     if df.empty:
-        df = execute_query_to_df(QUERY_TABLESPACES_FALLBACK)
+        df = execute_query_to_df(QUERY_TABLESPACES_FALLBACK, conn=conn)
     return df
 
-def get_backup_status():
+def get_backup_status(conn=None):
     """Fetch latest backup status."""
-    df = execute_query_to_df(QUERY_BACKUP_STATUS)
+    df = execute_query_to_df(QUERY_BACKUP_STATUS, conn=conn)
     if df.empty:
         return "NO BACKUP"
     return df.iloc[0]["STATUS"]
 
-def get_rman_durations():
+def get_rman_durations(conn=None):
     """Fetch all RMAN backup durations (complete history)."""
-    return execute_query_to_df(QUERY_RMAN_DURATIONS)
+    return execute_query_to_df(QUERY_RMAN_DURATIONS, conn=conn)
 
-def get_session_license():
+def get_session_license(conn=None):
     """Fetch current sessions count and highwater mark."""
-    df = execute_query_to_df(QUERY_SESSION_LICENSE)
+    df = execute_query_to_df(QUERY_SESSION_LICENSE, conn=conn)
     if df.empty:
         return {"sessions_current": 0, "sessions_highwater": 0}
     row = df.iloc[0]
@@ -300,9 +300,9 @@ def get_session_license():
         "sessions_highwater": int(row.get("SESSIONS_HIGHWATER", 0))
     }
 
-def get_db_growth_rates():
+def get_db_growth_rates(conn=None):
     """Fetch historical DB growth data and calculate actual daily, weekly, monthly, and yearly usage changes."""
-    df = execute_query_to_df(QUERY_DB_GROWTH)
+    df = execute_query_to_df(QUERY_DB_GROWTH, conn=conn)
     if df.empty or len(df) < 2:
         return {"daily": 2.9, "weekly": 20.3, "monthly": 90.7, "yearly": 1088.3}
 
@@ -341,41 +341,41 @@ def get_db_growth_rates():
     }
 
 
-def get_cpu_consuming_sessions():
+def get_cpu_consuming_sessions(conn=None):
     """Fetch top CPU consuming sessions."""
-    return execute_query_to_df(QUERY_CPU_SESSIONS)
+    return execute_query_to_df(QUERY_CPU_SESSIONS, conn=conn)
 
-def get_blocking_sessions():
+def get_blocking_sessions(conn=None):
     """Fetch current blocking sessions."""
-    return execute_query_to_df(QUERY_BLOCKING_SESSIONS)
+    return execute_query_to_df(QUERY_BLOCKING_SESSIONS, conn=conn)
 
-def get_lock_waits():
+def get_lock_waits(conn=None):
     """Fetch lock wait details."""
-    return execute_query_to_df(QUERY_LOCK_WAITS)
+    return execute_query_to_df(QUERY_LOCK_WAITS, conn=conn)
 
-def get_alert_log():
+def get_alert_log(conn=None):
     """Fetch alert log errors for the last 48 hours. Handled gracefully if view is unavailable."""
     try:
-        df = execute_query_to_df(QUERY_ALERT_LOG)
+        df = execute_query_to_df(QUERY_ALERT_LOG, conn=conn)
         return df
     except Exception as e:
         print(f"Alert log query failed (likely permission/view missing): {e}")
         import pandas as pd
         return pd.DataFrame()
 
-def get_sga_pga_usage():
+def get_sga_pga_usage(conn=None):
     """Fetch SGA and PGA allocation, consumption, and free space details."""
     sga_allocated = sga_free = sga_consumed = sga_used_pct = 0.0
     pga_allocated = pga_consumed = pga_free = pga_used_pct = pga_target = 0.0
 
-    df_sga = execute_query_to_df("SELECT SUM(value) as total_bytes FROM v$sga")
+    df_sga = execute_query_to_df("SELECT SUM(value) as total_bytes FROM v$sga", conn=conn)
     if not df_sga.empty:
         try:
             sga_allocated = float(df_sga.iloc[0]["TOTAL_BYTES"])
         except Exception:
             pass
 
-    df_sga_free = execute_query_to_df("SELECT SUM(bytes) as free_bytes FROM v$sgastat WHERE name = 'free memory'")
+    df_sga_free = execute_query_to_df("SELECT SUM(bytes) as free_bytes FROM v$sgastat WHERE name = 'free memory'", conn=conn)
     if not df_sga_free.empty:
         try:
             sga_free = float(df_sga_free.iloc[0]["FREE_BYTES"])
@@ -390,7 +390,7 @@ def get_sga_pga_usage():
         SELECT name, value 
         FROM v$pgastat 
         WHERE name IN ('aggregate PGA target parameter', 'total PGA allocated', 'total PGA inuse')
-    """)
+    """, conn=conn)
     if not df_pga.empty:
         pga_map = {row["NAME"]: float(row["VALUE"]) for _, row in df_pga.iterrows()}
         pga_allocated = pga_map.get("total PGA allocated", 0.0)
@@ -417,7 +417,7 @@ def get_sga_pga_usage():
     }
 
 
-def get_listener_status():
+def get_listener_status(conn=None):
     """Check listener status by querying V$LISTENER_NETWORK from the connected remote DB session.
 
     V$LISTENER_NETWORK actual columns (Oracle 19c): NETWORK, TYPE, VALUE, CON_ID
@@ -431,7 +431,7 @@ def get_listener_status():
     try:
         # Primary: V$LISTENER_NETWORK — actual columns are TYPE, VALUE (NOT status)
         df = execute_query_to_df(
-            "SELECT type, value FROM v$listener_network WHERE ROWNUM = 1"
+            "SELECT type, value FROM v$listener_network WHERE ROWNUM = 1", conn=conn
         )
         if not df.empty:
             # If rows exist, listener is registered with this instance = UP
@@ -442,7 +442,7 @@ def get_listener_status():
     # Fallback: if V$LISTENER_NETWORK not accessible —
     # if DB session is open at all, listener MUST be running
     try:
-        df = execute_query_to_df("SELECT status FROM v$instance WHERE ROWNUM = 1")
+        df = execute_query_to_df("SELECT status FROM v$instance WHERE ROWNUM = 1", conn=conn)
         if not df.empty:
             return "UP"
     except Exception:
@@ -497,7 +497,7 @@ SELECT
 FROM dual
 """
 
-def get_system_resources():
+def get_system_resources(conn=None):
     """Fetch OS/Host system resources: CPU (Used/Free), RAM (Used/Free/Oracle), and Total Sessions."""
     res = {
         "num_cpus": 1,
@@ -512,7 +512,7 @@ def get_system_resources():
     }
     try:
         # 1. OS Stats
-        df_os = execute_query_to_df(QUERY_OS_STATS)
+        df_os = execute_query_to_df(QUERY_OS_STATS, conn=conn)
         os_stats = {}
         if not df_os.empty:
             for _, r in df_os.iterrows():
@@ -536,7 +536,7 @@ def get_system_resources():
             res["cpu_host_free_pct"] = round(100.0 - res["cpu_host_used_pct"], 2)
 
         # 2. Sysmetric stats
-        df_sys = execute_query_to_df(QUERY_SYSMETRIC)
+        df_sys = execute_query_to_df(QUERY_SYSMETRIC, conn=conn)
         sys_stats = {}
         if not df_sys.empty:
             for _, r in df_sys.iterrows():
@@ -554,7 +554,7 @@ def get_system_resources():
         res["session_count"] = int(sys_stats.get("Session Count", 0))
 
         # 3. Oracle Memory
-        df_mem = execute_query_to_df(QUERY_ORACLE_MEM)
+        df_mem = execute_query_to_df(QUERY_ORACLE_MEM, conn=conn)
         if not df_mem.empty:
             sga = float(df_mem.iloc[0].get("SGA_BYTES", 0) or 0)
             pga = float(df_mem.iloc[0].get("PGA_BYTES", 0) or 0)
@@ -566,7 +566,7 @@ def get_system_resources():
     return res
 
 
-def get_oracle_pid_sid_map(conn) -> dict:
+def get_oracle_pid_sid_map(conn=None) -> dict:
     """
     Query v$process + v$session to map OS PID (str) → Oracle SID (int).
 

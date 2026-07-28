@@ -153,28 +153,23 @@ def load_db_status_summary(db_name):
 
             return status_data
 
-        # DB connected → listener is UP by definition
         status_data["db"] = "UP"
         status_data["listener"] = "UP"
-
         from queries.queries import get_db_status, get_listener_status, get_rman_durations
         from dashboard.monitoring import get_drive_details
 
-        old_selected = st.session_state.get("selected_db")
-        st.session_state.selected_db = db_name
-
-        # Query actual DB status from remote server
-        db_info = get_db_status()
+        # Query actual DB status from remote server using active connection
+        db_info = get_db_status(conn=conn)
         db_status_val = db_info.get("STATUS", "UNKNOWN") if db_info else "UNKNOWN"
         status_data["db"] = "UP" if db_status_val == "OPEN" else "DOWN"
 
         if status_data["db"] == "UP":
             # Listener check via remote V$LISTENER_NETWORK query
-            lsnr_info = get_listener_status()
+            lsnr_info = get_listener_status(conn=conn)
             status_data["listener"] = "UP" if lsnr_info == "UP" else "DOWN"
 
             # Backup check via remote V$RMAN_BACKUP_JOB_DETAILS
-            df_rman = get_rman_durations()
+            df_rman = get_rman_durations(conn=conn)
             if df_rman.empty:
                 status_data["backup"] = "PENDING"
             else:
@@ -225,7 +220,7 @@ def load_db_status_summary(db_name):
             # Tablespace check - permanent tablespaces only (excl TEMP/UNDO)
             from queries.queries import get_tablespace_utilization, get_arc_log_info, get_blocking_sessions
             try:
-                df_ts = get_tablespace_utilization()
+                df_ts = get_tablespace_utilization(conn=conn)
                 balance_ts = []  # permanent tablespaces sorted by least free space
                 if not df_ts.empty:
                     for _, ts in df_ts.iterrows():
@@ -259,13 +254,13 @@ def load_db_status_summary(db_name):
             # System Resources check for Host OS
             from queries.queries import get_system_resources
             try:
-                status_data["system_res"] = get_system_resources()
+                status_data["system_res"] = get_system_resources(conn=conn)
             except Exception:
                 status_data["system_res"] = None
                 
             # Arc log (FRA) check
             try:
-                arc_info = get_arc_log_info()
+                arc_info = get_arc_log_info(conn=conn)
                 status_data["arc_pct"] = arc_info.get("used_pct", 0)
                 status_data["arc_configured"] = arc_info.get("configured", False)
             except Exception:
@@ -274,7 +269,7 @@ def load_db_status_summary(db_name):
                 
             # Blocking / deadlock check
             try:
-                df_blk = get_blocking_sessions()
+                df_blk = get_blocking_sessions(conn=conn)
                 status_data["has_blocking"] = not df_blk.empty
             except Exception:
                 status_data["has_blocking"] = False
@@ -282,8 +277,8 @@ def load_db_status_summary(db_name):
             # Concurrent session max limit check
             from queries.queries import get_session_stats, get_max_sessions
             try:
-                sess_stats = get_session_stats()
-                max_sess = get_max_sessions()
+                sess_stats = get_session_stats(conn=conn)
+                max_sess = get_max_sessions(conn=conn)
                 act_num = int(sess_stats.get("ACTIVE", 0)) if str(sess_stats.get("ACTIVE", 0)).isdigit() else 0
                 sess_threshold_high = max(50, int(max_sess * 0.85)) if max_sess > 0 else 50
                 if act_num > sess_threshold_high:
@@ -298,8 +293,6 @@ def load_db_status_summary(db_name):
             status_data["listener"] = "UP"  # We connected, so listener is UP
             status_data["backup"] = "UNKNOWN"
             status_data["error"] = f"Database is {db_status_val} (not OPEN)"
-
-        st.session_state.selected_db = old_selected
 
         # Resolve host address for alert triggering
         cfg_check = get_config_for_db(db_name)

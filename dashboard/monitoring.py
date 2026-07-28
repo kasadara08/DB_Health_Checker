@@ -365,7 +365,7 @@ def clear_archive_logs_via_ssh(db_name):
         # Try 1: OS Authentication (Standard oracle user)
         echo "=== Attempting RMAN OS Auth ==="
         rman target / <<EOF
-DELETE NOPROMPT ARCHIVELOG ALL COMPLETED BEFORE 'SYSDATE-10';
+DELETE NOPROMPT ARCHIVELOG ALL COMPLETED BEFORE 'SYSDATE-15';
 EOF
         if [ $? -eq 0 ]; then
             SUCCESS=1
@@ -377,7 +377,7 @@ EOF
             # Escape single quotes in password if any
             PWD_ESC=$(echo "{db_pwd}" | sed "s/'/'\\\\''/g")
             rman target '{db_user}'/'"$PWD_ESC"' as sysdba <<EOF
-DELETE NOPROMPT ARCHIVELOG ALL COMPLETED BEFORE 'SYSDATE-10';
+DELETE NOPROMPT ARCHIVELOG ALL COMPLETED BEFORE 'SYSDATE-15';
 EOF
             if [ $? -eq 0 ]; then
                 SUCCESS=1
@@ -389,7 +389,7 @@ EOF
             echo "=== Attempting RMAN Standard Auth ==="
             PWD_ESC=$(echo "{db_pwd}" | sed "s/'/'\\\\''/g")
             rman target '{db_user}'/'"$PWD_ESC"' <<EOF
-DELETE NOPROMPT ARCHIVELOG ALL COMPLETED BEFORE 'SYSDATE-10';
+DELETE NOPROMPT ARCHIVELOG ALL COMPLETED BEFORE 'SYSDATE-15';
 EOF
             if [ $? -eq 0 ]; then
                 SUCCESS=1
@@ -436,7 +436,7 @@ EOF
             if deleted_count > 0:
                 return True, f"Cleared {deleted_count} archive logs successfully via RMAN on database {db_name}."
             else:
-                return True, f"RMAN checked successfully, but no archive logs older than 10 days needed deletion on database {db_name}."
+                return True, f"RMAN checked successfully, but no archive logs older than 15 days needed deletion on database {db_name}."
                 
     except Exception as e:
         return False, str(e)
