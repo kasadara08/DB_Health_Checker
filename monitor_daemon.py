@@ -11,11 +11,8 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 if current_dir not in sys.path:
     sys.path.append(current_dir)
 
-from db_connection import load_db_names_api, get_config_for_db, get_oracle_mode
-from queries.queries import (
-    QUERY_TABLESPACES, QUERY_ARC_LOG, QUERY_MAX_SESSIONS, QUERY_BACKUP_STATUS,
-    QUERY_OS_STATS, QUERY_SYSMETRIC, QUERY_ORACLE_MEM, QUERY_ALERT_LOG
-)
+from db_connection import execute_proc_to_df, load_db_names_api, get_config_for_db, get_oracle_mode
+
 from utils.storage_provider import get_storage_provider
 from utils.alerts import check_and_trigger_alerts
 
@@ -121,7 +118,7 @@ def collect_db_metrics(db_name: str) -> dict:
 
         # 4. Tablespaces
         try:
-            df_ts = run_query_df(conn, QUERY_TABLESPACES)
+            df_ts = execute_proc_to_df('dashboard_pkg.get_tablespaces', conn=conn)
             balance_ts = []
             if not df_ts.empty:
                 for _, ts in df_ts.iterrows():
@@ -152,7 +149,7 @@ def collect_db_metrics(db_name: str) -> dict:
 
         # 5. Archive log space (FRA)
         try:
-            df_arc = run_query_df(conn, QUERY_ARC_LOG)
+            df_arc = execute_proc_to_df('dashboard_pkg.get_arc_log', conn=conn)
             if not df_arc.empty:
                 row = df_arc.iloc[0]
                 limit_mb = float(row.get("LIMIT_MB", 0))
@@ -171,7 +168,7 @@ def collect_db_metrics(db_name: str) -> dict:
 
         # 7. Alert Log Checks
         try:
-            df_alerts = run_query_df(conn, QUERY_ALERT_LOG)
+            df_alerts = execute_proc_to_df('dashboard_pkg.get_alert_log', conn=conn)
             if not df_alerts.empty:
                 stats["alert_log_errors"] = df_alerts["MESSAGE"].tolist()[:10]
         except Exception:
@@ -180,21 +177,21 @@ def collect_db_metrics(db_name: str) -> dict:
         # 8. Host OS System Resources
         try:
             # Query v$osstat
-            df_os = run_query_df(conn, QUERY_OS_STATS)
+            df_os = execute_proc_to_df('dashboard_pkg.get_os_stats', conn=conn)
             os_stats = {}
             if not df_os.empty:
                 for _, r in df_os.iterrows():
                     os_stats[r["STAT_NAME"]] = float(r["VALUE"])
             
             # Query v$sysmetric
-            df_sys = run_query_df(conn, QUERY_SYSMETRIC)
+            df_sys = execute_proc_to_df('dashboard_pkg.get_sysmetric', conn=conn)
             sys_stats = {}
             if not df_sys.empty:
                 for _, r in df_sys.iterrows():
                     sys_stats[r["METRIC_NAME"]] = float(r["VALUE"])
 
             # Query Oracle Memory
-            df_mem = run_query_df(conn, QUERY_ORACLE_MEM)
+            df_mem = execute_proc_to_df('dashboard_pkg.get_oracle_mem', conn=conn)
             sga_val, pga_val = 0.0, 0.0
             if not df_mem.empty:
                 sga_val = float(df_mem.iloc[0].get("SGA_BYTES", 0))
@@ -232,7 +229,7 @@ def collect_db_metrics(db_name: str) -> dict:
 
         # 9. Session Maxed Check
         try:
-            df_max = run_query_df(conn, QUERY_MAX_SESSIONS)
+            df_max = execute_proc_to_df('dashboard_pkg.get_max_sessions', conn=conn)
             if not df_max.empty and stats["system_res"]:
                 max_sess = int(df_max.iloc[0].get("VALUE", 150))
                 act_sess = stats["system_res"]["session_count"]

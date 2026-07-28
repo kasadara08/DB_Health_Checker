@@ -16,11 +16,8 @@ _BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 if _BASE_DIR not in sys.path:
     sys.path.insert(0, _BASE_DIR)
 
-from db_connection import load_db_names_api, get_config_for_db
-from queries.queries import (
-    QUERY_TABLESPACES, QUERY_ARC_LOG, QUERY_MAX_SESSIONS,
-    QUERY_OS_STATS, QUERY_SYSMETRIC, QUERY_ORACLE_MEM, QUERY_ALERT_LOG
-)
+from db_connection import execute_proc_to_df, load_db_names_api, get_config_for_db
+
 from utils.storage_provider import get_storage_provider
 from utils.alerts import check_and_trigger_alerts
 
@@ -87,7 +84,7 @@ def collect_db_metrics(db_name: str) -> dict:
 
     conn = None
     try:
-        from db_connection import get_oracle_mode
+        from db_connection import execute_proc_to_df, get_oracle_mode
         mode = get_oracle_mode(cfg["user"])
         conn = oracledb.connect(
             user=cfg["user"], password=cfg["password"], dsn=cfg["dsn"],
@@ -134,7 +131,7 @@ def collect_db_metrics(db_name: str) -> dict:
 
         # 3. Tablespaces
         try:
-            rows = _run_query(conn, QUERY_TABLESPACES)
+            rows = execute_proc_to_df('dashboard_pkg.get_tablespaces', conn=conn).to_dict('records')
             balance_ts = []
             for ts in rows:
                 name = str(ts.get("TABLESPACE_NAME", "")).upper()
@@ -219,7 +216,7 @@ def collect_db_metrics(db_name: str) -> dict:
 
         # 7. ORA errors from alert log
         try:
-            ora_rows = _run_query(conn, QUERY_ALERT_LOG)
+            ora_rows = execute_proc_to_df('dashboard_pkg.get_alert_log', conn=conn).to_dict('records')
             if ora_rows:
                 msgs = [r.get("MESSAGE", r.get("MESSAGE_TEXT", "")) for r in ora_rows]
                 ora_errors = [m for m in msgs if "ORA-" in str(m).upper()][:10]
@@ -229,9 +226,9 @@ def collect_db_metrics(db_name: str) -> dict:
 
         # 8. Host OS resources
         try:
-            os_rows  = _run_query(conn, QUERY_OS_STATS)
-            sys_rows = _run_query(conn, QUERY_SYSMETRIC)
-            mem_rows = _run_query(conn, QUERY_ORACLE_MEM)
+            os_rows  = execute_proc_to_df('dashboard_pkg.get_os_stats', conn=conn).to_dict('records')
+            sys_rows = execute_proc_to_df('dashboard_pkg.get_sysmetric', conn=conn).to_dict('records')
+            mem_rows = execute_proc_to_df('dashboard_pkg.get_oracle_mem', conn=conn).to_dict('records')
 
             os_stats  = {r["STAT_NAME"]: float(r["VALUE"] or 0) for r in os_rows}
             sys_stats = {r["METRIC_NAME"]: float(r["VALUE"] or 0) for r in sys_rows}
@@ -266,7 +263,7 @@ def collect_db_metrics(db_name: str) -> dict:
 
         # 9. Session max check
         try:
-            max_rows = _run_query(conn, QUERY_MAX_SESSIONS)
+            max_rows = execute_proc_to_df('dashboard_pkg.get_max_sessions', conn=conn).to_dict('records')
             if max_rows and stats["system_res"]:
                 max_sess = int(max_rows[0].get("VALUE", 150))
                 act_sess = stats["system_res"]["session_count"]
