@@ -11,7 +11,7 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 if current_dir not in sys.path:
     sys.path.append(current_dir)
 
-from db_connection import execute_proc_to_df, load_db_names_api, get_config_for_db, get_oracle_mode
+from db_connection import load_db_names_api, get_config_for_db, get_oracle_mode
 
 from utils.storage_provider import get_storage_provider
 from utils.alerts import check_and_trigger_alerts
@@ -118,7 +118,23 @@ def collect_db_metrics(db_name: str) -> dict:
 
         # 4. Tablespaces
         try:
-            df_ts = execute_proc_to_df('dashboard_pkg.get_tablespaces', conn=conn)
+            df_ts = run_query_df(conn, """
+                SELECT df.tablespace_name,
+                    ROUND(df.allocated_mb,2) AS allocated_mb,
+                    ROUND(NVL(fs.free_mb,0),2) AS free_mb,
+                    ROUND(df.allocated_mb - NVL(fs.free_mb,0),2) AS used_mb,
+                    ROUND(df.max_mb,2) AS maxsize_mb,
+                    ROUND(df.max_mb - (df.allocated_mb - NVL(fs.free_mb,0)),2) AS free_on_max_mb,
+                    ROUND(((df.allocated_mb - NVL(fs.free_mb,0))/df.max_mb)*100,2) AS pct_used_max,
+                    loc.location
+                FROM (SELECT tablespace_name, SUM(bytes)/1024/1024 allocated_mb,
+                    SUM(CASE WHEN autoextensible='YES' THEN maxbytes ELSE bytes END)/1024/1024 max_mb
+                    FROM dba_data_files GROUP BY tablespace_name) df
+                LEFT JOIN (SELECT tablespace_name, SUM(bytes)/1024/1024 free_mb FROM dba_free_space GROUP BY tablespace_name) fs
+                    ON df.tablespace_name = fs.tablespace_name
+                LEFT JOIN (SELECT tablespace_name, MAX(file_name) AS location FROM dba_data_files GROUP BY tablespace_name) loc
+                    ON df.tablespace_name = loc.tablespace_name
+                ORDER BY df.tablespace_name""")
             balance_ts = []
             if not df_ts.empty:
                 for _, ts in df_ts.iterrows():
@@ -149,7 +165,14 @@ def collect_db_metrics(db_name: str) -> dict:
 
         # 5. Archive log space (FRA)
         try:
-            df_arc = execute_proc_to_df('dashboard_pkg.get_arc_log', conn=conn)
+            df_arc = run_query_df(conn, """
+                SELECT
+                  (SELECT COUNT(*) FROM v$archived_log WHERE deleted='NO') AS archive_logs,
+                  (SELECT ROUND(NVL(SUM(blocks*block_size), 0)/1024/1024/1024, 2) FROM v$archived_log WHERE deleted='NO') AS size_gb,
+                  (SELECT value FROM V$PARAMETER WHERE name = 'db_recovery_file_dest') AS fra_dest_param,
+                  (SELECT ROUND(SPACE_LIMIT / 1024 / 1024 / 1024, 2) FROM V$RECOVERY_FILE_DEST WHERE rownum = 1) AS fra_limit_gb,
+                  (SELECT ROUND(SPACE_USED / 1024 / 1024 / 1024, 2) FROM V$RECOVERY_FILE_DEST WHERE rownum = 1) AS fra_used_gb
+                FROM DUAL""")
             if not df_arc.empty:
                 row = df_arc.iloc[0]
                 limit_mb = float(row.get("LIMIT_MB", 0))
@@ -168,7 +191,7 @@ def collect_db_metrics(db_name: str) -> dict:
 
         # 7. Alert Log Checks
         try:
-            df_alerts = execute_proc_to_df('dashboard_pkg.get_alert_log', conn=conn)
+            df_alerts = run_query_df(conn, """SELECT * FROM (SELECT TO_CHAR(originating_timestamp,'YYYY-MM-DD HH24:MI:SS') as time_str, message_text FROM v$diag_alert_ext WHERE originating_timestamp >= SYSDATE - 2 AND message_text LIKE '%ORA-%' ORDER BY originating_timestamp DESC) WHERE ROWNUM <= 50""")
             if not df_alerts.empty:
                 stats["alert_log_errors"] = df_alerts["MESSAGE"].tolist()[:10]
         except Exception:
@@ -177,14 +200,14 @@ def collect_db_metrics(db_name: str) -> dict:
         # 8. Host OS System Resources
         try:
             # Query v$osstat
-            df_os = execute_proc_to_df('dashboard_pkg.get_os_stats', conn=conn)
+            df_os = run_query_df(conn, "SELECT stat_name, value FROM v$osstat WHERE stat_name IN ('NUM_CPUS', 'PHYSICAL_MEMORY_BYTES', 'FREE_MEMORY_BYTES', 'IDLE_TIME', 'BUSY_TIME')")
             os_stats = {}
             if not df_os.empty:
                 for _, r in df_os.iterrows():
                     os_stats[r["STAT_NAME"]] = float(r["VALUE"])
             
             # Query v$sysmetric
-            df_sys = execute_proc_to_df('dashboard_pkg.get_sysmetric', conn=conn)
+            df_sys = run_query_df(conn, "SELECT metric_name, value FROM v$sysmetric WHERE metric_name IN ('Host CPU Utilization (%)', 'CPU Usage Per Sec', 'Session Count') AND group_id = 2")
             sys_stats = {}
             if not df_sys.empty:
                 for _, r in df_sys.iterrows():
@@ -229,7 +252,7 @@ def collect_db_metrics(db_name: str) -> dict:
 
         # 9. Session Maxed Check
         try:
-            df_max = execute_proc_to_df('dashboard_pkg.get_max_sessions', conn=conn)
+            df_max = run_query_df(conn, "SELECT name, value FROM v$parameter WHERE name = 'sessions'")
             if not df_max.empty and stats["system_res"]:
                 max_sess = int(df_max.iloc[0].get("VALUE", 150))
                 act_sess = stats["system_res"]["session_count"]
