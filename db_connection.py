@@ -696,14 +696,21 @@ def execute_proc_to_df(proc_name, params=None, conn=None):
         return pd.DataFrame()
     
     try:
+        import oracledb
         cursor = conn.cursor()
-        out_cursor = conn.cursor()
+        out_var = cursor.var(oracledb.CURSOR)
         
         if params:
-            call_params = params + [out_cursor]
+            call_params = params + [out_var]
             cursor.callproc(proc_name, call_params)
         else:
-            cursor.callproc(proc_name, [out_cursor])
+            cursor.callproc(proc_name, [out_var])
+            
+        out_cursor = out_var.getvalue()
+        if out_cursor is None:
+            cursor.close()
+            if should_close: conn.close()
+            return pd.DataFrame()
             
         records = out_cursor.fetchall()
         cols = [col[0] for col in out_cursor.description]
