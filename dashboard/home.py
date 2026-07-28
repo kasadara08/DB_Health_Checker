@@ -1541,6 +1541,51 @@ def render_home_page():
             if mount_err and any(term in mount_err.lower() for term in ["authentication failed", "wrong username", "permission denied", "auth failed"]):
                 error_html += '<div class="db-error-msg" style="color:#ef4444; font-weight:800; margin-top:4px;">❌ host username and password is wrong</div>'
 
+            # ── Reporting DB section ─────────────────────────────────────────
+            rpt_status  = stats.get("reporting_status", "NOT_CONFIGURED")
+            rpt_db_name = stats.get("reporting_db_name", "")
+            rpt_configured = stats.get("reporting_configured", False)
+
+            if rpt_configured and rpt_db_name:
+                if rpt_status == "UP":
+                    rpt_dot   = "dot-green"
+                    rpt_val   = "val-green"
+                    rpt_arrow = "⇧"
+                    rpt_bar_color = "#10b981"
+                    rpt_badge_bg  = "rgba(16,185,129,0.10)"
+                    rpt_badge_border = "rgba(16,185,129,0.35)"
+                else:
+                    rpt_dot   = "dot-red"
+                    rpt_val   = "val-red"
+                    rpt_arrow = "⇩"
+                    rpt_bar_color = "#ef4444"
+                    rpt_badge_bg  = "rgba(239,68,68,0.08)"
+                    rpt_badge_border = "rgba(239,68,68,0.30)"
+
+                reporting_section_html = (
+                    f'<div style="margin-top:8px; border-top: 1.5px solid var(--border-color); padding-top:7px;">'
+                    f'<div style="font-size:0.6rem; font-weight:700; color:var(--text-secondary); '
+                    f'text-transform:uppercase; letter-spacing:0.06em; margin-bottom:5px;">'
+                    f'📊 Reporting DB</div>'
+                    f'<div style="display:flex; align-items:center; justify-content:space-between; '
+                    f'background:{rpt_badge_bg}; border:1px solid {rpt_badge_border}; '
+                    f'border-radius:6px; padding:5px 8px;">'
+                    f'<div style="display:flex; flex-direction:column; min-width:0; flex:1;">'
+                    f'<span style="font-size:0.68rem; font-weight:700; color:var(--text-primary); '
+                    f'white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" '
+                    f'title="{rpt_db_name}">{rpt_db_name}</span>'
+                    f'<span style="font-size:0.58rem; color:var(--text-secondary); margin-top:1px;">Reporting Instance</span>'
+                    f'</div>'
+                    f'<div style="display:flex; align-items:center; gap:5px; flex-shrink:0; margin-left:6px;">'
+                    f'<span class="{rpt_dot}"></span>'
+                    f'<span class="{rpt_val}" style="font-size:1.05rem; line-height:1;">{rpt_arrow}</span>'
+                    f'</div>'
+                    f'</div>'
+                    f'</div>'
+                )
+            else:
+                reporting_section_html = ""
+
             card_html = (
                 f'<a href="?selected_db={db}" target="_self" style="text-decoration:none; color:inherit; display:block;">'
                 f'<div class="{card_class}">'
@@ -1562,6 +1607,7 @@ def render_home_page():
                 f'<span class="db-status-label"><span class="{ts_dot}"></span> Tablespace</span>'
                 f'<span class="{ts_val_class}">{ts_text}</span></div>'
                 f'{error_html}'
+                f'{reporting_section_html}'
                 f'</div>'
                 f'</a>'
             )

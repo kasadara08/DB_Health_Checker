@@ -28,7 +28,11 @@ _BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_FILE = os.path.join(_BASE_DIR, "db_path_config.json")  #now _BASE_DIR contains dbdbashboard/config and CONFIG_FILE contains db_path_config.json file path
 
 # Required column order when the registry file has NO header row
-REGISTRY_COLUMNS = ["db_name", "host", "port", "service_name", "username", "password", "host_username", "host_password"]
+REGISTRY_COLUMNS = [
+    "db_name", "host", "port", "service_name", "username", "password", "host_username", "host_password",
+    "reporting_db_name", "reporting_host", "reporting_port", "reporting_service_name",
+    "reporting_username", "reporting_password", "reporting_host_username", "reporting_host_password"
+]
 
 def get_txt_path():
     # Dynamically get the path of the database registry file (cross-platform)."""
@@ -479,6 +483,77 @@ def get_config_for_db(db_name: str) -> dict:
 
         # Return None if any exception occurs
         return None
+
+def get_reporting_db_config(db_name: str) -> dict:
+    """
+    Returns reporting DB credentials for a given main db_name.
+    Returns None if no reporting DB is configured for that row.
+    """
+    path = get_txt_path_api()
+    if not path or not os.path.exists(path):
+        return None
+    try:
+        df = read_db_file_to_df(path)
+        match = df[df["db_name"].astype(str).str.strip().str.lower() == str(db_name).strip().lower()]
+        if match.empty:
+            return None
+        row = match.iloc[0]
+
+        r_db   = str(row.get("reporting_db_name", "")).strip()
+        r_host = str(row.get("reporting_host", "")).strip()
+        r_port = str(row.get("reporting_port", "")).strip()
+        r_svc  = str(row.get("reporting_service_name", "")).strip()
+        r_user = str(row.get("reporting_username", "")).strip()
+        r_pwd  = str(row.get("reporting_password", "")).strip()
+
+        # All essential fields must be present
+        if not all([r_db, r_host, r_port, r_svc, r_user, r_pwd]):
+            return None
+
+        if r_port.endswith(".0"):
+            r_port = r_port[:-2]
+
+        return {
+            "db_name":      r_db,
+            "user":         r_user,
+            "password":     r_pwd,
+            "dsn":          f"{r_host}:{r_port}/{r_svc}",
+            "host":         r_host,
+            "port":         r_port,
+            "service_name": r_svc,
+        }
+    except Exception as e:
+        print(f"[reporting] Error reading reporting config for {db_name}: {e}")
+        return None
+
+
+def check_reporting_db_status(db_name: str) -> dict:
+    """
+    Attempt a lightweight connection to the reporting DB configured for `db_name`.
+    Returns a dict:
+        { "configured": bool, "status": "UP"/"DOWN"/"NOT_CONFIGURED", "reporting_db_name": str, "error": str }
+    """
+    cfg = get_reporting_db_config(db_name)
+    if cfg is None:
+        return {"configured": False, "status": "NOT_CONFIGURED", "reporting_db_name": "", "error": ""}
+
+    try:
+        mode = get_oracle_mode(cfg["user"])
+        conn = oracledb.connect(
+            user=cfg["user"],
+            password=cfg["password"],
+            dsn=cfg["dsn"],
+            mode=mode,
+            tcp_connect_timeout=5
+        )
+        conn.close()
+        return {"configured": True, "status": "UP", "reporting_db_name": cfg["db_name"], "error": ""}
+    except oracledb.DatabaseError as e:
+        err_msg = str(e.args[0].message if hasattr(e.args[0], "message") else e)
+        return {"configured": True, "status": "DOWN", "reporting_db_name": cfg["db_name"], "error": err_msg}
+    except Exception as e:
+        return {"configured": True, "status": "DOWN", "reporting_db_name": cfg["db_name"], "error": str(e)}
+
 
 def get_api_connection(db_name: str):
     """

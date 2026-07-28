@@ -350,6 +350,18 @@ def collect_db_metrics(db_name: str) -> dict:
         reasons.append("Last RMAN backup FAILED")
     stats["tooltip_reasons"] = reasons
 
+    # ── Reporting DB status check ─────────────────────────────────────────
+    try:
+        from db_connection import check_reporting_db_status
+        rpt = check_reporting_db_status(db_name)
+        stats["reporting_status"]   = rpt.get("status", "NOT_CONFIGURED")
+        stats["reporting_db_name"]  = rpt.get("reporting_db_name", "")
+        stats["reporting_configured"] = rpt.get("configured", False)
+    except Exception as re:
+        stats["reporting_status"]   = "NOT_CONFIGURED"
+        stats["reporting_db_name"]  = ""
+        stats["reporting_configured"] = False
+
     return stats
 
 
