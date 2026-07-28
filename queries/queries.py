@@ -1,34 +1,5 @@
 import pandas as pd
-from db_connection import execute_query_to_df, execute_query
-
-import os
-
-def load_sql_queries():
-    queries = {}
-    current_name = None
-    current_query = []
-    
-    pkg_path = os.path.join(os.path.dirname(__file__), 'dashboard_pkg.sql')
-    if not os.path.exists(pkg_path):
-        return queries
-        
-    with open(pkg_path, 'r', encoding='utf-8') as f:
-        for line in f:
-            if line.startswith('-- name:'):
-                if current_name:
-                    queries[current_name] = "".join(current_query).strip()
-                current_name = line.split('-- name:')[1].strip()
-                current_query = []
-            else:
-                current_query.append(line)
-                
-    if current_name:
-         queries[current_name] = "".join(current_query).strip()
-         
-    return queries
-
-QUERIES = load_sql_queries()
-
+from db_connection import execute_proc_to_df
 
 # 1. DB STATUS & INSTANCE DETAILS
 
@@ -62,7 +33,7 @@ QUERIES = load_sql_queries()
 def get_arc_log_info(conn=None):
     """Fetch archive log info dynamically using v$archive_dest and either v$recovery_file_dest or v$archived_log."""
     try:
-        df_dest = execute_query_to_df(QUERIES['QUERY_ARC_DEST'], conn=conn)
+        df_dest = execute_proc_to_df("dashboard_pkg.get_arc_dest", conn=conn)
         dest = df_dest.iloc[0]["DESTINATION"] if not df_dest.empty and pd.notna(df_dest.iloc[0]["DESTINATION"]) else ""
         
         arc_info = {
@@ -77,7 +48,7 @@ def get_arc_log_info(conn=None):
         }
         
         if dest == "USE_DB_RECOVERY_FILE_DEST":
-            df_fra = execute_query_to_df(QUERIES['QUERY_ARC_FRA'], conn=conn)
+            df_fra = execute_proc_to_df("dashboard_pkg.get_arc_fra", conn=conn)
             if not df_fra.empty:
                 row = df_fra.iloc[0]
                 arc_info.update({
@@ -90,7 +61,7 @@ def get_arc_log_info(conn=None):
                 })
                 arc_info["arc_free_gb"] = max(0.0, arc_info["arc_limit_gb"] - arc_info["arc_used_gb"])
         elif dest:
-            df_arch = execute_query_to_df(QUERIES['QUERY_ARC_CUSTOM'], conn=conn)
+            df_arch = execute_proc_to_df("dashboard_pkg.get_arc_custom", conn=conn)
             if not df_arch.empty:
                 row = df_arch.iloc[0]
                 arc_info.update({
@@ -110,7 +81,7 @@ def get_arc_log_info(conn=None):
 def get_max_sessions(conn=None):
     """Fetch the max sessions parameter from v$parameter."""
     try:
-        df = execute_query_to_df(QUERIES['QUERY_MAX_SESSIONS'], conn=conn)
+        df = execute_proc_to_df("dashboard_pkg.get_max_sessions", conn=conn)
         if not df.empty:
             return int(float(df.iloc[0]["VALUE"]))
     except Exception:
@@ -119,14 +90,14 @@ def get_max_sessions(conn=None):
 
 def get_db_status(conn=None):
     """Fetch database status and details."""
-    df = execute_query_to_df(QUERIES['QUERY_DB_STATUS'], conn=conn)
+    df = execute_proc_to_df("dashboard_pkg.get_db_status", conn=conn)
     if df.empty:
         return {"STATUS": "DOWN", "INSTANCE_NAME": "UNKNOWN", "HOST_NAME": "UNKNOWN", "VERSION": "UNKNOWN", "STARTUP_TIME": "UNKNOWN"}
     return df.iloc[0].to_dict()
 
 def get_session_stats(conn=None):
     """Fetch current session stats."""
-    df = execute_query_to_df(QUERIES['QUERY_SESSION_STATS'], conn=conn)
+    df = execute_proc_to_df("dashboard_pkg.get_session_stats", conn=conn)
     stats = {"ACTIVE": 0, "INACTIVE": 0, "TOTAL": 0}
     if df.empty:
         return stats
@@ -140,25 +111,25 @@ def get_session_stats(conn=None):
 
 def get_tablespace_utilization(conn=None):
     """Fetch tablespace utilization metrics."""
-    df = execute_query_to_df(QUERIES['QUERY_TABLESPACES'], conn=conn)
+    df = execute_proc_to_df("dashboard_pkg.get_tablespaces", conn=conn)
     if df.empty:
-        df = execute_query_to_df(QUERIES['QUERY_TABLESPACES'], conn=conn)
+        df = execute_proc_to_df("dashboard_pkg.get_tablespaces", conn=conn)
     return df
 
 def get_backup_status(conn=None):
     """Fetch latest backup status."""
-    df = execute_query_to_df(QUERIES['QUERY_BACKUP_STATUS'], conn=conn)
+    df = execute_proc_to_df("dashboard_pkg.get_backup_status", conn=conn)
     if df.empty:
         return "NO BACKUP"
     return df.iloc[0]["STATUS"]
 
 def get_rman_durations(conn=None):
     """Fetch all RMAN backup durations (complete history)."""
-    return execute_query_to_df(QUERIES['QUERY_RMAN_DURATIONS'], conn=conn)
+    return execute_proc_to_df("dashboard_pkg.get_rman_durations", conn=conn)
 
 def get_session_license(conn=None):
     """Fetch current sessions count and highwater mark."""
-    df = execute_query_to_df(QUERIES['QUERY_SESSION_LICENSE'], conn=conn)
+    df = execute_proc_to_df("dashboard_pkg.get_session_license", conn=conn)
     if df.empty:
         return {"sessions_current": 0, "sessions_highwater": 0}
     row = df.iloc[0]
@@ -169,7 +140,7 @@ def get_session_license(conn=None):
 
 def get_db_growth_rates(conn=None):
     """Fetch historical DB growth data and calculate actual daily, weekly, monthly, and yearly usage changes."""
-    df = execute_query_to_df(QUERIES['QUERY_DB_GROWTH'], conn=conn)
+    df = execute_proc_to_df("dashboard_pkg.get_db_growth", conn=conn)
     if df.empty or len(df) < 2:
         return {"daily": 2.9, "weekly": 20.3, "monthly": 90.7, "yearly": 1088.3}
 
@@ -210,20 +181,20 @@ def get_db_growth_rates(conn=None):
 
 def get_cpu_consuming_sessions(conn=None):
     """Fetch top CPU consuming sessions."""
-    return execute_query_to_df(QUERIES['QUERY_CPU_SESSIONS'], conn=conn)
+    return execute_proc_to_df("dashboard_pkg.get_cpu_sessions", conn=conn)
 
 def get_blocking_sessions(conn=None):
     """Fetch current blocking sessions."""
-    return execute_query_to_df(QUERIES['QUERY_BLOCKING_SESSIONS'], conn=conn)
+    return execute_proc_to_df("dashboard_pkg.get_blocking_sessions", conn=conn)
 
 def get_lock_waits(conn=None):
     """Fetch lock wait details."""
-    return execute_query_to_df(QUERIES['QUERY_LOCK_WAITS'], conn=conn)
+    return execute_proc_to_df("dashboard_pkg.get_lock_waits", conn=conn)
 
 def get_alert_log(conn=None):
     """Fetch alert log errors for the last 48 hours. Handled gracefully if view is unavailable."""
     try:
-        df = execute_query_to_df(QUERIES['QUERY_ALERT_LOG'], conn=conn)
+        df = execute_proc_to_df("dashboard_pkg.get_alert_log", conn=conn)
         return df
     except Exception as e:
         print(f"Alert log query failed (likely permission/view missing): {e}")
@@ -235,14 +206,14 @@ def get_sga_pga_usage(conn=None):
     sga_allocated = sga_free = sga_consumed = sga_used_pct = 0.0
     pga_allocated = pga_consumed = pga_free = pga_used_pct = pga_target = 0.0
 
-    df_sga = execute_query_to_df(QUERIES['QUERY_SGA_TOTAL'], conn=conn)
+    df_sga = execute_proc_to_df("dashboard_pkg.get_sga_total", conn=conn)
     if not df_sga.empty:
         try:
             sga_allocated = float(df_sga.iloc[0]["TOTAL_BYTES"])
         except Exception:
             pass
 
-    df_sga_free = execute_query_to_df(QUERIES['QUERY_SGA_FREE'], conn=conn)
+    df_sga_free = execute_proc_to_df("dashboard_pkg.get_sga_free", conn=conn)
     if not df_sga_free.empty:
         try:
             sga_free = float(df_sga_free.iloc[0]["FREE_BYTES"])
@@ -253,7 +224,7 @@ def get_sga_pga_usage(conn=None):
     if sga_allocated > 0:
         sga_used_pct = round((sga_consumed / sga_allocated) * 100, 2)
 
-    df_pga = execute_query_to_df(QUERIES['QUERY_PGA_STATS'], conn=conn)
+    df_pga = execute_proc_to_df("dashboard_pkg.get_pga_stats", conn=conn)
     if not df_pga.empty:
         pga_map = {row["NAME"]: float(row["VALUE"]) for _, row in df_pga.iterrows()}
         pga_allocated = pga_map.get("total PGA allocated", 0.0)
@@ -305,7 +276,7 @@ def get_listener_status(conn=None):
     # Fallback: if V$LISTENER_NETWORK not accessible â€”
     # if DB session is open at all, listener MUST be running
     try:
-        df = execute_query_to_df(QUERIES['QUERY_LISTENER_INSTANCE'], conn=conn)
+        df = execute_proc_to_df("dashboard_pkg.get_listener_instance", conn=conn)
         if not df.empty:
             return "UP"
     except Exception:
@@ -325,7 +296,7 @@ def get_asm_storage(conn=None):
             import pandas as pd
             return pd.read_sql(QUERIES['QUERY_ASM_STORAGE'], con=conn)
         else:
-            return execute_query_to_df(QUERIES['QUERY_ASM_STORAGE'])
+            return execute_proc_to_df("dashboard_pkg.get_asm_storage")
     except Exception as e:
         print(f"ASM Storage Query Failed: {e}")
         import pandas as pd
@@ -351,7 +322,7 @@ def get_system_resources(conn=None):
     }
     try:
         # 1. OS Stats
-        df_os = execute_query_to_df(QUERIES['QUERY_OS_STATS'], conn=conn)
+        df_os = execute_proc_to_df("dashboard_pkg.get_os_stats", conn=conn)
         os_stats = {}
         if not df_os.empty:
             for _, r in df_os.iterrows():
@@ -375,7 +346,7 @@ def get_system_resources(conn=None):
             res["cpu_host_free_pct"] = round(100.0 - res["cpu_host_used_pct"], 2)
 
         # 2. Sysmetric stats
-        df_sys = execute_query_to_df(QUERIES['QUERY_SYSMETRIC'], conn=conn)
+        df_sys = execute_proc_to_df("dashboard_pkg.get_sysmetric", conn=conn)
         sys_stats = {}
         if not df_sys.empty:
             for _, r in df_sys.iterrows():
@@ -393,7 +364,7 @@ def get_system_resources(conn=None):
         res["session_count"] = int(sys_stats.get("Session Count", 0))
 
         # 3. Oracle Memory
-        df_mem = execute_query_to_df(QUERIES['QUERY_ORACLE_MEM'], conn=conn)
+        df_mem = execute_proc_to_df("dashboard_pkg.get_oracle_mem", conn=conn)
         if not df_mem.empty:
             sga = float(df_mem.iloc[0].get("SGA_BYTES", 0) or 0)
             pga = float(df_mem.iloc[0].get("PGA_BYTES", 0) or 0)

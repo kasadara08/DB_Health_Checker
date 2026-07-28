@@ -684,6 +684,47 @@ def execute_query_to_df(query, params=None, conn=None):
     df.columns = [col.upper() for col in df.columns]
     return df
 
+
+def execute_proc_to_df(proc_name, params=None, conn=None):
+    """Safely execute a stored procedure returning a SYS_REFCURSOR as a DataFrame."""
+    should_close = False
+    if conn is None:
+        conn = get_db_connection()
+        should_close = True
+        
+    if conn is None:
+        return pd.DataFrame()
+    
+    try:
+        cursor = conn.cursor()
+        out_cursor = conn.cursor()
+        
+        if params:
+            call_params = params + [out_cursor]
+            cursor.callproc(proc_name, call_params)
+        else:
+            cursor.callproc(proc_name, [out_cursor])
+            
+        records = out_cursor.fetchall()
+        cols = [col[0] for col in out_cursor.description]
+        
+        out_cursor.close()
+        cursor.close()
+        if should_close:
+            conn.close()
+            
+        df = pd.DataFrame(records, columns=cols)
+        df.columns = [col.upper() for col in df.columns]
+        return df
+    except Exception as e:
+        print(f"Error executing procedure {proc_name}: {e}")
+        if should_close:
+            try:
+                conn.close()
+            except Exception:
+                pass
+        return pd.DataFrame()
+
 def execute_non_query(query, params=None):
     """Safely execute a DDL/DML query (e.g. ALTER SYSTEM, UPDATE) without fetching records."""
     conn = get_db_connection()
