@@ -487,24 +487,45 @@ def get_config_for_db(db_name: str) -> dict:
 def get_reporting_db_config(db_name: str) -> dict:
     """
     Returns reporting DB credentials for a given main db_name.
+    Supports flexible column names / aliases and UI session path.
     Returns None if no reporting DB is configured for that row.
     """
-    path = get_txt_path_api()
+    path = ""
+    try:
+        path = get_txt_path()
+    except Exception:
+        pass
+    if not path or not os.path.exists(path):
+        path = get_txt_path_api()
+
     if not path or not os.path.exists(path):
         return None
+
     try:
         df = read_db_file_to_df(path)
+        if "db_name" not in df.columns:
+            return None
+
         match = df[df["db_name"].astype(str).str.strip().str.lower() == str(db_name).strip().lower()]
         if match.empty:
             return None
+
         row = match.iloc[0]
 
-        r_db   = str(row.get("reporting_db_name", "")).strip()
-        r_host = str(row.get("reporting_host", "")).strip()
-        r_port = str(row.get("reporting_port", "")).strip()
-        r_svc  = str(row.get("reporting_service_name", "")).strip()
-        r_user = str(row.get("reporting_username", "")).strip()
-        r_pwd  = str(row.get("reporting_password", "")).strip()
+        def _first_val(keys):
+            for k in keys:
+                if k in row:
+                    val = str(row[k]).strip()
+                    if val and val.lower() not in ("none", "nan", "n/a", "-"):
+                        return val
+            return ""
+
+        r_db   = _first_val(["reporting_db_name", "reporting_db", "reporting db name", "reporting db", "rpt_db"])
+        r_host = _first_val(["reporting_host", "reporting host", "rpt_host"])
+        r_port = _first_val(["reporting_port", "reporting port", "rpt_port"])
+        r_svc  = _first_val(["reporting_service_name", "reporting_server", "reporting server name", "reporting server", "reporting_service", "rpt_service", "server_name"])
+        r_user = _first_val(["reporting_username", "reporting_user", "reporting username", "rpt_user"])
+        r_pwd  = _first_val(["reporting_password", "reporting_pass", "reporting password", "rpt_password"])
 
         # All essential fields must be present
         if not all([r_db, r_host, r_port, r_svc, r_user, r_pwd]):
