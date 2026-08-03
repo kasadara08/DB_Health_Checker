@@ -282,10 +282,14 @@ def render_sidebar():
         }
         </style>
     """, unsafe_allow_html=True)
-    st.sidebar.markdown("<br><p style='color: #9ca3af; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;'>Database Connections</p>", unsafe_allow_html=True)
-    
-    # 3. Dynamic DB Selection list
-    db_names = load_db_names()
+    session_done = st.session_state.get("session_config_done", False)
+    force_config = st.session_state.get("force_config_screen", False)
+
+    if session_done and not force_config:
+        st.sidebar.markdown("<br><p style='color: #9ca3af; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;'>Database Connections</p>", unsafe_allow_html=True)
+        
+        # 3. Dynamic DB Selection list
+        db_names = load_db_names()
     from dashboard.home import load_db_status_summary_cached, determine_health_category
     for db in db_names:
         # Highlight active database if selected

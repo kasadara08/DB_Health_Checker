@@ -554,9 +554,11 @@ def render_sidebar():
     """, unsafe_allow_html=True)
 
     current_path = get_txt_path()
+    session_done = st.session_state.get("session_config_done", False)
+    force_config = st.session_state.get("force_config_screen", False)
 
-    # Only show sidebar navigation options if registry is active
-    if current_path:
+    # Only show sidebar database connections when configuration setup is complete
+    if current_path and session_done and not force_config:
 
         st.sidebar.markdown("<br><p style='color: #9ca3af; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;'>Database Connections</p>", unsafe_allow_html=True)
         db_names = load_db_names()
