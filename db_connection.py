@@ -257,6 +257,328 @@ def _is_header_row(first_row_values: list) -> bool:
             return True   # Port field is text → this is likely a header row
     return True  # Fewer than 3 columns — assume header present
 
+def derive_reporting_db_name(db_name):
+    """
+    Reporting DB Name rule (always lowercase r):
+      ends with P or p -> replace last char with r   e.g. fa114p -> fa114r
+      otherwise        -> append r                   e.g. fa114  -> fa114r
+    """
+    if not db_name:
+        return "r"
+    if db_name.endswith("p") or db_name.endswith("P"):
+        return db_name[:-1] + "r"
+    return db_name + "r"
+
+
+def parse_db_line_parts(parts):
+    res = {}
+    n = len(parts)
+    if n >= 14:
+        res["db_name"]                 = parts[0]
+        res["host"]                    = parts[1]
+        res["port"]                    = parts[2]
+        res["service_name"]            = parts[3]
+        res["username"]                = parts[4]
+        res["password"]                = parts[5]
+        res["host_username"]           = parts[6]
+        res["host_password"]           = parts[7]
+        res["reporting_db_name"]       = parts[8]
+        res["reporting_host"]          = parts[9]
+        res["reporting_port"]          = parts[10]
+        res["reporting_service_name"]  = parts[11]
+        res["reporting_username"]      = parts[12]
+        res["reporting_password"]      = parts[13]
+    elif n >= 8:
+        res["db_name"]                 = parts[0]
+        res["host"]                    = parts[1]
+        res["port"]                    = parts[2]
+        res["service_name"]            = parts[3]
+        res["username"]                = parts[4]
+        res["password"]                = parts[5]
+        res["host_username"]           = parts[6]
+        res["host_password"]           = parts[7]
+    elif n == 6:
+        res["db_name"]                 = parts[0]
+        res["host"]                    = parts[1]
+        res["port"]                    = parts[2]
+        res["service_name"]            = parts[3]
+        res["username"]                = parts[4]
+        res["password"]                = parts[5]
+    elif n == 3:
+        res["db_name"]                 = parts[0]
+        res["password"]                = parts[1]
+        res["reporting_password"]      = parts[2]
+    elif n == 2:
+        res["db_name"]                 = parts[0]
+        res["password"]                = parts[1]
+    elif n == 1:
+        res["db_name"]                 = parts[0]
+    return res
+
+
+def replace_in_template(template, old, new):
+    if not template:
+        return template
+    if not old:
+        return template
+    if old in template:
+        return template.replace(old, new, 1)
+    lo_tmpl = template.lower()
+    lo_old  = old.lower()
+    if lo_old in lo_tmpl:
+        idx = lo_tmpl.index(lo_old)
+        return template[:idx] + new + template[idx + len(old):]
+    return template
+
+
+def parse_smart_txt_to_df(filepath):
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            lines = [ln.rstrip() for ln in f]
+    except Exception as e:
+        print(f"[config] Error reading registry file: {e}")
+        return pd.DataFrame(columns=REGISTRY_COLUMNS)
+
+    global_key_map = {
+        "db host": "host", "host": "host", "db port": "port", "port": "port",
+        "db username": "username", "db user": "username", "username": "username", "user": "username",
+        "host username": "host_username", "host user": "host_username", "os username": "host_username", "os user": "host_username",
+        "host password": "host_password", "host pass": "host_password", "os password": "host_password", "os pass": "host_password",
+        "reporting port": "reporting_port", "report port": "reporting_port", "rpt port": "reporting_port",
+        "reporting username": "reporting_username", "reporting user": "reporting_username", "report username": "reporting_username",
+        "report user": "reporting_username", "rpt username": "reporting_username", "rpt user": "reporting_username",
+        "db service suffix": "service_suffix", "service suffix": "service_suffix",
+    }
+
+    reporting_key_map = {
+        "reporting host": "reporting_host", "report host": "reporting_host", "rpt host": "reporting_host",
+        "reporting server": "reporting_service_name", "report server": "reporting_service_name",
+        "reporting service": "reporting_service_name", "reporting service name": "reporting_service_name",
+        "reporting server name": "reporting_service_name", "rpt server": "reporting_service_name", "server": "reporting_service_name",
+    }
+
+    global_cfg = {
+        "host": "", "port": "", "username": "", "host_username": "", "host_password": "",
+        "reporting_port": "", "reporting_username": "", "service_suffix": "",
+    }
+    
+    groups = []
+    current_grp = None
+
+    non_blank = []
+    for i, ln in enumerate(lines):
+        s_ln = ln.strip()
+        if s_ln and not s_ln.startswith("#"):
+            non_blank.append((i, s_ln))
+            
+    for pos, (orig_idx, line) in enumerate(non_blank):
+        if "=" in line:
+            key_raw, val = line.split("=", 1)
+            key = key_raw.strip().lower()
+            val = val.strip()
+
+            if key in reporting_key_map:
+                field = reporting_key_map[key]
+                if field == "reporting_host":
+                    current_grp = {
+                        "reporting_host"        : val,
+                        "reporting_service_name": "",
+                        "reporting_port"        : "",
+                        "reporting_username"    : "",
+                        "reporting_password_template": "",
+                        "dbs"                   : [],
+                    }
+                    groups.append(current_grp)
+                elif current_grp is not None:
+                    if field == "reporting_password":
+                        current_grp["reporting_password_template"] = val
+                    else:
+                        current_grp[field] = val
+                else:
+                    global_cfg[field] = val
+            elif key in global_key_map:
+                global_cfg[global_key_map[key]] = val
+        else:
+            is_header = False
+            # Check if this plain line is a section header (e.g. has spaces and contains header-like words)
+            parts = line.split()
+            line_lower = line.lower()
+            if len(parts) > 1 and any(w in line_lower for w in ["server", "group", "reporting", "default", "class"]):
+                is_header = True
+            elif len(parts) > 1:
+                # If it has spaces but no keyword, use lookahead to see if upcoming lines contain '='
+                for upcoming_pos in range(pos + 1, min(pos + 10, len(non_blank))):
+                    upcoming_line = non_blank[upcoming_pos][1]
+                    if "=" in upcoming_line:
+                        is_header = True
+                        break
+                    break
+
+                
+            if is_header:
+                current_grp = {
+                    "reporting_host"        : "",
+                    "reporting_service_name": "",
+                    "reporting_port"        : "",
+                    "reporting_username"    : "",
+                    "reporting_password_template": "",
+                    "dbs"                   : [],
+                }
+                groups.append(current_grp)
+            else:
+                parts = line.split()
+                if parts:
+                    db_dict = parse_db_line_parts(parts)
+                    if current_grp is None:
+                        current_grp = {
+                            "reporting_host"        : global_cfg.get("reporting_host", ""),
+                            "reporting_service_name": global_cfg.get("reporting_service_name", ""),
+                            "reporting_port"        : global_cfg.get("reporting_port", ""),
+                            "reporting_username"    : global_cfg.get("reporting_username", ""),
+                            "reporting_password_template": global_cfg.get("reporting_password", ""),
+                            "dbs"                   : [],
+                        }
+                        groups.append(current_grp)
+                    current_grp["dbs"].append(db_dict)
+
+    rows = []
+    
+    first_db = None
+    for group in groups:
+        if group.get("dbs"):
+            first_db = group["dbs"][0]
+            break
+            
+    resolved_globals = {**global_cfg}
+    db_tmpl = ""
+    db_ref = ""
+    rpt_tmpl = ""
+    rpt_ref = ""
+    svc_tmpl = ""
+    svc_ref = ""
+    
+    if first_db:
+        for key in ["host", "port", "username", "host_username", "host_password", "reporting_port", "reporting_username"]:
+            if key in first_db and first_db[key]:
+                resolved_globals[key] = first_db[key]
+        
+        db_tmpl = first_db.get("password", "")
+        db_ref  = first_db.get("db_name", "")
+        
+        rpt_tmpl = first_db.get("reporting_password", "")
+        rpt_ref  = first_db.get("reporting_db_name", "")
+        if rpt_tmpl and not rpt_ref:
+            rpt_ref = derive_reporting_db_name(db_ref)
+            
+        svc_tmpl = first_db.get("service_name", "")
+        svc_ref  = db_ref
+
+    # Fallbacks for globals
+    g_host      = resolved_globals.get("host", "")
+    g_port      = resolved_globals.get("port") or "1521"
+    g_username  = resolved_globals.get("username") or "sys"
+    g_host_user = resolved_globals.get("host_username", "")
+    g_host_pass = resolved_globals.get("host_password", "")
+    g_rpt_port  = resolved_globals.get("reporting_port") or "1521"
+    g_rpt_user  = resolved_globals.get("reporting_username", "")
+    g_svc_sfx   = resolved_globals.get("service_suffix", "")
+
+    for group in groups:
+        rpt_host = group.get("reporting_host", "")
+        rpt_svc  = group.get("reporting_service_name", "")
+        dbs      = group.get("dbs", [])
+
+        if not dbs:
+            continue
+
+        first_entry = dbs[0]
+        
+        grp_db_tmpl = first_entry.get("password", "") or db_tmpl
+        grp_db_ref  = first_entry.get("db_name", "") if first_entry.get("password") else db_ref
+        
+        grp_rpt_tmpl = first_entry.get("reporting_password", "")
+        grp_rpt_ref  = ""
+        if grp_rpt_tmpl:
+            grp_rpt_ref = first_entry.get("reporting_db_name", "") or derive_reporting_db_name(first_entry["db_name"])
+        else:
+            grp_rpt_tmpl = group.get("reporting_password_template", "")
+            if grp_rpt_tmpl:
+                grp_rpt_ref = derive_reporting_db_name(first_entry["db_name"])
+            else:
+                grp_rpt_tmpl = rpt_tmpl
+                grp_rpt_ref  = rpt_ref
+
+        grp_svc_tmpl = first_entry.get("service_name", "") or svc_tmpl
+        grp_svc_ref  = first_entry.get("db_name", "") if first_entry.get("service_name") else svc_ref
+
+        for db_entry in dbs:
+            db_name = db_entry["db_name"]
+
+            host = db_entry.get("host") or g_host
+            port = db_entry.get("port") or g_port
+            
+            service_name = db_entry.get("service_name")
+            if not service_name:
+                if grp_svc_tmpl and grp_svc_ref:
+                    service_name = replace_in_template(grp_svc_tmpl, grp_svc_ref, db_name)
+                else:
+                    service_name = db_name + g_svc_sfx
+
+            username = db_entry.get("username") or g_username
+            
+            password = db_entry.get("password")
+            if not password:
+                if grp_db_tmpl and grp_db_ref:
+                    password = replace_in_template(grp_db_tmpl, grp_db_ref, db_name)
+                else:
+                    password = ""
+
+            host_username = db_entry.get("host_username") or g_host_user
+            host_password = db_entry.get("host_password") or g_host_pass
+
+            reporting_db_name = db_entry.get("reporting_db_name")
+            if not reporting_db_name:
+                reporting_db_name = derive_reporting_db_name(db_name)
+
+            reporting_host = db_entry.get("reporting_host") or rpt_host
+            reporting_port = db_entry.get("reporting_port") or group.get("reporting_port") or g_rpt_port
+            reporting_service_name = db_entry.get("reporting_service_name") or rpt_svc
+            reporting_username = db_entry.get("reporting_username") or group.get("reporting_username") or g_rpt_user
+
+            reporting_password = db_entry.get("reporting_password")
+            if not reporting_password:
+                if grp_rpt_tmpl and grp_rpt_ref:
+                    reporting_password = replace_in_template(grp_rpt_tmpl, grp_rpt_ref, reporting_db_name)
+                else:
+                    reporting_password = ""
+
+            row = {
+                "db_name"                 : db_name,
+                "host"                    : host,
+                "port"                    : port,
+                "service_name"            : service_name,
+                "username"                : username,
+                "password"                : password,
+                "host_username"           : host_username,
+                "host_password"           : host_password,
+                "reporting_db_name"       : reporting_db_name,
+                "reporting_host"          : reporting_host,
+                "reporting_port"          : reporting_port,
+                "reporting_service_name"  : reporting_service_name,
+                "reporting_username"      : reporting_username,
+                "reporting_password"      : reporting_password,
+                "reporting_host_username" : "",
+                "reporting_host_password" : "",
+            }
+            rows.append(row)
+
+    df = pd.DataFrame(rows, columns=REGISTRY_COLUMNS)
+    for col in df.columns:
+        if df[col].dtype == object:
+            df[col] = df[col].astype(str).str.strip()
+    return df
+
+
 def read_db_file_to_df(path):
     """
     Reads either a text file (txt, csv) or an Excel sheet (xlsx, xls).
@@ -266,6 +588,10 @@ def read_db_file_to_df(path):
     Works cross-platform (Windows & Linux).
     """
     ext = os.path.splitext(path)[1].lower()
+
+    if ext == ".txt":
+        # Always use the smart auto-fill parser for txt config files
+        return parse_smart_txt_to_df(path)
 
     if ext in [".xlsx", ".xls"]:
         # Read Excel — check if first row is header
@@ -322,6 +648,7 @@ def read_db_file_to_df(path):
 
     df.columns = [col.strip().lower() for col in df.columns]
     return df
+
 
 def load_db_names():
     """Load database names dynamically from the registry file (Text or Excel)."""
