@@ -401,25 +401,32 @@ def load_db_names_api() -> list:
 def get_config_for_db(db_name: str) -> dict:
     """
     Load Oracle credentials for a specific database name from the registry file.
-    Does NOT use st.session_state — safe to call from FastAPI/uvicorn.
+    Tries session-aware path first (get_txt_path), then JSON config (get_txt_path_api).
     Returns a dict with keys: user, password, dsn, host, port, service_name
     Returns None if not found or file missing.
     """
 
-    # Get the path of the registry file
-    path = get_txt_path_api()
+    # Get the path of the registry file — try session-aware path first
+    path = ""
+    try:
+        path = get_txt_path()
+    except Exception:
+        pass
+    if not path or not os.path.exists(path):
+        path = get_txt_path_api()
 
     # Check whether the file exists
     if not path or not os.path.exists(path):
         return None
 
     try:
-
         # Read the registry file into a DataFrame
         df = read_db_file_to_df(path)
 
-        # Find the row where database name matches the requested database
-        # Comparison is case-insensitive and ignores extra spaces
+        if "db_name" not in df.columns:
+            return None
+
+        # Find the row where database name matches (case-insensitive)
         match = df[
             df["db_name"]
             .astype(str)
@@ -435,54 +442,52 @@ def get_config_for_db(db_name: str) -> dict:
         # Get the first matching row
         row = match.iloc[0]
 
-        # Read Oracle username
-        user = str(row["username"]).strip()
+        def _clean(val, default=""):
+            """Return clean string, replacing None/nan/empty with default."""
+            v = str(val).strip() if val is not None else ""
+            return default if v.lower() in ("", "none", "nan", "n/a", "-") else v
 
-        # Read Oracle password
-        password = str(row["password"]).strip()
+        # Read all fields with safe fallbacks
+        user         = _clean(row.get("username",      row.get("user", "")))
+        password     = _clean(row.get("password",      ""))
+        host         = _clean(row.get("host",          ""))
+        port         = _clean(row.get("port",          ""), "1521")
+        service_name = _clean(row.get("service_name",  row.get("db_name", db_name)))
+        host_username = _clean(row.get("host_username", row.get("os_user", "")))
+        host_password = _clean(row.get("host_password", row.get("os_pass", "")))
 
-        # Read Oracle server host/IP address
-        host = str(row["host"]).strip()
-
-        # Read Oracle port number.
-        # If port is missing, use default Oracle port 1521.
-        port = str(row.get("port", "1521")).strip()
-
-        # Read host (OS) username and password for SSH if provided (optional 7th and 8th columns)
-        host_username = str(row.get("host_username", "")).strip()
-        host_password = str(row.get("host_password", "")).strip()
-
-        # Remove ".0" if Excel converted the port into decimal format
-        # Example: 1521.0 → 1521
+        # Remove ".0" if Excel converted the port into decimal format (1521.0 → 1521)
         if port.endswith(".0"):
             port = port[:-2]
 
-        # Read Oracle service name
-        service_name = str(row["service_name"]).strip()
+        # Validate essential fields — host, user, password must be present
+        if not host:
+            print(f"[config] '{db_name}': host is empty in registry — skipping row.")
+            return None
+        if not user:
+            print(f"[config] '{db_name}': username is empty in registry — skipping row.")
+            return None
 
-        # Build Oracle DSN (Data Source Name)
-        # Example: localhost:1521/ORCL
+        # Build Oracle DSN in host:port/service_name format (required for thin mode)
+        # DPY-4027 occurs when DSN is a TNS alias (no host:port). Always use explicit format.
         dsn = f"{host}:{port}/{service_name}"
 
         # Return all database connection details as a dictionary
         return {
-            "user": user,
-            "password": password,
-            "dsn": dsn,
-            "host": host,
-            "port": port,
-            "service_name": service_name,
+            "user":          user,
+            "password":      password,
+            "dsn":           dsn,
+            "host":          host,
+            "port":          port,
+            "service_name":  service_name,
             "host_username": host_username,
-            "host_password": host_password
+            "host_password": host_password,
         }
 
     except Exception as e:
-
-        # Print error if configuration loading fails
-        print(f"[API] Error loading config for {db_name}: {e}")
-
-        # Return None if any exception occurs
+        print(f"[config] Error loading config for '{db_name}': {e}")
         return None
+
 
 def get_reporting_db_config(db_name: str) -> dict:
     """
