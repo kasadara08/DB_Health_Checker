@@ -473,13 +473,13 @@ def parse_smart_txt_to_df(filepath):
         svc_tmpl = first_db.get("service_name", "")
         svc_ref  = db_ref
 
-    # Fallbacks for globals
+    # Fallbacks for globals (strictly taken from file only)
     g_host      = resolved_globals.get("host", "")
-    g_port      = resolved_globals.get("port") or "1521"
-    g_username  = resolved_globals.get("username") or "sys"
+    g_port      = resolved_globals.get("port", "")
+    g_username  = resolved_globals.get("username", "")
     g_host_user = resolved_globals.get("host_username", "")
     g_host_pass = resolved_globals.get("host_password", "")
-    g_rpt_port  = resolved_globals.get("reporting_port") or "1521"
+    g_rpt_port  = resolved_globals.get("reporting_port", "")
     g_rpt_user  = resolved_globals.get("reporting_username", "")
     g_svc_sfx   = resolved_globals.get("service_suffix", "")
 
