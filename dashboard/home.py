@@ -387,12 +387,8 @@ def determine_health_category(stats):
     if stats.get("db") == "DOWN" or stats.get("listener") == "DOWN" or stats.get("backup") == "FAILED":
         return "Critical"
             
-    # Warning state triggers (backup pending/warning, mount point/storage >= 80%, ORA error, tablespaces, archive log, blocking locks, max sessions/CPU/RAM)
-    drives = stats.get("drives", [])
-    has_drive_warn = False
-    if isinstance(drives, list):
-        has_drive_warn = any(float(d.get("pct", 0) or 0) >= 80 for d in drives if isinstance(d, dict))
-
+    # Warning state triggers (backup pending/warning, ORA error, tablespaces, archive log, blocking locks, max sessions/CPU/RAM)
+    # Note: Mount point is full or above 80% does NOT trigger overall Warning status for homepage card / sidebar button.
     if (
         stats.get("backup") in ["PENDING", "WARNING"] or
         stats.get("full_ts") or
@@ -402,10 +398,7 @@ def determine_health_category(stats):
         stats.get("session_maxed") or
         stats.get("has_ora_error") or
         stats.get("ora_error") or
-        stats.get("alert_log_error") or
-        stats.get("mount_point_warning") or
-        stats.get("storage_warning") or
-        has_drive_warn
+        stats.get("alert_log_error")
     ):
         return "Warning"
             
