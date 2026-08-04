@@ -519,7 +519,12 @@ def parse_smart_txt_to_df(filepath):
             
             service_name = db_entry.get("service_name")
             if not service_name:
-                if grp_svc_tmpl and grp_svc_ref:
+                db_lower = db_name.lower()
+                if db_lower.startswith("m5"):
+                    service_name = replace_in_template("m5phl.dbprod01.csi.waynepa", "m5phl", db_name)
+                elif db_lower.startswith("fa"):
+                    service_name = replace_in_template("faop100fa129", "fa129", db_name)
+                elif grp_svc_tmpl and grp_svc_ref:
                     service_name = replace_in_template(grp_svc_tmpl, grp_svc_ref, db_name)
                 else:
                     service_name = db_name + g_svc_sfx
