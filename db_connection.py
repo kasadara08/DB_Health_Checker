@@ -533,7 +533,12 @@ def parse_smart_txt_to_df(filepath):
             
             password = db_entry.get("password")
             if not password:
-                if grp_db_tmpl and grp_db_ref:
+                db_lower = db_name.lower()
+                if db_lower.startswith("m5"):
+                    password = replace_in_template("m5op200m5phl", "m5phl", db_name)
+                elif db_lower.startswith("fa"):
+                    password = replace_in_template("faop100fa129", "fa129", db_name)
+                elif grp_db_tmpl and grp_db_ref:
                     password = replace_in_template(grp_db_tmpl, grp_db_ref, db_name)
                 else:
                     password = ""
@@ -552,7 +557,12 @@ def parse_smart_txt_to_df(filepath):
 
             reporting_password = db_entry.get("reporting_password")
             if not reporting_password:
-                if grp_rpt_tmpl and grp_rpt_ref:
+                rpt_db_lower = reporting_db_name.lower()
+                if rpt_db_lower.startswith("m5"):
+                    reporting_password = replace_in_template("m5or210m5phlr", "m5phlr", reporting_db_name)
+                elif rpt_db_lower.startswith("fa"):
+                    reporting_password = replace_in_template("faor100fa129r", "fa129r", reporting_db_name)
+                elif grp_rpt_tmpl and grp_rpt_ref:
                     reporting_password = replace_in_template(grp_rpt_tmpl, grp_rpt_ref, reporting_db_name)
                 else:
                     reporting_password = ""
