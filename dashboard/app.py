@@ -290,11 +290,14 @@ def render_sidebar():
         
         # 3. Dynamic DB Selection list
         db_names = load_db_names()
-    from dashboard.home import load_db_status_summary_cached, determine_health_category
+    from dashboard.home import determine_health_category
     for db in db_names:
         # Highlight active database if selected
         is_active = (st.session_state.page == "monitoring" and st.session_state.selected_db == db)
-        stats = load_db_status_summary_cached(db)
+        if "status_cache" in st.session_state and db in st.session_state.status_cache:
+            stats = st.session_state.status_cache[db]
+        else:
+            stats = {"db": "UNKNOWN", "listener": "UNKNOWN", "backup": "UNKNOWN", "active_sessions": 0, "balance_ts": [], "full_ts": [], "tooltip_reasons": []}
         cat = determine_health_category(stats)
         key_id = f"sidebar_nav_{db}"
         

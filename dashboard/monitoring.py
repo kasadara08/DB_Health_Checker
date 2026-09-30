@@ -444,6 +444,209 @@ EOF
         client.close()
 
 
+def get_standby_gap_live(db_name, do_log=True):
+    """Connect to the standby DB via OCI-key SSH into the primary host to calculate the live log gap."""
+    from db_connection import get_standby_db_config, get_oracle_mode, get_config_for_db, _log_standby_db, SSHConnection
+    import oracledb
+    from queries.queries import get_log_gap_info
+
+    stby_cfg = get_standby_db_config(db_name)
+    if not stby_cfg:
+        return {"configured": False}
+
+    primary_cfg = get_config_for_db(db_name)
+    if not primary_cfg:
+        return {"configured": False, "error": "Primary config not found"}
+
+    p_conn = None
+    try:
+        p_mode = get_oracle_mode(primary_cfg["user"])
+        p_conn = oracledb.connect(
+            user=primary_cfg["user"], password=primary_cfg["password"],
+            dsn=primary_cfg["dsn"], mode=p_mode, tcp_connect_timeout=3
+        )
+    except Exception as e:
+        return {"configured": False, "error": f"Primary DB connection failed: {e}"}
+
+    try:
+        stby_name = stby_cfg.get("db_name", "unknown")
+        stby_dsn = stby_cfg.get("service_name") or stby_cfg.get("dsn") or "unknown"
+        stby_user = stby_cfg.get("user") or "sys"
+        conn_method = f"SSH via Primary Server (OCI Key) -> . {db_name}.env -> sqlplus {stby_user}/****@{stby_dsn} as sysdba"
+
+        s_ssh = SSHConnection(primary_cfg, is_standby=True, standby_cfg=stby_cfg)
+        res = get_log_gap_info(primary_conn=p_conn, standby_conn=s_ssh)
+
+        if res and res.get("configured"):
+            status_label = "UP (SYNCHRONIZED)" if not res.get("has_gap") else f"UP (NOT SYNCHRONIZED - Gap: {res.get('max_gap', 0)})"
+        else:
+            status_label = f"DOWN ({(res or {}).get('error') or 'Standby unreachable via OCI Key SSH'})"
+
+        if do_log:
+            _log_standby_db(db_name, stby_name, status_label, stby_cfg, (res or {}).get("error", ""), dg_info=res, conn_method=conn_method)
+        return res
+    except Exception as e:
+        return {"configured": False, "error": str(e)}
+    finally:
+        if p_conn:
+            try: p_conn.close()
+            except Exception: pass
+
+
+def _render_process_table_html(df, t_mode):
+    if t_mode == "Dark":
+        bg_green = "rgba(16, 185, 129, 0.1)"
+        bg_grey  = "rgba(255, 255, 255, 0.02)"
+        hdr_bg   = "rgba(16, 185, 129, 0.2)"
+        text_col = "#ffffff"
+        bdr_col  = "rgba(255, 255, 255, 0.1)"
+    else:
+        bg_green = "#e6f4ea"    # Row 1 -> Light Green
+        bg_grey  = "#f8fafc"    # Row 2 -> Light Grey
+        hdr_bg   = "#c3e6cb"    # Light Green Header
+        text_col = "#1e293b"
+        bdr_col  = "#cbd5e1"
+
+    html = f'''<div style="overflow-x:auto; overflow-y:auto; max-height:180px; border:1px solid {bdr_col}; border-radius:6px;">
+    <table style="width:100%; border-collapse:collapse; font-family:'Inter',sans-serif; font-size:0.72rem; color:{text_col};">
+        <thead>
+            <tr style="background:{hdr_bg}; border-bottom:2px solid {bdr_col}; text-transform:uppercase; font-size:0.65rem; font-weight:800;">'''
+    for col in df.columns:
+        html += f'<th style="padding:4px 6px; text-align:left;">{col}</th>'
+    html += '</tr></thead><tbody>'
+    for idx, row in df.iterrows():
+        row_bg = bg_green if idx % 2 == 0 else bg_grey
+        html += f'<tr style="background:{row_bg}; border-bottom:1px solid {bdr_col};">'
+        for val in row.values:
+            html += f'<td style="padding:3px 6px; font-weight:600;">{val}</td>'
+        html += '</tr>'
+    html += '</tbody></table></div>'
+    return html
+
+
+@st.fragment(run_every=30)
+def _render_top_processes_fragment(db_name):
+    """
+    Top CPU / Memory consuming OS processes for THIS specific database only
+    (filtered to db_name's own SID — see get_top_processes_for_db). Runs as
+    its own fragment so it re-fetches and re-renders every 30 seconds,
+    independent of the rest of the dashboard's refresh cycle.
+    """
+    st.markdown("<hr style='margin: 15px 0; border-color: var(--border-color);'>", unsafe_allow_html=True)
+    st.markdown(
+        f"<h4 style='color: var(--text-primary); font-family: Space Grotesk; font-size: 1.05rem; "
+        f"font-weight: 700; margin-bottom: 10px;'>🔥 Top Running Processes — Database {db_name}</h4>",
+        unsafe_allow_html=True
+    )
+    try:
+        from utils.ssh_process_provider import get_top_processes_for_db
+        from db_connection import get_config_for_db, get_bundled_oci_key
+        import os as _os
+
+        cfg = get_config_for_db(db_name) or {}
+        host = cfg.get("host", "")
+
+        # Resolve SSH host credentials the SAME way the home portal page does
+        # (see dashboard/home.py: load_server_status_summary) so both pages
+        # read the exact same live `ps` data and report identical %CPU/%MEM.
+        # Using the Oracle DB login/password here instead silently fails SSH
+        # auth and falls back to a DB-only CPU-seconds estimate, which is
+        # what previously showed up as a wrong-looking "CPU %".
+        h_user = cfg.get("host_username", "").strip() or cfg.get("user", "").strip() or "opc"
+        ssh_key_path = cfg.get("ssh_key_path") or cfg.get("oci_key_path") or cfg.get("key_filename")
+        bundled_key_path = get_bundled_oci_key(host)
+
+        key_file_to_use = None
+        if bundled_key_path and _os.path.exists(bundled_key_path):
+            key_file_to_use = bundled_key_path
+        elif ssh_key_path and _os.path.exists(ssh_key_path):
+            key_file_to_use = ssh_key_path
+
+        proc_res = get_top_processes_for_db(
+            host=host,
+            username=h_user,
+            password="",
+            sid=db_name,
+            limit=10,
+            key_filename=key_file_to_use,
+        )
+        top_cpu = proc_res.get("top_cpu", [])
+        top_mem = proc_res.get("top_mem", [])
+
+        # Filter out killed sessions from running processes tables
+        if "killed_sids" in st.session_state:
+            top_cpu = [p for p in top_cpu if str(p.get('sid', p.get('pid', ''))).strip() not in st.session_state.killed_sids]
+            top_mem = [p for p in top_mem if str(p.get('sid', p.get('pid', ''))).strip() not in st.session_state.killed_sids]
+        source  = proc_res.get("source", "none")
+        err_msg = proc_res.get("error")
+
+        src_badge = " (v$session DB View)" if source == "v$session" else (" (SSH)" if source == "ssh" else "")
+        # Both sources report a genuine live %CPU (0-100+, same convention
+        # as OS `ps`/`top`) — the SSH path reads it from `ps`, the v$session
+        # fallback computes it from two v$sesstat samples a second apart
+        # (see _fetch_processes_via_db) — so the column is always a percent.
+        cpu_col_label = "CPU %"
+        cpu_val_suffix = "%"
+
+        mcol1, mcol2 = st.columns(2)
+        with mcol1:
+            st.markdown(
+                f"<div style='background:var(--card-bg); border:1px solid var(--border-color); border-radius:8px; padding:10px 12px; margin-bottom:10px;'>"
+                f"<div style='font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--text-primary); margin-bottom:8px;'>🔥 Top CPU Consuming Sessions ({db_name})<span style='font-size:0.65rem; color:#ef4444; font-weight:normal;'>{src_badge}</span></div>",
+                unsafe_allow_html=True
+            )
+            if top_cpu:
+                df_c = pd.DataFrame([{
+                    "PID":      f"#{p['pid']}",
+                    "SID":      p.get('sid', 'N/A'),
+                    "USER":     p.get('user_label', p.get('username', 'oracle')),
+                    "CMD":      (p.get('args', p.get('name', '')) or '')[:40],
+                    cpu_col_label: f"{p.get('cpu', p.get('cpu_sec', 0.0)):.1f}{cpu_val_suffix}",
+                    "MEM (MB)": f"{p.get('rss_mb', p.get('mem', 0.0)):.1f} MB",
+                } for p in top_cpu])
+                theme_mode = st.session_state.get("theme", "Light")
+                st.markdown(_render_process_table_html(df_c, theme_mode), unsafe_allow_html=True)
+            else:
+                if err_msg:
+                    if any(term in err_msg.lower() for term in ["authentication failed", "wrong username", "permission denied"]):
+                        st.error("❌ host username and password is wrong")
+                    else:
+                        st.info(err_msg)
+                else:
+                    st.info(f"No active oracle user sessions for {db_name}")
+            st.markdown("</div>", unsafe_allow_html=True)
+
+        with mcol2:
+            st.markdown(
+                f"<div style='background:var(--card-bg); border:1px solid var(--border-color); border-radius:8px; padding:10px 12px; margin-bottom:10px;'>"
+                f"<div style='font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--text-primary); margin-bottom:8px;'>💾 Top Memory Consuming Sessions ({db_name})<span style='font-size:0.65rem; color:#3b82f6; font-weight:normal;'>{src_badge}</span></div>",
+                unsafe_allow_html=True
+            )
+            if top_mem:
+                df_m = pd.DataFrame([{
+                    "PID":      f"#{p['pid']}",
+                    "SID":      p.get('sid', 'N/A'),
+                    "USER":     p.get('user_label', p.get('username', 'oracle')),
+                    "CMD":      (p.get('args', p.get('name', '')) or '')[:40],
+                    "MEM (MB)": f"{p.get('rss_mb', p.get('mem', p.get('vsz_mb', 0.0))):.1f} MB",
+                    cpu_col_label: f"{p.get('cpu', 0.0):.1f}{cpu_val_suffix}",
+                } for p in top_mem])
+                theme_mode = st.session_state.get("theme", "Light")
+                st.markdown(_render_process_table_html(df_m, theme_mode), unsafe_allow_html=True)
+            else:
+                if err_msg:
+                    if any(term in err_msg.lower() for term in ["authentication failed", "wrong username", "permission denied"]):
+                        st.error("❌ host username and password is wrong")
+                    else:
+                        st.info(err_msg)
+                else:
+                    st.info(f"No active oracle user sessions for {db_name}")
+            st.markdown("</div>", unsafe_allow_html=True)
+
+    except Exception as exc:
+        print(f"[monitoring] Process section error: {exc}")
+
+
 def render_dashboard(db_name):
     """Render the main database health metrics and charts in a premium compact layout."""
     
@@ -455,7 +658,16 @@ def render_dashboard(db_name):
             # Clean up refresh cycle state so next visit starts fresh
             if "_refresh_cycle_start" in st.session_state:
                 del st.session_state["_refresh_cycle_start"]
-            # Keep diag_result cached — Portal Home will reuse it for instant display
+            # Force the home portal page to fetch live instead of reusing
+            # whatever was cached from before this dashboard visit — time
+            # has passed (a DB could have gone down, filled a tablespace,
+            # etc.), so "instant but possibly stale" is no longer what we
+            # want here. Same cache keys save_txt_path() clears on a new
+            # registry file load.
+            for _key in ("status_cache", "server_cache", "home_load_complete",
+                         "home_processes_cache", "home_mounts_cache"):
+                if _key in st.session_state:
+                    del st.session_state[_key]
             st.session_state.page = "home"
             st.session_state.selected_db = None
             st.rerun()
@@ -487,9 +699,15 @@ def render_dashboard(db_name):
                 st.rerun()
 
 
+    # Clear the session cache on fresh database details page load to force live metrics
+    cache_key = f"mon_cache_{db_name}"
+    if st.session_state.get("active_detail_db") != db_name:
+        st.session_state.active_detail_db = db_name
+        if cache_key in st.session_state:
+            del st.session_state[cache_key]
+
     # Cache monitoring metrics to avoid reload on theme change
     use_cache = False
-    cache_key = f"mon_cache_{db_name}"
     if cache_key in st.session_state:
         cache_data = st.session_state[cache_key]
         if time.time() - cache_data.get("timestamp", 0) < 60:
@@ -513,24 +731,145 @@ def render_dashboard(db_name):
         max_sessions   = metrics["max_sessions"]
         system_res     = metrics["system_res"]
         os_storage     = metrics["os_storage"]
+        reporting_db   = metrics.get("reporting_db", {"configured": False, "status": "NOT_CONFIGURED"})
+        standby_gap    = metrics.get("standby_gap", {"configured": False})
     else:
         with st.spinner("Fetching DB metrics..."):
-            db_details     = get_db_status()
-            session_stats  = get_session_stats()
-            df_ts          = get_tablespace_utilization()
-            backup_state   = get_backup_status()
-            df_rman        = get_rman_durations()
-            license_stats  = get_session_license()
-            growth_rates   = get_db_growth_rates()
-            df_cpu         = get_cpu_consuming_sessions()
-            df_blocking    = get_blocking_sessions()
-            df_locks       = get_lock_waits()
-            listener_state = get_listener_status()
-            mem_usage      = get_sga_pga_usage()
-            arc_log_info   = get_arc_log_info()
-            max_sessions   = get_max_sessions()
-            system_res     = get_system_resources()
-            os_storage     = get_drive_details()
+            from concurrent.futures import ThreadPoolExecutor
+            from db_connection import check_reporting_db_status, get_api_connection, get_config_for_db
+
+            def _with_explicit_conn(func, target_db):
+                # Every one of these queries.py/get_drive_details functions
+                # defaults to conn=None and falls back to opening a
+                # connection via st.session_state["selected_db"] when none
+                # is passed. That fallback is NOT reliable from inside a
+                # ThreadPoolExecutor worker thread: Streamlit gives worker
+                # threads no script run context, so st.session_state there
+                # resolves to a separate, always-empty global mock state —
+                # selected_db reads back as None, and the fallback then
+                # silently connects to ROW 0 OF THE REGISTRY FILE instead
+                # of target_db. Open an explicit connection for target_db
+                # instead, so every metric is guaranteed to be scoped to
+                # the database actually being viewed.
+                conn, _err = get_api_connection(target_db)
+                if not conn:
+                    raise RuntimeError(f"DB connection error for {target_db}: {_err}")
+                try:
+                    return func(conn=conn)
+                finally:
+                    try:
+                        conn.close()
+                    except Exception:
+                        pass
+
+            def _fetch_listener_status(target_db):
+                # Must mirror dashboard/home.py's listener logic exactly
+                # (load_db_status_summary_basic), otherwise this page can
+                # disagree with the home portal card. If the Oracle
+                # connection succeeds, the listener obviously accepted it.
+                # If it FAILS, _with_explicit_conn would just report the
+                # listener as unknown/down — but the listener can be up
+                # and reachable even when the DB connection itself fails
+                # for an unrelated reason (bad credentials, DB mounted but
+                # not open to a non-privileged user, etc.), so fall back to
+                # a raw TCP check on the configured host:port, same as home.
+                conn, _err = get_api_connection(target_db)
+                if conn:
+                    try:
+                        return get_listener_status(conn=conn)
+                    finally:
+                        try:
+                            conn.close()
+                        except Exception:
+                            pass
+                try:
+                    import socket as _socket
+                    cfg = get_config_for_db(target_db)
+                    if cfg:
+                        sock = _socket.create_connection((cfg["host"], int(cfg["port"])), timeout=2.0)
+                        sock.close()
+                        return "UP"
+                except Exception:
+                    pass
+                return "DOWN"
+
+            # Decided here on the main Streamlit thread (never inside the
+            # ThreadPoolExecutor worker below — st.session_state falls back
+            # to a shared, always-empty mock inside worker threads) so the
+            # standby DB connection is only written to the log/console once
+            # per browser session, not once per rerun. A refresh/reload
+            # starts a brand-new session, so it logs again there — that's
+            # intended, only same-session reruns are deduped.
+            _standby_log_key = f"_standby_logged_{db_name}"
+            _should_log_standby = not st.session_state.get(_standby_log_key, False)
+
+            funcs = {
+                "db_details":     lambda: _with_explicit_conn(get_db_status, db_name),
+                "session_stats":  lambda: _with_explicit_conn(get_session_stats, db_name),
+                "df_ts":          lambda: _with_explicit_conn(get_tablespace_utilization, db_name),
+                "backup_state":   lambda: _with_explicit_conn(get_backup_status, db_name),
+                "df_rman":        lambda: _with_explicit_conn(get_rman_durations, db_name),
+                "license_stats":  lambda: _with_explicit_conn(get_session_license, db_name),
+                "growth_rates":   lambda: _with_explicit_conn(get_db_growth_rates, db_name),
+                "df_blocking":    lambda: _with_explicit_conn(get_blocking_sessions, db_name),
+                "df_locks":       lambda: _with_explicit_conn(get_lock_waits, db_name),
+                "listener_state": lambda: _fetch_listener_status(db_name),
+                "mem_usage":      lambda: _with_explicit_conn(get_sga_pga_usage, db_name),
+                "arc_log_info":   lambda: _with_explicit_conn(get_arc_log_info, db_name),
+                "max_sessions":   lambda: _with_explicit_conn(get_max_sessions, db_name),
+                "system_res":     lambda: _with_explicit_conn(get_system_resources, db_name),
+                "reporting_db":   lambda: check_reporting_db_status(db_name),
+                "standby_gap":    lambda: get_standby_gap_live(db_name, do_log=_should_log_standby),
+                "os_storage":     lambda: _with_explicit_conn(get_drive_details, db_name),
+                "df_cpu":         lambda: _with_explicit_conn(get_cpu_consuming_sessions, db_name),
+            }
+
+            results = {}
+            with ThreadPoolExecutor(max_workers=20) as executor:
+                future_to_key = {executor.submit(f): k for k, f in funcs.items()}
+                for future in future_to_key:
+                    key = future_to_key[future]
+                    try:
+                        results[key] = future.result()
+                    except Exception as e:
+                        print(f"[dashboard] Error fetching {key}: {e}")
+                        # Provide clean fallback defaults on failure
+                        if key in ("df_ts", "df_rman", "df_cpu", "df_blocking", "df_locks"):
+                            results[key] = pd.DataFrame()
+                        elif key in ("session_stats", "db_details", "license_stats", "mem_usage", "arc_log_info", "system_res"):
+                            results[key] = {}
+                        elif key == "os_storage":
+                            results[key] = []
+                        elif key == "max_sessions":
+                            results[key] = 0
+                        elif key == "reporting_db":
+                            results[key] = {"configured": False, "status": "NOT_CONFIGURED"}
+                        elif key == "standby_gap":
+                            results[key] = {"configured": False}
+                        else:
+                            results[key] = "UNKNOWN"
+
+            if _should_log_standby:
+                st.session_state[_standby_log_key] = True
+
+            db_details     = results["db_details"]
+            session_stats  = results["session_stats"]
+            df_ts          = results["df_ts"]
+            backup_state   = results["backup_state"]
+            df_rman        = results["df_rman"]
+            license_stats  = results["license_stats"]
+            growth_rates   = results["growth_rates"]
+            df_cpu         = results["df_cpu"]
+            df_blocking    = results["df_blocking"]
+            df_locks       = results["df_locks"]
+            listener_state = results["listener_state"]
+            mem_usage      = results["mem_usage"]
+            arc_log_info   = results["arc_log_info"]
+            max_sessions   = results["max_sessions"]
+            system_res     = results["system_res"]
+            os_storage     = results["os_storage"]
+            reporting_db   = results["reporting_db"]
+            standby_gap    = results["standby_gap"]
             
         st.session_state[cache_key] = {
             "timestamp": time.time(),
@@ -550,10 +889,11 @@ def render_dashboard(db_name):
                 "arc_log_info":   arc_log_info,
                 "max_sessions":   max_sessions,
                 "system_res":     system_res,
-                "os_storage":     os_storage
+                "os_storage":     os_storage,
+                "reporting_db":   reporting_db,
+                "standby_gap":    standby_gap
             }
         }
-
 
     theme_mode = st.session_state.get("theme", "Light")
     chart_template = "plotly_dark" if theme_mode == "Dark" else "plotly_white"
@@ -571,22 +911,48 @@ def render_dashboard(db_name):
     row1_col1, row1_col2, row1_col3 = st.columns([1, 1, 1])
     
     with row1_col1:
-        with st.container(border=True, height=210):
+        with st.container(border=True, height=320):
             st.markdown("<h5 style='color: var(--text-primary); margin-top: 0; margin-bottom: 0px; font-family: Space Grotesk; font-size: 0.95rem;'><span style='font-size:0.8em;'>⚙️</span> Server & Service Status</h5>", unsafe_allow_html=True)
             
-            # Rebuild missing get_state_html for Backup box
             def get_state_html(title, state):
                 if state == "up":
                     color = "#10b981"; badge = "&#8679; UP"; border = "#10b981"; bg = "rgba(16,185,129,0.08)"
                 elif state == "warning":
                     color = "#f59e0b"; badge = "&#9651; PENDING"; border = "#f59e0b"; bg = "rgba(245,158,11,0.08)"
+                elif state == "not_configured":
+                    color = "#6b7280"; badge = "NOT CONFIG"; border = "#6b7280"; bg = "rgba(107,114,128,0.08)"
                 else:
                     color = "#ef4444"; badge = "&#8681; DOWN"; border = "#ef4444"; bg = "rgba(239,68,68,0.08)"
-                return f'''<div style="display:flex; align-items:center; justify-content:space-between; padding:6px 12px; border-left:3px solid {border}; border-radius:0 6px 6px 0; background:{bg}; margin-bottom:4px;">
-                    <span style="font-size:0.72rem; font-weight:700; color:var(--text-primary); letter-spacing:0.02em;">{title}</span>
-                    <span style="font-size:0.75rem; font-weight:800; color:{color}; letter-spacing:0.04em;">{badge}</span>
+                return f'''<div style="display:flex; align-items:center; justify-content:space-between; padding:4px 10px; border-left:3px solid {border}; border-radius:0 6px 6px 0; background:{bg}; margin-bottom:3px; height:24px;">
+                    <span style="font-size:0.68rem; font-weight:700; color:var(--text-primary); letter-spacing:0.02em;">{title}</span>
+                    <span style="font-size:0.68rem; font-weight:800; color:{color}; letter-spacing:0.04em;">{badge}</span>
                 </div>'''
 
+            # 1. DB Status — must match the home portal page's rule exactly
+            # (dashboard/home.py: load_db_status_summary_basic), otherwise
+            # a database can show DOWN on one page and UP on the other.
+            # MOUNTED means the instance is up but the database itself
+            # isn't open — regular connections can't actually use it in
+            # that state, so only OPEN counts as UP here, same as home.
+            db_status_raw = str(db_details.get("STATUS", "DOWN")).upper()
+            db_state = "up" if db_status_raw == "OPEN" else "down"
+            db_html = get_state_html("Database", db_state)
+
+            # 2. Listener Status
+            lsnr_state = "up" if str(listener_state).upper() == "UP" else "down"
+            lsnr_html = get_state_html("Listener", lsnr_state)
+
+            # 3. Reporting DB Status
+            rpt_raw_state = reporting_db.get("status", "NOT_CONFIGURED")
+            if rpt_raw_state == "UP":
+                rpt_state = "up"
+            elif rpt_raw_state == "DOWN":
+                rpt_state = "down"
+            else:
+                rpt_state = "not_configured"
+            rpt_html = get_state_html("Reporting DB", rpt_state)
+
+            # 4. Backup Status
             import datetime as _dt
             today = _dt.date.today()
             if df_rman.empty:
@@ -595,27 +961,23 @@ def render_dashboard(db_name):
                 df_rman_dt = df_rman.copy()
                 
                 def safe_parse_date(val):
-                    """Safely parse RMAN date strings like '14-Jul', '14-Jul-26', '14-Jul-2026', full timestamps."""
                     try:
                         s = str(val).strip()
                         cur_year = str(today.year)
-                        # Handle short format "14-Jul" or "14-JUL" — no year
                         import re as _re
                         if _re.match(r'^\d{1,2}-[A-Za-z]{3}$', s):
                             s = s + "-" + cur_year
-                        # Try multiple formats
                         for fmt in ("%d-%b-%Y", "%d-%b-%y", "%d-%b", "%Y-%m-%d", "%d/%m/%Y", "%d-%m-%Y"):
                             try:
                                 return pd.to_datetime(s, format=fmt).date()
                             except Exception:
                                 continue
-                        # Last resort: let pandas guess
                         return pd.to_datetime(s, errors="coerce").date()
                     except Exception:
                         return None
                 
                 df_rman_dt["START_DATE"] = df_rman_dt["START_TIME_STR"].apply(safe_parse_date)
-                df_rman_dt = df_rman_dt[df_rman_dt["START_DATE"].notna()]  # drop unparseable rows
+                df_rman_dt = df_rman_dt[df_rman_dt["START_DATE"].notna()]
                 df_rman_dt["DAYS_AGO"] = df_rman_dt["START_DATE"].apply(lambda d: (today - d).days)
                 recent_1d = df_rman_dt[df_rman_dt["DAYS_AGO"] <= 1]
                 if recent_1d.empty:
@@ -630,9 +992,10 @@ def render_dashboard(db_name):
 
             bkp_html = get_state_html("Backup", bkp_state)
 
-            tot   = session_stats["TOTAL"]
-            act   = session_stats["ACTIVE"]
-            inact = session_stats["INACTIVE"]
+            # 5. Sessions Status
+            tot   = session_stats.get("TOTAL", 0)
+            act   = session_stats.get("ACTIVE", 0)
+            inact = session_stats.get("INACTIVE", 0)
             act_num = int(act) if str(act).isdigit() else 0
             
             sess_threshold_high = max(50, int(max_sessions * 0.85)) if max_sessions > 0 else 50
@@ -647,22 +1010,25 @@ def render_dashboard(db_name):
             max_label = f" / Max {max_sessions}" if max_sessions > 0 else ""
             
             st.markdown(f'''
-<div style="display:flex; flex-direction:column; justify-content:flex-start; gap:0px; height: 160px; margin-top:2px; overflow:hidden;">
+<div style="display:flex; flex-direction:column; justify-content:flex-start; gap:4px; height: 260px; margin-top:2px; overflow:hidden;">
+    {db_html}
+    {lsnr_html}
+    {rpt_html}
     {bkp_html}
-    <div style="display:flex; align-items:center; justify-content:space-between; padding:6px 12px; border-left:3px solid {sess_border}; border-radius:0 6px 6px 0; background:{sess_bg}; margin-bottom:4px;" title="Total: {tot} | Active: {act} | Inactive: {inact} | Max Allowed: {max_sessions}">
-        <span style="font-size:0.72rem; font-weight:700; color:var(--text-primary);">Sessions</span>
-        <span style="font-size:0.70rem; font-weight:800; color:{act_color}; display:flex; flex-direction:column; align-items:flex-end;">
+    <div style="display:flex; align-items:center; justify-content:space-between; padding:4px 10px; border-left:3px solid {sess_border}; border-radius:0 6px 6px 0; background:{sess_bg}; height:28px;" title="Total: {tot} | Active: {act} | Inactive: {inact} | Max Allowed: {max_sessions}">
+        <span style="font-size:0.68rem; font-weight:700; color:var(--text-primary);">Sessions</span>
+        <span style="font-size:0.65rem; font-weight:800; color:{act_color}; display:flex; flex-direction:column; align-items:flex-end; line-height:1.2;">
             <span>{tot} Total{max_label}</span>
-            <span style="color:var(--text-secondary); font-size:0.65rem; margin-top:2px;">{act} Active &middot; {inact} Inactive</span>
+            <span style="color:var(--text-secondary); font-size:0.58rem;">{act} Active &middot; {inact} Inactive</span>
         </span>
     </div>
 </div>
 ''', unsafe_allow_html=True)
             
     with row1_col2:
-        with st.container(border=True, height=210):
+        with st.container(border=True, height=320):
             st.markdown("<h5 style='color: var(--text-primary); margin-top: 0; margin-bottom: 0px; font-family: Space Grotesk; font-size: 0.95rem;'><span style='font-size:0.8em;'>📈</span> Session HWM Peak</h5>", unsafe_allow_html=True)
-            df_sessions_hist = update_session_history(license_stats["sessions_current"], license_stats["sessions_highwater"])
+            df_sessions_hist = update_session_history(license_stats.get("sessions_current", 0), license_stats.get("sessions_highwater", 0))
             
             fig_sess = go.Figure()
             fig_sess.add_trace(go.Scatter(
@@ -686,7 +1052,7 @@ def render_dashboard(db_name):
                 paper_bgcolor='rgba(0,0,0,0)',
                 plot_bgcolor='rgba(0,0,0,0)',
                 font=dict(color=chart_text_color, size=9),
-                height=130,
+                height=230,
                 margin=dict(l=5, r=5, t=5, b=5),
                 showlegend=False,
                 xaxis=dict(showgrid=False, title=None, tickfont=dict(color=chart_text_color, size=8)),
@@ -695,23 +1061,23 @@ def render_dashboard(db_name):
             st.plotly_chart(fig_sess, use_container_width=True, config={'displayModeBar': False})
 
     with row1_col3:
-        with st.container(border=True, height=210):
+        with st.container(border=True, height=320):
             st.markdown("<h5 style='color: var(--text-primary); margin-top: 0; margin-bottom: 0px; font-family: Space Grotesk; font-size: 0.95rem;'><span style='font-size:0.8em;'>💾</span> Memory Allocation</h5>", unsafe_allow_html=True)
-            sga_pct = mem_usage["SGA"]["used_pct"]
-            pga_pct = mem_usage["PGA"]["used_pct"]
-            sga_alloc = mem_usage['SGA']['allocated_mb']
-            sga_free = mem_usage['SGA']['free_mb']
+            sga_pct = mem_usage.get("SGA", {}).get("used_pct", 0)
+            pga_pct = mem_usage.get("PGA", {}).get("used_pct", 0)
+            sga_alloc = mem_usage.get('SGA', {}).get('allocated_mb', 0)
+            sga_free = mem_usage.get('SGA', {}).get('free_mb', 0)
             sga_used = sga_alloc - sga_free
             
-            pga_alloc = mem_usage['PGA']['allocated_mb']
-            pga_free = mem_usage['PGA']['free_mb']
+            pga_alloc = mem_usage.get('PGA', {}).get('allocated_mb', 0)
+            pga_free = mem_usage.get('PGA', {}).get('free_mb', 0)
             pga_used = pga_alloc - pga_free
             
             sga_indicator = "🔴" if sga_pct > 85 else "🟢"
             pga_indicator = "🔴" if pga_pct > 85 else "🟢"
             
             st.markdown(f"""
-                <div style="height: 135px; display: flex; flex-direction: column; justify-content: center; padding: 2px 0;">
+                <div style="height: 245px; display: flex; flex-direction: column; justify-content: center; padding: 2px 0; gap: 4px;">
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; font-weight: 700; margin-bottom: 2px;">
                         <span>{sga_indicator} SGA</span>
                         <span style="color: var(--neon-blue);">{sga_pct}%</span>
@@ -1196,258 +1562,275 @@ def render_dashboard(db_name):
             else:
                 st.markdown("<p style='color:var(--text-secondary); font-size:0.6rem;'>No CPU session details</p>", unsafe_allow_html=True)
 
-    # ================= Archive Log Destination =================
+    # ================= Archive Log & Standby DB Log Sync Status (Side-by-Side) =================
     st.markdown("<hr style='margin: 15px 0; border-color: var(--border-color);'>", unsafe_allow_html=True)
-    st.markdown(
-        "<h4 style='color: var(--text-primary); font-family: Space Grotesk; font-size: 1.05rem; font-weight: 700; margin-bottom: 10px;'>"
-        "📂 Archive Log Destination</h4>", unsafe_allow_html=True
-    )
-    if not arc_log_info or not isinstance(arc_log_info, dict):
-        arc_log_info = {"arc_configured": True, "arc_log_type": "DEST", "arc_dest_name": "USE_DB_RECOVERY_FILE_DEST", "archive_logs": 0, "arc_used_gb": 0.0}
     
-    theme_mode = st.session_state.get("theme", "Light")
-    arc_text = "#f1f5f9" if theme_mode == "Dark" else "#1e293b"
-    arc_sub  = "#94a3b8" if theme_mode == "Dark" else "#64748b"
-    arc_bg   = "rgba(16,185,129,0.04)" if theme_mode == "Dark" else "rgba(16,185,129,0.03)"
-    arc_bdr  = "rgba(255,255,255,0.1)"  if theme_mode == "Dark" else "rgba(0,0,0,0.08)"
+    col_arc, col_stby = st.columns([1.1, 1.3])
     
-    a_type = arc_log_info.get("arc_log_type", "UNKNOWN")
-    a_dest = arc_log_info.get("arc_dest_name", "") or "USE_DB_RECOVERY_FILE_DEST"
-    
-    if a_type == "FRA":
-        limit = arc_log_info.get("arc_limit_gb", 0)
-        used = arc_log_info.get("arc_used_gb", 0)
-        free = arc_log_info.get("arc_free_gb", 0)
-        pct = arc_log_info.get("arc_pct", 0)
+    with col_arc:
+        st.markdown(
+            "<h4 style='color: var(--text-primary); font-family: Space Grotesk; font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; margin-top: 0;'>"
+            "📂 Archive Log Destination</h4>", unsafe_allow_html=True
+        )
+        if not arc_log_info or not isinstance(arc_log_info, dict):
+            arc_log_info = {"arc_configured": True, "arc_log_type": "DEST", "arc_dest_name": "USE_DB_RECOVERY_FILE_DEST", "archive_logs": 0, "arc_used_gb": 0.0}
         
-        bar_col = "#ef4444" if pct >= 90 else ("#f59e0b" if pct >= 70 else "#10b981")
-        ind = "&#128308;" if pct >= 90 else ("&#128993;" if pct >= 70 else "&#128994;")
+        theme_mode = st.session_state.get("theme", "Light")
+        arc_text = "#f1f5f9" if theme_mode == "Dark" else "#1e293b"
+        arc_sub  = "#94a3b8" if theme_mode == "Dark" else "#64748b"
+        arc_bg   = "rgba(16,185,129,0.04)" if theme_mode == "Dark" else "rgba(16,185,129,0.03)"
+        arc_bdr  = "rgba(255,255,255,0.1)"  if theme_mode == "Dark" else "rgba(0,0,0,0.08)"
         
-        arc_html = f"""
-        <div style="border:1px solid {arc_bdr};border-radius:6px;padding:6px 10px;background:{arc_bg};font-family:'Inter',sans-serif;margin-bottom:8px;max-width:250px;">
-            <div style="font-size:0.65rem;font-weight:800;color:{arc_sub};margin-bottom:4px;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="FRA Destination: {a_dest}">
-                FRA: {a_dest}
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.65rem;font-weight:700;color:{arc_text};margin-bottom:2px;">
-                <span>{ind} Used %</span>
-                <span style="color:#38bdf8;">{pct:.2f}%</span>
-            </div>
-            <div style="height:8px;border-radius:4px;background:rgba(128,128,128,0.2);position:relative;overflow:hidden;margin-bottom:6px;">
-                <div style="position:absolute;left:0;top:0;height:100%;width:{pct}%;background:{bar_col};"></div>
-            </div>
-            <div style="font-size:0.65rem;color:{arc_sub};display:flex;flex-direction:column;gap:3px;">
-                <div style="display:flex;justify-content:space-between;"><span>Allocated :</span> <b>{limit:.2f} GB</b></div>
-                <div style="display:flex;justify-content:space-between;"><span>Used :</span> <b>{used:.2f} GB</b></div>
-                <div style="display:flex;justify-content:space-between;"><span>Free :</span> <b>{free:.2f} GB</b></div>
-            </div>
-        </div>
-        """
-    else:
-        count = arc_log_info.get("archive_logs", 0)
-        used = arc_log_info.get("arc_used_gb", 0)
+        a_type = arc_log_info.get("arc_log_type", "UNKNOWN")
+        a_dest = arc_log_info.get("arc_dest_name", "") or "USE_DB_RECOVERY_FILE_DEST"
         
-        arc_html = f"""
-        <div style="border:1px solid {arc_bdr};border-radius:6px;padding:6px 10px;background:{arc_bg};font-family:'Inter',sans-serif;margin-bottom:8px;max-width:250px;">
-            <div style="font-size:0.65rem;font-weight:800;color:{arc_sub};margin-bottom:4px;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="Destination: {a_dest}">
-                Dest: {a_dest}
+        if a_type == "FRA":
+            limit = arc_log_info.get("arc_limit_gb", 0)
+            used = arc_log_info.get("arc_used_gb", 0)
+            free = arc_log_info.get("arc_free_gb", 0)
+            pct = arc_log_info.get("arc_pct", 0)
+            
+            bar_col = "#ef4444" if pct >= 90 else ("#f59e0b" if pct >= 70 else "#10b981")
+            ind = "&#128308;" if pct >= 90 else ("&#128993;" if pct >= 70 else "&#128994;")
+            
+            arc_html = f"""
+            <div style="border:1px solid {arc_bdr};border-radius:6px;padding:6px 10px;background:{arc_bg};font-family:'Inter',sans-serif;margin-bottom:8px;">
+                <div style="font-size:0.65rem;font-weight:800;color:{arc_sub};margin-bottom:4px;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="FRA Destination: {a_dest}">
+                    FRA: {a_dest}
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.65rem;font-weight:700;color:{arc_text};margin-bottom:2px;">
+                    <span>{ind} Used %</span>
+                    <span style="color:#38bdf8;">{pct:.2f}%</span>
+                </div>
+                <div style="height:8px;border-radius:4px;background:rgba(128,128,128,0.2);position:relative;overflow:hidden;margin-bottom:6px;">
+                    <div style="position:absolute;left:0;top:0;height:100%;width:{pct}%;background:{bar_col};"></div>
+                </div>
+                <div style="font-size:0.65rem;color:{arc_sub};display:flex;flex-direction:column;gap:3px;">
+                    <div style="display:flex;justify-content:space-between;"><span>Allocated :</span> <b>{limit:.2f} GB</b></div>
+                    <div style="display:flex;justify-content:space-between;"><span>Used :</span> <b>{used:.2f} GB</b></div>
+                    <div style="display:flex;justify-content:space-between;"><span>Free :</span> <b>{free:.2f} GB</b></div>
+                </div>
             </div>
-            <div style="font-size:0.6rem;color:{arc_sub};display:flex;flex-direction:column;gap:2px;">
-                <div style="display:flex;justify-content:space-between;"><span>Archive Logs :</span> <b style="color:{arc_text};">{count}</b></div>
-                <div style="display:flex;justify-content:space-between;"><span>Used Size :</span> <b style="color:{arc_text};">{used:.2f} GB</b></div>
+            """
+        else:
+            count = arc_log_info.get("archive_logs", 0)
+            used = arc_log_info.get("arc_used_gb", 0)
+            
+            arc_html = f"""
+            <div style="border:1px solid {arc_bdr};border-radius:6px;padding:6px 10px;background:{arc_bg};font-family:'Inter',sans-serif;margin-bottom:8px;">
+                <div style="font-size:0.65rem;font-weight:800;color:{arc_sub};margin-bottom:4px;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="Destination: {a_dest}">
+                    Dest: {a_dest}
+                </div>
+                <div style="font-size:0.6rem;color:{arc_sub};display:flex;flex-direction:column;gap:2px;">
+                    <div style="display:flex;justify-content:space-between;"><span>Archive Logs :</span> <b style="color:{arc_text};">{count}</b></div>
+                    <div style="display:flex;justify-content:space-between;"><span>Used Size :</span> <b style="color:{arc_text};">{used:.2f} GB</b></div>
+                </div>
             </div>
-        </div>
-        """
-    key_arc = f"kill_arc_dest_{db_name}"
-    st.markdown(f"""
-    <style>
-    div[data-testid="stElementContainer"]:has(.st-key-{key_arc}),
-    .st-key-{key_arc} {{
-        max-width: 250px !important;
-        width: 250px !important;
-        margin: 4px 0 8px 0 !important;
-    }}
-    div[data-testid="stElementContainer"]:has(.st-key-{key_arc}) button,
-    .st-key-{key_arc} button {{
-        width: 250px !important;
-        max-width: 250px !important;
-        font-size: 0.72rem !important;
-        padding: 4px 8px !important;
-        min-height: 28px !important;
-        height: 28px !important;
-        line-height: 28px !important;
-        background: #ef4444 !important;
-        background-color: #ef4444 !important;
-        color: #ffffff !important;
-        border: none !important;
-        border-radius: 6px !important;
-        font-weight: 800 !important;
-        display: block !important;
-        box-shadow: 0 2px 6px rgba(239, 68, 68, 0.35) !important;
-    }}
-    .st-key-{key_arc} button:hover {{
-        background: #dc2626 !important;
-        background-color: #dc2626 !important;
-    }}
-    .st-key-{key_arc} button p,
-    .st-key-{key_arc} button span {{
-        color: #ffffff !important;
-        font-size: 0.72rem !important;
-        font-weight: 800 !important;
-    }}
-    </style>
-    """, unsafe_allow_html=True)
-    st.markdown(arc_html, unsafe_allow_html=True)
-    if st.button("🧹 Archive Log Clear", key=key_arc):
-        with st.spinner("Clearing archive logs on database server..."):
-            success, msg = clear_archive_logs_via_ssh(db_name)
-            if success:
-                st.success(f"✅ {msg}")
-                # Switch logfile to start fresh
-                try:
-                    from db_connection import execute_query
-                    execute_query("ALTER SYSTEM SWITCH LOGFILE")
-                except Exception:
-                    pass
-            else:
-                st.error(f"❌ Failed to clear archive logs: {msg}")
+            """
+        key_arc = f"kill_arc_dest_{db_name}"
+        st.markdown(f"""
+        <style>
+        div[data-testid="stElementContainer"]:has(.st-key-{key_arc}),
+        .st-key-{key_arc} {{
+            width: 100% !important;
+            margin: 4px 0 8px 0 !important;
+        }}
+        div[data-testid="stElementContainer"]:has(.st-key-{key_arc}) button,
+        .st-key-{key_arc} button {{
+            width: 100% !important;
+            font-size: 0.72rem !important;
+            padding: 4px 8px !important;
+            min-height: 28px !important;
+            height: 28px !important;
+            line-height: 28px !important;
+            background: #ef4444 !important;
+            background-color: #ef4444 !important;
+            color: #ffffff !important;
+            border: none !important;
+            border-radius: 6px !important;
+            font-weight: 800 !important;
+            display: block !important;
+            box-shadow: 0 2px 6px rgba(239, 68, 68, 0.35) !important;
+        }}
+        .st-key-{key_arc} button:hover {{
+            background: #dc2626 !important;
+            background-color: #dc2626 !important;
+        }}
+        .st-key-{key_arc} button p,
+        .st-key-{key_arc} button span {{
+            color: #ffffff !important;
+            font-size: 0.72rem !important;
+            font-weight: 800 !important;
+        }}
+        </style>
+        """, unsafe_allow_html=True)
+        st.markdown(arc_html, unsafe_allow_html=True)
+        if st.button("🧹 Archive Log Clear", key=key_arc):
+            with st.spinner("Clearing archive logs on database server..."):
+                success, msg = clear_archive_logs_via_ssh(db_name)
+                if success:
+                    st.success(f"✅ {msg}")
+                    # Switch logfile to start fresh
+                    try:
+                        from db_connection import execute_query
+                        execute_query("ALTER SYSTEM SWITCH LOGFILE")
+                    except Exception:
+                        pass
+                else:
+                    st.error(f"❌ Failed to clear archive logs: {msg}")
 
+        # Standby Destination Status - stacked below Archive Log Destination,
+        # in the same left column (not a separate side-by-side column).
+        st.markdown(
+            "<h4 style='color: var(--text-primary); font-family: Space Grotesk; font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; margin-top: 0;'>"
+            "📡 Standby Destination Status</h4>", unsafe_allow_html=True
+        )
+        theme_mode = st.session_state.get("theme", "Light")
+        card_bg = "rgba(59,130,246,0.03)" if theme_mode == "Dark" else "rgba(59,130,246,0.02)"
+        card_bdr = "rgba(255,255,255,0.08)" if theme_mode == "Dark" else "rgba(0,0,0,0.06)"
+        text_color = "#f1f5f9" if theme_mode == "Dark" else "#1e293b"
+        text_sec = "#94a3b8" if theme_mode == "Dark" else "#64748b"
+
+        standby_dests = standby_gap.get("standby_dests", []) if ("standby_gap" in locals() and standby_gap) else []
+        if standby_dests:
+            dest_rows = []
+            for d in standby_dests:
+                d_id = d.get("dest_id", "")
+                d_role = d.get("role") or ""
+                d_name = d.get("dest_name") or "N/A"
+                d_unique = d.get("db_unique_name") or "N/A"
+                d_status = d.get("status") or "UNKNOWN"
+                d_sync = d.get("synchronization_status") or "N/A"
+                d_err = d.get("error", "")
+
+                status_color = "#10b981" if d_status == "VALID" else ("#f59e0b" if d_status == "INACTIVE" else "#ef4444")
+                role_label = "Primary" if d_role == "primary" else ("Standby" if d_role == "standby" else "")
+                dest_label = f"Dest #{d_id}" + (f"<br><span style='font-size:0.58rem;font-weight:600;color:{text_sec};'>{role_label}</span>" if role_label else "")
+                err_html = f'<div style="color:#ef4444; font-size:0.65rem; margin-top:2px; font-weight:600;">⚠️ {d_err}</div>' if d_err else ''
+
+                dest_rows.append(f"""<tr style="border-bottom: 1px solid {card_bdr};">
+<td style="padding: 6px 8px; font-weight: 700; color: {text_color}; text-align: center;">{dest_label}</td>
+<td style="padding: 6px 8px; color: {text_color}; text-align: center;">{d_name}</td>
+<td style="padding: 6px 8px; color: {text_color}; text-align: center;">{d_unique}</td>
+<td style="padding: 6px 8px; font-weight: 800; color: {status_color}; text-align: center;">{d_status}</td>
+<td style="padding: 6px 8px; color: {text_color}; text-align: center;">{d_sync}</td>
+</tr>
+{"<tr><td colspan='5' style='padding:0 8px;'>" + err_html + "</td></tr>" if d_err else ""}""")
+
+            dest_html = f"""<div style="border: 1px solid {card_bdr}; border-radius: 8px; background: {card_bg}; padding: 10px 12px; font-family: 'Inter', sans-serif; margin-bottom: 15px;">
+<div style="font-size: 0.68rem; font-weight: 800; color: {text_sec}; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;">
+V$ARCHIVE_DEST_STATUS (DEST_ID IN (1, 2))
+</div>
+<table style="width: 100%; border-collapse: collapse; font-size: 0.66rem;">
+<thead>
+<tr style="border-bottom: 1.5px solid {card_bdr}; text-align: center; color: {text_sec}; font-weight: 700;">
+<th style="padding: 4px 6px; text-align: center;">DEST</th>
+<th style="padding: 4px 6px; text-align: center;">DEST_NAME</th>
+<th style="padding: 4px 6px; text-align: center;">DB_UNIQUE_NAME</th>
+<th style="padding: 4px 6px; text-align: center;">STATUS</th>
+<th style="padding: 4px 6px; text-align: center;">SYNC_STATUS</th>
+</tr>
+</thead>
+<tbody>
+{"".join(dest_rows)}
+</tbody>
+</table>
+</div>"""
+            st.markdown(dest_html, unsafe_allow_html=True)
+        else:
+            st.markdown(f"""<div style="border: 1px solid {card_bdr}; border-radius: 8px; background: {card_bg}; padding: 12px; font-family: 'Inter', sans-serif; margin-bottom: 15px; font-size: 0.72rem; color: {text_sec}; font-style: italic;">
+📡 No archive destination status returned for <b>{db_name}</b> (V$ARCHIVE_DEST_STATUS not returning rows for DEST_ID 1/2).
+</div>""", unsafe_allow_html=True)
+
+    with col_stby:
+        from db_connection import get_standby_db_config
+        stby_cfg = get_standby_db_config(db_name)
+        
+        if stby_cfg:
+            st.markdown(
+                "<h4 style='color: var(--text-primary); font-family: Space Grotesk; font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; margin-top: 0;'>"
+                "📡 Standby DB Log Sync Status</h4>", unsafe_allow_html=True
+            )
+            
+            if "standby_gap" in locals() and standby_gap:
+                if standby_gap.get("configured", False):
+                    threads = standby_gap.get("threads", [])
+                    if threads:
+                        theme_mode = st.session_state.get("theme", "Light")
+                        card_bg = "rgba(59,130,246,0.03)" if theme_mode == "Dark" else "rgba(59,130,246,0.02)"
+                        card_bdr = "rgba(255,255,255,0.08)" if theme_mode == "Dark" else "rgba(0,0,0,0.06)"
+                        text_color = "#f1f5f9" if theme_mode == "Dark" else "#1e293b"
+                        text_sec = "#94a3b8" if theme_mode == "Dark" else "#64748b"
+                        
+                        rows_html = []
+                        for t in threads:
+                            thread_no = t.get("thread", 1)
+                            primary = t.get("primary_generated", "N/A")
+                            received = t.get("standby_received", "N/A")
+                            applied = t.get("standby_applied", "N/A")
+                            gap = t.get("gap", 0)
+                            
+                            if gap >= 2:
+                                gap_color = "#ef4444"
+                                badge_icon = "🔴"
+                            else:
+                                gap_color = "#10b981"
+                                badge_icon = "✅"
+                            
+                            rows_html.append(f"""<tr style="border-bottom: 1px solid {card_bdr};">
+<td style="padding: 8px 10px; font-weight: 700; color: {text_color}; text-align: center;">{thread_no}</td>
+<td style="padding: 8px 10px; color: {text_color}; text-align: center;">{primary}</td>
+<td style="padding: 8px 10px; color: {text_color}; text-align: center;">{received}</td>
+<td style="padding: 8px 10px; color: {text_color}; text-align: center;">{applied}</td>
+<td style="padding: 8px 10px; font-weight: 800; color: {gap_color}; text-align: center;">
+<span style="background: {gap_color}22; padding: 2px 8px; border-radius: 4px;">{gap} {badge_icon}</span>
+</td>
+</tr>""")
+                        
+                        table_html = f"""<div style="border: 1px solid {card_bdr}; border-radius: 8px; background: {card_bg}; padding: 12px; font-family: 'Inter', sans-serif; width: 100%; margin-bottom: 15px;">
+<div style="font-size: 0.7rem; font-weight: 800; color: {text_sec}; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;">
+Real-time Data Guard Replication Sync
+</div>
+<table style="width: 100%; border-collapse: collapse; font-size: 0.72rem;">
+<thead>
+<tr style="border-bottom: 1.5px solid {card_bdr}; text-align: center; color: {text_sec}; font-weight: 700;">
+<th style="padding: 6px 10px; text-align: center;">THREAD#</th>
+<th style="padding: 6px 10px; text-align: center;">PRIMARY GEN</th>
+<th style="padding: 6px 10px; text-align: center;">STANDBY RCV</th>
+<th style="padding: 6px 10px; text-align: center;">STANDBY APP</th>
+<th style="padding: 6px 10px; text-align: center;">GAP</th>
+</tr>
+</thead>
+<tbody>
+{"".join(rows_html)}
+</tbody>
+</table>
+</div>"""
+                        st.markdown(table_html, unsafe_allow_html=True)
+                        
+                        max_g = standby_gap.get("max_gap", 0)
+                        if max_g >= 2:
+                            st.error(f"🚨 Warning: Standby DB has a log gap of {max_g} sequence(s) (Limit: < 2). Email alert triggered.")
+                    else:
+                        st.info("📡 Standby DB is configured but no thread logs could be retrieved.")
+                elif standby_gap.get("error"):
+                    st.error(f"❌ Failed to connect to Standby DB: {standby_gap.get('error')}")
+                else:
+                    st.info("📡 Standby DB status is unknown or connecting...")
+            else:
+                st.info("📡 Standby DB status is unknown or connecting...")
+        else:
+            st.markdown(
+                "<h4 style='color: var(--text-primary); font-family: Space Grotesk; font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; margin-top: 0;'>"
+                "📡 Standby DB Status</h4>", unsafe_allow_html=True
+            )
+            st.info(f"no standby db has for this {db_name}")
 
     # ================= Top CPU & Top Memory Processes for this DB =================
-    st.markdown("<hr style='margin: 15px 0; border-color: var(--border-color);'>", unsafe_allow_html=True)
-    st.markdown(
-        f"<h4 style='color: var(--text-primary); font-family: Space Grotesk; font-size: 1.05rem; "
-        f"font-weight: 700; margin-bottom: 10px;'>🔥 Top Running Processes — Database {db_name}</h4>",
-        unsafe_allow_html=True
-    )
-    try:
-        from utils.ssh_process_provider import get_top_processes_for_db
-        from db_connection import get_config_for_db
-
-        cfg = get_config_for_db(db_name) or {}
-        host = cfg.get("host", "")
-        ssh_user = cfg.get("user", "")
-        ssh_pwd  = cfg.get("password", "")
-
-        proc_res = get_top_processes_for_db(
-            host=host,
-            username=ssh_user,
-            password=ssh_pwd,
-            sid=db_name,
-            limit=10,
-        )
-        top_cpu = proc_res.get("top_cpu", [])
-        top_mem = proc_res.get("top_mem", [])
-        
-        # Filter out killed sessions from running processes tables
-        if "killed_sids" in st.session_state:
-            top_cpu = [p for p in top_cpu if str(p.get('sid', p.get('pid', ''))).strip() not in st.session_state.killed_sids]
-            top_mem = [p for p in top_mem if str(p.get('sid', p.get('pid', ''))).strip() not in st.session_state.killed_sids]
-        source  = proc_res.get("source", "none")
-        err_msg = proc_res.get("error")
-
-        src_badge = " (v$session DB View)" if source == "v$session" else (" (SSH)" if source == "ssh" else "")
-
-        mcol1, mcol2 = st.columns(2)
-        with mcol1:
-            st.markdown(
-                f"<div style='background:var(--card-bg); border:1px solid var(--border-color); border-radius:8px; padding:10px 12px; margin-bottom:10px;'>"
-                f"<div style='font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--text-primary); margin-bottom:8px;'>🔥 Top CPU Consuming Sessions ({db_name})<span style='font-size:0.65rem; color:#ef4444; font-weight:normal;'>{src_badge}</span></div>",
-                unsafe_allow_html=True
-            )
-            if top_cpu:
-                if source == "v$session":
-                    df_c = pd.DataFrame([{
-                        "PID":            f"#{p['pid']}",
-                        "SID":            p.get('sid', 'N/A'),
-                        "USER (DB)":      p.get('user_label', p.get('username', 'oracle')),
-                        "STATUS":         p.get('status', ''),
-                        "CPU Time (sec)": f"{p.get('cpu_sec', 0.0):.2f}s"
-                    } for p in top_cpu])
-                else:
-                    df_c = pd.DataFrame([{
-                        "PID":    f"#{p['pid']}",
-                        "USER":   p.get('user_label', p.get('username', 'oracle')),
-                        "CPU %":  f"{p['cpu']:.1f}%",
-                    } for p in top_cpu])
-                theme_mode = st.session_state.get("theme", "Light")
-                def render_styled_process_table_html(df, t_mode):
-                    if t_mode == "Dark":
-                        bg_green = "rgba(16, 185, 129, 0.1)"
-                        bg_grey  = "rgba(255, 255, 255, 0.02)"
-                        hdr_bg   = "rgba(16, 185, 129, 0.2)"
-                        text_col = "#ffffff"
-                        bdr_col  = "rgba(255, 255, 255, 0.1)"
-                    else:
-                        bg_green = "#e6f4ea"    # Row 1 -> Light Green
-                        bg_grey  = "#f8fafc"    # Row 2 -> Light Grey
-                        hdr_bg   = "#c3e6cb"    # Light Green Header
-                        text_col = "#1e293b"
-                        bdr_col  = "#cbd5e1"
-
-                    html = f'''<div style="overflow-x:auto; overflow-y:auto; max-height:180px; border:1px solid {bdr_col}; border-radius:6px;">
-                    <table style="width:100%; border-collapse:collapse; font-family:'Inter',sans-serif; font-size:0.72rem; color:{text_col};">
-                        <thead>
-                            <tr style="background:{hdr_bg}; border-bottom:2px solid {bdr_col}; text-transform:uppercase; font-size:0.65rem; font-weight:800;">'''
-                    for col in df.columns:
-                        html += f'<th style="padding:4px 6px; text-align:left;">{col}</th>'
-                    html += '</tr></thead><tbody>'
-                    for idx, row in df.iterrows():
-                        row_bg = bg_green if idx % 2 == 0 else bg_grey
-                        html += f'<tr style="background:{row_bg}; border-bottom:1px solid {bdr_col};">'
-                        for val in row.values:
-                            html += f'<td style="padding:3px 6px; font-weight:600;">{val}</td>'
-                        html += '</tr>'
-                    html += '</tbody></table></div>'
-                    return html
-
-                st.markdown(render_styled_process_table_html(df_c, theme_mode), unsafe_allow_html=True)
-            else:
-                if err_msg:
-                    if any(term in err_msg.lower() for term in ["authentication failed", "wrong username", "permission denied"]):
-                        st.error("❌ host username and password is wrong")
-                    else:
-                        st.info(err_msg)
-                else:
-                    st.info(f"No active oracle user sessions for {db_name}")
-            st.markdown("</div>", unsafe_allow_html=True)
-
-        with mcol2:
-            st.markdown(
-                f"<div style='background:var(--card-bg); border:1px solid var(--border-color); border-radius:8px; padding:10px 12px; margin-bottom:10px;'>"
-                f"<div style='font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--text-primary); margin-bottom:8px;'>💾 Top Memory Consuming Sessions ({db_name})<span style='font-size:0.65rem; color:#3b82f6; font-weight:normal;'>{src_badge}</span></div>",
-                unsafe_allow_html=True
-            )
-            if top_mem:
-                if source == "v$session":
-                    df_m = pd.DataFrame([{
-                        "PID":      f"#{p['pid']}",
-                        "SID":      p.get('sid', 'N/A'),
-                        "USER (DB)": p.get('user_label', p.get('username', 'oracle')),
-                        "STATUS":   p.get('status', ''),
-                        "MEM (MB)": f"{p['mem']:.1f} MB"
-                    } for p in top_mem])
-                else:
-                    df_m = pd.DataFrame([{
-                        "PID":    f"#{p['pid']}",
-                        "USER":   p.get('user_label', p.get('username', 'oracle')),
-                        "MEM %":  f"{p['mem']:.1f}%",
-                    } for p in top_mem])
-                theme_mode = st.session_state.get("theme", "Light")
-                st.markdown(render_styled_process_table_html(df_m, theme_mode), unsafe_allow_html=True)
-            else:
-                if err_msg:
-                    if any(term in err_msg.lower() for term in ["authentication failed", "wrong username", "permission denied"]):
-                        st.error("❌ host username and password is wrong")
-                    else:
-                        st.info(err_msg)
-                else:
-                    st.info(f"No active oracle user sessions for {db_name}")
-            st.markdown("</div>", unsafe_allow_html=True)
-
-
-
-    except Exception as exc:
-        print(f"[monitoring] Process section error: {exc}")
+    # Rendered in its own fragment so it can auto-refresh every 30 seconds
+    # independently of the rest of this page (which follows the page's own
+    # Manual/Automatic refresh cycle).
+    _render_top_processes_fragment(db_name)
 
     # ================= OS Storage / Mount Points (Table Format) =================
     if os_storage:

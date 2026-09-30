@@ -1,0 +1,145 @@
+246 INFO: PyInstaller: 6.21.0, contrib hooks: 2026.6
+246 INFO: Python: 3.10.11
+271 INFO: Platform: Windows-10-10.0.26200-SP0
+271 INFO: Python environment: C:\Users\KTS\Desktop\dash_manually\venv
+1392 WARNING: Failed to collect submodules for 'streamlit.external.langchain' because importing 'streamlit.external.langchain' raised: ModuleNotFoundError: No module named 'langchain'
+6804 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\KTS\\Desktop\\dash_manually',
+ 'C:\\Users\\KTS\\AppData\\Local\\Programs\\Python\\Python310\\python310.zip',
+ 'C:\\Users\\KTS\\AppData\\Local\\Programs\\Python\\Python310\\DLLs',
+ 'C:\\Users\\KTS\\AppData\\Local\\Programs\\Python\\Python310\\lib',
+ 'C:\\Users\\KTS\\AppData\\Local\\Programs\\Python\\Python310',
+ 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv',
+ 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages',
+ 'C:\\Users\\KTS\\Desktop\\dash_manually']
+7445 INFO: Appending 'binaries' from .spec
+7450 INFO: Appending 'datas' from .spec
+7574 INFO: checking Analysis
+7718 INFO: Building because excludes changed
+7718 INFO: Looking for Python shared library...
+7718 INFO: Using Python shared library: C:\Users\KTS\AppData\Local\Programs\Python\Python310\python310.dll
+7718 INFO: Running Analysis Analysis-00.toc
+7718 INFO: Target bytecode optimization level: 0
+7718 INFO: Initializing module dependency graph...
+7721 INFO: Initializing module graph hook caches...
+7750 INFO: Analyzing modules for base_library.zip ...
+8849 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+8995 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+9879 INFO: Processing standard module hook 'hook-math.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+11664 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+14347 INFO: Caching module dependency graph...
+14417 INFO: Analyzing C:\Users\KTS\Desktop\dash_manually\run_dashboard.py
+14722 INFO: Processing standard module hook 'hook-platform.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+14745 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+14748 INFO: SetuptoolsInfo: initializing cached setuptools info...
+16014 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+16213 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+16488 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+17039 INFO: Processing standard module hook 'hook-webbrowser.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+17463 INFO: Processing standard module hook 'hook-difflib.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+17599 INFO: Processing standard module hook 'hook-plotly.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+20547 INFO: Processing standard module hook 'hook-narwhals.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+20742 INFO: Processing standard module hook 'hook-pandas.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+23554 INFO: Processing standard module hook 'hook-sysconfig.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+23590 INFO: Processing standard module hook 'hook-numpy.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+25691 INFO: Processing standard module hook 'hook-psutil.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+27338 INFO: Processing standard module hook 'hook-charset_normalizer.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+28054 INFO: Processing standard module hook 'hook-pytz.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+31669 INFO: Processing standard module hook 'hook-pandas.io.formats.style.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+35000 INFO: Processing standard module hook 'hook-pandas.plotting.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+36729 INFO: Processing standard module hook 'hook-sqlite3.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+37305 INFO: Processing standard module hook 'hook-pandas.io.clipboard.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+37678 INFO: Processing standard module hook 'hook-dateutil.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+37875 INFO: Processing pre-safe-import-module hook 'hook-six.moves.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+38475 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+38495 INFO: Processing standard module hook 'hook-xml.dom.domreg.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+42004 INFO: Processing pre-safe-import-module hook 'hook-packaging.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+50029 INFO: Processing standard module hook 'hook-urllib3.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+50329 INFO: Processing pre-safe-import-module hook 'hook-backports.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+50330 INFO: Setuptools: 'backports' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.backports'!
+51863 INFO: Processing standard module hook 'hook-cryptography.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+55788 INFO: hook-cryptography: cryptography does not seem to be using dynamically linked OpenSSL.
+56158 INFO: Processing standard module hook 'hook-bcrypt.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+56196 INFO: Processing standard module hook 'hook-certifi.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+56464 INFO: Processing standard module hook 'hook-PIL.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+56608 INFO: Processing standard module hook 'hook-PIL.Image.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+57525 INFO: Processing standard module hook 'hook-PIL.ImageFilter.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+60348 INFO: Processing standard module hook 'hook-jinja2.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+65482 INFO: Processing pre-safe-import-module hook 'hook-tensorflow.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\_pyinstaller_hooks_contrib\\pre_safe_import_module'
+68244 INFO: Processing standard module hook 'hook-nacl.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+69298 INFO: Analyzing hidden import 'monitor_daemon'
+69317 INFO: Analyzing hidden import 'dashboard.app'
+69324 INFO: Analyzing hidden import 'dashboard.mail_config'
+69334 INFO: Analyzing hidden import 'utils.storage'
+69336 INFO: Analyzing hidden import 'streamlit.__main__'
+69337 INFO: Analyzing hidden import 'streamlit.components.v1.components'
+69340 INFO: Analyzing hidden import 'streamlit.external'
+69341 INFO: Analyzing hidden import 'streamlit.hello.animation_demo'
+69349 INFO: Analyzing hidden import 'streamlit.hello.dataframe_demo'
+69353 INFO: Analyzing hidden import 'streamlit.hello.hello'
+69354 INFO: Analyzing hidden import 'streamlit.hello.mapping_demo'
+69359 INFO: Analyzing hidden import 'streamlit.hello.plotting_demo'
+69361 INFO: Analyzing hidden import 'streamlit.platform'
+69363 INFO: Analyzing hidden import 'streamlit.proto.MetricsEvent_pb2'
+69366 INFO: Analyzing hidden import 'streamlit.runtime.scriptrunner.magic_funcs'
+69369 INFO: Analyzing hidden import 'streamlit.testing'
+69370 INFO: Analyzing hidden import 'streamlit.testing.v1'
+69528 INFO: Analyzing hidden import 'streamlit.web.server.websocket_headers'
+69531 INFO: Analyzing hidden import 'cryptography.fernet'
+69541 INFO: Analyzing hidden import 'cryptography.hazmat.asn1'
+69545 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.cmac'
+69547 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.kdf'
+69548 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.kdf.argon2'
+69552 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.kdf.concatkdf'
+69560 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.kdf.hkdf'
+69563 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.kdf.kbkdf'
+69578 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.kdf.pbkdf2'
+69583 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.kdf.scrypt'
+69584 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.kdf.x963kdf'
+69587 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.keywrap'
+69593 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.poly1305'
+69595 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.serialization.pkcs12'
+69601 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.serialization.pkcs7'
+69618 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.twofactor'
+69619 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.twofactor.hotp'
+69623 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.twofactor.totp'
+69626 INFO: Analyzing hidden import 'cryptography.x509.ocsp'
+69635 INFO: Processing module hooks (post-graph stage)...
+70032 INFO: Processing standard module hook 'hook-PIL.SpiderImagePlugin.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks'
+70167 INFO: Performing binary vs. data reclassification (1443 entries)
+70584 INFO: Looking for ctypes DLLs
+70650 INFO: Analyzing run-time hooks ...
+70666 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+70670 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+70672 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+70675 INFO: Including run-time hook 'pyi_rth_cryptography_openssl.py' from 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
+70903 INFO: Creating base_library.zip...
+70940 INFO: Looking for dynamic libraries
+75175 INFO: Extra DLL search directories (AddDllDirectory): ['C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\numpy.libs', 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\pandas.libs', 'C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\lib\\site-packages\\pyarrow.libs']
+75175 INFO: Extra DLL search directories (PATH): []
+81767 INFO: Warnings written to C:\Users\KTS\Desktop\dash_manually\build\dash_manually\warn-dash_manually.txt
+82478 INFO: Graph cross-reference written to C:\Users\KTS\Desktop\dash_manually\build\dash_manually\xref-dash_manually.html
+82829 INFO: checking PYZ
+82933 INFO: Building because C:\Users\KTS\Desktop\dash_manually\generate_db_status_log.py changed
+82933 INFO: Building PYZ (ZlibArchive) C:\Users\KTS\Desktop\dash_manually\build\dash_manually\PYZ-00.pyz
+85394 INFO: Building PYZ (ZlibArchive) C:\Users\KTS\Desktop\dash_manually\build\dash_manually\PYZ-00.pyz completed successfully.
+85517 INFO: checking PKG
+85520 INFO: Building because C:\Users\KTS\Desktop\dash_manually\build\dash_manually\PYZ-00.pyz changed
+85520 INFO: Building PKG (CArchive) DB_Health_Portal.pkg
+85565 INFO: Building PKG (CArchive) DB_Health_Portal.pkg completed successfully.
+85567 INFO: Bootloader C:\Users\KTS\Desktop\dash_manually\venv\lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\run.exe
+85567 INFO: checking EXE
+85586 INFO: Rebuilding EXE-00.toc because pkg is more recent
+85587 INFO: Building EXE from EXE-00.toc
+85590 INFO: Copying bootloader EXE to C:\Users\KTS\Desktop\dash_manually\build\dash_manually\DB_Health_Portal.exe
+85679 INFO: Copying icon to EXE
+85770 INFO: Copying 0 resources to EXE
+85770 INFO: Embedding manifest in EXE
+85867 INFO: Appending PKG archive to EXE
+85962 INFO: Fixing EXE headers
+86403 INFO: Building EXE from EXE-00.toc completed successfully.
+86437 INFO: checking COLLECT
+86477 INFO: Removing dir C:\Users\KTS\Desktop\dash_manually\dist\DB_Health_Portal_App
+91287 INFO: Building COLLECT COLLECT-00.toc
+97703 INFO: Building COLLECT COLLECT-00.toc completed successfully.
+98035 INFO: Build complete! The results are available in: C:\Users\KTS\Desktop\dash_manually\dist

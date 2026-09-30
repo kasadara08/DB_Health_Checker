@@ -8,3 +8,7 @@ __pycache__/
 scratch/
 .idea/
 .vscode/
+
+# Private SSH/OCI keys - never commit these
+keys/
+*.pem

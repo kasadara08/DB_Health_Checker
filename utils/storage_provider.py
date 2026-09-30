@@ -30,25 +30,18 @@ class StorageProvider:
 
     def get_storage_info(self) -> list:
         """
-        Retrieve mount point information ONLY via SSH using host_username and
-        host_password from the registry file.
-
-        Returns
-        -------
-        list of volume dicts on success, OR a single-item list with an
-        error dict so the UI can display the actual problem:
-            [{"ssh_error": "actual error message here"}]
+        Retrieve mount point information via SSH using the bundled OCI key.
         """
         if not self.conn:
             return [{"ssh_error": "No database connection available."}]
 
         try:
             from utils.ssh_mount_provider import get_mounts_via_ssh
-            from db_connection import get_config_for_db, load_db_names_api
+            from db_connection import get_config_for_db, load_db_names_api, get_bundled_oci_key
 
             host = ""
             host_username = ""
-            host_password = ""
+            ssh_key_path = None
 
             # Extract host IP/hostname from the active DB connection DSN
             try:
@@ -62,7 +55,7 @@ class StorageProvider:
             except Exception:
                 pass
 
-            # Find the matching DB config from registry to get host credentials
+            # Find the matching DB config from registry to get the host username
             try:
                 for db in load_db_names_api():
                     cfg = get_config_for_db(db) or {}
@@ -70,34 +63,45 @@ class StorageProvider:
                     if (host and cfg_host == host) or not host:
                         if not host:
                             host = cfg_host
-                        # ONLY use host_username and host_password — no fallback to DB user
                         host_username = cfg.get("host_username", "").strip()
-                        host_password = cfg.get("host_password", "").strip()
+                        ssh_key_path = cfg.get("ssh_key_path") or cfg.get("oci_key_path") or cfg.get("key_filename")
                         if host_username:
                             break
             except Exception as e:
                 return [{"ssh_error": f"Failed to read registry credentials: {e}"}]
 
-            # Guard: credentials must be present
             if not host:
                 return [{"ssh_error": "Host address could not be determined from the database connection."}]
-            if not host_username:
-                return [{"ssh_error": f"host_username is missing for host '{host}'. Please add it as the 7th column in your registry file."}]
-            if not host_password:
-                return [{"ssh_error": f"host_password is missing for host '{host}'. Please add it as the 8th column in your registry file."}]
 
-            # Attempt SSH connection
+            # Default username fallback to 'opc'
+            if not host_username:
+                host_username = "opc"
+
+            # Resolve which SSH key to use, in priority order:
+            #   1. Bundled OCI key shipped with the app (keys/ folder).
+            #   2. A key path configured directly in the registry file.
+            bundled_key_path = get_bundled_oci_key(host)
+
+            key_file_to_use = None
+            if bundled_key_path and os.path.exists(bundled_key_path):
+                key_file_to_use = bundled_key_path
+            elif ssh_key_path and os.path.exists(ssh_key_path):
+                key_file_to_use = ssh_key_path
+
+            if not key_file_to_use:
+                return [{"ssh_error": "No OCI key found in the keys/ folder for this host."}]
+
             result = get_mounts_via_ssh(
                 host=host,
                 username=host_username,
-                password=host_password,
+                key_filename=key_file_to_use
             )
 
-            if result["error"]:
+            if result.get("error"):
                 # Return the real SSH error so the UI can display it
                 return [{"ssh_error": result["error"]}]
 
-            return result["volumes"]
+            return result.get("volumes", [])
 
         except Exception as e:
             return [{"ssh_error": f"Unexpected error during mount point retrieval: {e}"}]

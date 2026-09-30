@@ -1,0 +1,67 @@
+DB REGISTRY FILE — "NC" (NOT CONFIGURED) CONVENTION
+=====================================================
+
+The registry .txt file (e.g. server_kasorcl.txt) holds one line per database,
+made up of 20 whitespace-separated columns split into 3 groups:
+
+  Group 1 - Production (columns 1-8):
+      db_name, host, port, service_name, username, password,
+      host_username, host_password
+
+  Group 2 - Reporting (columns 9-14):
+      reporting_db_name, reporting_host, reporting_port,
+      reporting_service_name, reporting_username, reporting_password
+
+  Group 3 - Standby (columns 15-20):
+      standby_db_name, standby_host, standby_port,
+      standby_service_name, standby_username, standby_password
+
+HOW "NC" WORKS
+--------------
+"NC" means "No Configuration" for that ENTIRE group — not just one field.
+
+- Put NC in place of the group's *first* field (db_name / reporting_db_name /
+  standby_db_name) to skip that whole group.
+- NC is given ONCE per group. That single "NC" token stands in for all
+  columns in the group — you do NOT repeat NC 8 times or 6 times.
+- The parser consumes only that one token for the group, then moves on to
+  reading the next group's columns starting from the next token in the line.
+
+Example (production filled in, reporting = NC, standby filled in):
+
+  kasorcl 10.10.10.11 1521 kasorcl sys Welcome123 oracle oracle123 NC kasorcl 10.10.10.11 1521 kasorcl sys Welcome123
+
+  - Columns 1-8   -> real production config, shown normally on the Home
+                     page with real UP/DOWN status, tablespaces, etc.
+  - Column 9      -> "NC", so the whole Reporting group (9-14) is skipped.
+                     The Reporting card on the Home page shows
+                     "No data found" / bold NONE.
+  - Columns 10-14 in this example are actually the STANDBY group's values,
+    because NC only consumed 1 token for the reporting group.
+
+Example (NC for production, i.e. no production DB at all):
+
+  NC kasorcl 10.10.10.11 1521 kasorcl sys Welcome123 kasorcl 10.10.10.11 1521 kasorcl sys Welcome123
+
+  - Column 1 -> "NC" skips the entire production group (1-8). This database
+    is excluded from the Home page's list entirely.
+  - The next token after NC starts filling the Reporting group (9-14).
+
+RULES SUMMARY
+-------------
+1. NC is placed where db_name / reporting_db_name / standby_db_name would go.
+2. One NC = skip that whole group (all columns in it), not just that field.
+3. NC must appear once per group you want to skip — it is not repeated for
+   every column in the group.
+4. Groups without NC must have all their columns filled in normally.
+
+IMPLEMENTATION REFERENCE
+-------------------------
+Already implemented in db_connection.py:
+  - REGISTRY_COLUMNS / _REGISTRY_GROUPS  (column layout + group boundaries)
+  - parse_smart_txt_to_df()              (consumes a single "NC" token per
+                                           group instead of one per column)
+  - get_config_for_db()                  (skips row if db_name == "nc")
+  - get_reporting_db_config()            (returns None if
+                                           reporting_db_name == "nc")
+  - get_standby_db_config()              (skips if standby_db_name == "nc")

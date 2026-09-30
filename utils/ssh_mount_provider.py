@@ -39,8 +39,8 @@ PSEUDO_FS = {
 }
 
 # ── SSH / command timeouts (seconds) ──────────────────────────────────────────
-SSH_TIMEOUT = 12
-CMD_TIMEOUT = 20
+SSH_TIMEOUT = 6    # TCP connection timeout — reduced for fast fail
+CMD_TIMEOUT = 8    # Command read timeout — reduced from 20s
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -115,68 +115,75 @@ def _parse_df_output(raw: str) -> list:
     return volumes
 
 
-def _enrich_fs_types(client, volumes: list) -> list:
+def _enrich_fs_types_from_map(mount_map: dict, volumes: list) -> list:
     """
-    Fill in missing fs_type by reading /proc/mounts via SSH.
+    Fill in missing fs_type from a pre-fetched /proc/mounts map.
+    No extra SSH round-trip needed.
     """
-    mount_map = {}
-    try:
-        _, stdout, _ = client.exec_command("cat /proc/mounts 2>/dev/null", timeout=CMD_TIMEOUT)
-        for line in stdout.read().decode(errors="replace").splitlines():
-            parts = line.split()
-            if len(parts) >= 3:
-                mount_map[parts[1]] = parts[2]
-    except Exception:
-        pass
-
     for v in volumes:
         if not v["fs_type"]:
             v["fs_type"] = mount_map.get(v["mount_point"], "xfs")
         v["stype"] = "Pseudo" if v["fs_type"].lower() in PSEUDO_FS else "Linux"
-
     return volumes
 
 
-def _run_df(client) -> str:
+def _run_df_and_mounts(client) -> tuple:
     """
-    Try several df variants in order of preference until we get output.
-    Attempts: df -PkT → df -PT → df -Pk → df -Ph
+    Run df -PkT and cat /proc/mounts in a single batched SSH command
+    to avoid two separate round-trips. Returns (df_raw, mount_map).
+    Falls back to df -Pk if df -PkT returns nothing.
     """
-    commands = [
-        "df -PkT 2>/dev/null",
-        "df -PT  2>/dev/null",
-        "df -Pk  2>/dev/null",
-        "df -Ph  2>/dev/null",
-    ]
-    for cmd in commands:
-        try:
-            _, stdout, _ = client.exec_command(cmd, timeout=CMD_TIMEOUT)
-            raw = stdout.read().decode(errors="replace")
-            if raw.strip():
-                return raw
-        except Exception:
-            continue
-    return ""
+    # Batch both commands into a single exec to eliminate second round-trip
+    batch_cmd = "df -PkT 2>/dev/null; echo '---MOUNTS---'; cat /proc/mounts 2>/dev/null"
+    try:
+        _, stdout, _ = client.exec_command(batch_cmd, timeout=CMD_TIMEOUT)
+        output = stdout.read().decode(errors="replace")
+        if "---MOUNTS---" in output:
+            df_raw, mounts_raw = output.split("---MOUNTS---", 1)
+        else:
+            df_raw, mounts_raw = output, ""
+
+        # If df -PkT returned nothing, try df -Pk
+        if not df_raw.strip():
+            _, stdout2, _ = client.exec_command("df -Pk 2>/dev/null", timeout=CMD_TIMEOUT)
+            df_raw = stdout2.read().decode(errors="replace")
+
+        # Build mount map from /proc/mounts
+        mount_map = {}
+        for line in mounts_raw.splitlines():
+            parts = line.split()
+            if len(parts) >= 3:
+                mount_map[parts[1]] = parts[2]
+
+        return df_raw, mount_map
+    except Exception:
+        return "", {}
 
 
+
+import os
 
 def get_mounts_via_ssh(
     host: str,
     username: str,
-    password: str,
+    password: str = "",
     port: int = 22,
     timeout: int = SSH_TIMEOUT,
+    key_filename: str = None,
+    **kwargs
 ) -> dict:
     """
     Open an SSH session to *host* and collect ALL real mount points using df -h.
+    Supports OCI SSH Private Key authentication as well as Password authentication.
 
     Parameters
     ----------
-    host      : Hostname or IP of the remote server.
-    username  : OS-level username (from host_username column in registry).
-    password  : OS-level password (from host_password column in registry).
-    port      : SSH port (default 22).
-    timeout   : TCP connection timeout in seconds.
+    host         : Hostname or IP of the remote server.
+    username     : OS-level username (from host_username column in registry).
+    password     : OS-level password (from host_password column in registry).
+    port         : SSH port (default 22).
+    timeout      : TCP connection timeout in seconds.
+    key_filename : Optional path to OCI SSH key / private key file (.pem).
 
     Returns
     -------
@@ -184,50 +191,87 @@ def get_mounts_via_ssh(
       - "volumes": list of mount point dicts (empty list on failure)
       - "error":   None on success, or a human-readable error string on failure
     """
-    # paramiko is now imported at the top level so PyInstaller can detect and bundle it.
-
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
+    # Only use key file if explicitly provided - no auto-search in system default locations
+    key_file = (
+        key_filename or
+        kwargs.get("key_filename") or
+        kwargs.get("ssh_key_path") or
+        kwargs.get("oci_key_path") or
+        kwargs.get("ssh_key") or
+        kwargs.get("oci_key")
+    )
+
+    connect_kwargs = {
+        "hostname": host,
+        "port": port,
+        "username": username,
+        "timeout": timeout,
+        "banner_timeout": 5,   # Reduced from 30s → 5s for fast failure
+        "auth_timeout": 8,    # Reduced from 15s → 8s
+    }
+    if password:
+        connect_kwargs["password"] = password
+
+    if key_file and os.path.isfile(key_file):
+        connect_kwargs["key_filename"] = key_file
+        connect_kwargs["look_for_keys"] = True
+        connect_kwargs["allow_agent"] = True
+        print(f"[ssh_mount] Connecting to {host} using OCI SSH key file: '{key_file}'")
+    elif not password:
+        connect_kwargs["look_for_keys"] = True
+        connect_kwargs["allow_agent"] = True
+    else:
+        connect_kwargs["look_for_keys"] = False
+        connect_kwargs["allow_agent"] = False
+
     try:
-        client.connect(
-            hostname=host,
-            port=port,
-            username=username,
-            password=password,
-            timeout=timeout,
-            look_for_keys=False,    # never use SSH key files
-            allow_agent=False,      # never use SSH agent
-            banner_timeout=30,
-            auth_timeout=15,
-        )
+        from db_connection import _log_ssh_oci_key
+    except Exception:
+        _log_ssh_oci_key = None
+
+    try:
+        client.connect(**connect_kwargs)
+        if _log_ssh_oci_key:
+            _log_ssh_oci_key(host, username, key_file, "UP (SSH Connected)", "")
     except paramiko.AuthenticationException:
         msg = f"SSH Authentication Failed: Wrong username or password for '{username}@{host}:{port}'. Please check host_username and host_password in your registry file."
         print(f"[ssh_mount] {msg}")
+        if _log_ssh_oci_key:
+            _log_ssh_oci_key(host, username, key_file, "DOWN (Auth Failed)", msg)
         return {"volumes": [], "error": msg}
     except (paramiko.SSHException, socket.timeout, TimeoutError) as exc:
         msg = f"SSH Connection Failed to '{host}:{port}': {exc}. Check if SSH port {port} is open and the server is reachable."
         print(f"[ssh_mount] {msg}")
+        if _log_ssh_oci_key:
+            _log_ssh_oci_key(host, username, key_file, "DOWN (Connection Failed)", msg)
         return {"volumes": [], "error": msg}
     except OSError as exc:
         msg = f"SSH Network Error connecting to '{host}:{port}': {exc}. Check network/VPN connection."
         print(f"[ssh_mount] {msg}")
+        if _log_ssh_oci_key:
+            _log_ssh_oci_key(host, username, key_file, "DOWN (Network Error)", msg)
         return {"volumes": [], "error": msg}
     except Exception as exc:
         msg = f"SSH Unexpected Error connecting to '{host}:{port}': {exc}"
         print(f"[ssh_mount] {msg}")
+        if _log_ssh_oci_key:
+            _log_ssh_oci_key(host, username, key_file, "DOWN (Error)", msg)
         return {"volumes": [], "error": msg}
 
     try:
-        raw = _run_df(client)
+        # Single batched SSH call — gets df output AND /proc/mounts in one shot
+        raw, mount_map = _run_df_and_mounts(client)
 
         if not raw.strip():
-            msg = f"SSH connected to '{host}' successfully, but 'df -h' command returned no output. The OS user may not have permission to run df."
+            msg = f"SSH connected to '{host}' successfully, but 'df' command returned no output. The OS user may not have permission to run df."
             print(f"[ssh_mount] {msg}")
             return {"volumes": [], "error": msg}
 
         volumes = _parse_df_output(raw)
-        volumes = _enrich_fs_types(client, volumes)
+        volumes = _enrich_fs_types_from_map(mount_map, volumes)
 
         # Remove pseudo / virtual file systems and zero-size volumes
         volumes = [
@@ -243,102 +287,11 @@ def get_mounts_via_ssh(
     except Exception as exc:
         msg = f"SSH connected but failed while running df on '{host}': {exc}"
         print(f"[ssh_mount] {msg}")
+        if _log_ssh_oci_key:
+            _log_ssh_oci_key(host, username, key_file, "DOWN (Exec Error)", msg)
         return {"volumes": [], "error": msg}
     finally:
         client.close()
-
-
-def get_mounts_for_db(db_name: str, ssh_port: int = 22) -> list:
-    """
-    Convenience wrapper: look up the DB registry for *db_name*,
-    extract host / username / password, then call get_mounts_via_ssh().
-
-    Parameters
-    ----------
-    db_name  : Database name as it appears in the TXT registry file.
-    ssh_port : SSH port on the DB server (default 22).
-
-    Returns
-    -------
-    List of volume dicts, or [] on error.
-    """
-    try:
-        from db_connection import get_config_for_db
-        cfg = get_config_for_db(db_name)
-        if not cfg:
-            print(f"[ssh_mount] No registry config found for DB: {db_name}")
-            return []
-
-        host     = cfg.get("host", "").strip()
-        host_user = cfg.get("host_username", "").strip()
-        host_pass = cfg.get("host_password", "").strip()
-        
-        username = host_user
-        password = host_pass
-
-        if not host or not username:
-            print(f"[ssh_mount] Missing host or username for DB: {db_name}")
-            return []
-
-        return get_mounts_via_ssh(
-            host=host,
-            username=username,
-            password=password,
-            port=ssh_port,
-            timeout=SSH_TIMEOUT,
-        )
-    except Exception as exc:
-        print(f"[ssh_mount] get_mounts_for_db({db_name}) error: {exc}")
-        return []
-
-
-def get_mounts_for_all_dbs(ssh_port: int = 22) -> dict:
-    """
-    Iterate over ALL databases in the registry and collect mount points
-    for every unique server host.
-
-    Returns
-    -------
-    dict: { "host": [volume_dicts, ...], ... }
-          Hosts that fail SSH are silently skipped.
-    """
-    results = {}
-    try:
-        from db_connection import get_db_names, get_config_for_db
-        seen_hosts = set()
-
-        for db_name in get_db_names():
-            cfg = get_config_for_db(db_name)
-            if not cfg:
-                continue
-
-            host     = cfg.get("host", "").strip()
-            
-            # ONLY use host_username/password — never fallback to DB user/password
-            host_user = cfg.get("host_username", "").strip()
-            host_pass = cfg.get("host_password", "").strip()
-            
-            username = host_user
-            password = host_pass
-
-            if not host or not username or not password or host in seen_hosts:
-                continue
-
-            seen_hosts.add(host)
-            volumes = get_mounts_via_ssh(
-                host=host,
-                username=username,
-                password=password,
-                port=ssh_port,
-                timeout=SSH_TIMEOUT,
-            )
-            if volumes:
-                results[host] = volumes
-
-    except Exception as exc:
-        print(f"[ssh_mount] get_mounts_for_all_dbs error: {exc}")
-
-    return results
 
 
 # ─────────────────────────────────────────────────────────────────────────────

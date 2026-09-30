@@ -1,161 +1,5 @@
 [
   {
-    "timestamp": "2026-07-16 17:15:45",
-    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
-    "alert_type": "Test Alert",
-    "db_name": "",
-    "server": "",
-    "to": [
-      "mohanraj.krishnasamy@kasadara.com"
-    ],
-    "status": "failed",
-    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.3 Authentication unsuccessful [PN4P287CA0050.INDP287.PROD.OUTLOOK.COM 2026-07-16T11:45:45.899Z 08DEE28047E676DD]')",
-    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-16 17:15:39 |  | \u2014 DB Health Dashboard Alert Engin"
-  },
-  {
-    "timestamp": "2026-07-16 21:18:44",
-    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
-    "alert_type": "Test Alert",
-    "db_name": "",
-    "server": "",
-    "to": [
-      "yuvarani.skannan@kasadara.com"
-    ],
-    "status": "failed",
-    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0113.INDP287.PROD.OUTLOOK.COM 2026-07-16T15:48:44.158Z 08DEE28778E602A6]')",
-    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: yuvarani.skannan@kasadara.com | Sent At: 2026-07-16 21:18:38 |  | \u2014 DB Health Dashboard Alert Engine"
-  },
-  {
-    "timestamp": "2026-07-16 21:19:16",
-    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
-    "alert_type": "Test Alert",
-    "db_name": "",
-    "server": "",
-    "to": [
-      "yuvarani.skannan@kasadara.com"
-    ],
-    "status": "failed",
-    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PNYP287CA0022.INDP287.PROD.OUTLOOK.COM 2026-07-16T15:49:16.662Z 08DEE287C8987433]')",
-    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: yuvarani.skannan@kasadara.com | Sent At: 2026-07-16 21:19:11 |  | \u2014 DB Health Dashboard Alert Engine"
-  },
-  {
-    "timestamp": "2026-07-17 10:02:01",
-    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
-    "alert_type": "Test Alert",
-    "db_name": "",
-    "server": "",
-    "to": [
-      "yuvarani.skannan@gmail.com"
-    ],
-    "status": "failed",
-    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0179.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T04:32:01.148Z 08DEE2876726E12B]')",
-    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@gmail.com | To: yuvarani.skannan@gmail.com | Sent At: 2026-07-17 10:01:56 |  | \u2014 DB Health Dashboard Alert Engine"
-  },
-  {
-    "timestamp": "2026-07-17 10:51:40",
-    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
-    "alert_type": "Test Alert",
-    "db_name": "",
-    "server": "",
-    "to": [
-      "mohanraj.krishnasamy@kasadara.com"
-    ],
-    "status": "failed",
-    "error": "Sender Refused: The mail server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (451, b'5.7.3 STARTTLS is required to send mail [MA5P287CA0319.INDP287.PROD.OUTLOOK.COM 2026-07-17T05:21:39.669Z 08DEE2864E64943D]', 'yuvarani.skannan@kasadara.com')",
-    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-17 10:51:34 |  | \u2014 DB Health Dashboard Alert Engin"
-  },
-  {
-    "timestamp": "2026-07-17 11:02:06",
-    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
-    "alert_type": "Test Alert",
-    "db_name": "",
-    "server": "",
-    "to": [
-      "yuvarani.skannan@kasadara.com"
-    ],
-    "status": "failed",
-    "error": "Sender Refused: The mail server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5PR01CA0309.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T05:32:05.841Z 08DEE280829F76C3]', 'yuvarani.skannan@kasadara.com')",
-    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: yuvarani.skannan@kasadara.com | Sent At: 2026-07-17 11:02:01 |  | \u2014 DB Health Dashboard Alert Engine"
-  },
-  {
-    "timestamp": "2026-07-17 11:54:55",
-    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
-    "alert_type": "Test Alert",
-    "db_name": "",
-    "server": "",
-    "to": [
-      "yuvarani.skannan@kasadara.com"
-    ],
-    "status": "failed",
-    "error": "Sender Refused: The mail server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN4P287CA0035.INDP287.PROD.OUTLOOK.COM 2026-07-17T06:24:54.306Z 08DEE287D3A2D0B5]', 'yuvarani.skannan@kasadara.com')",
-    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: yuvarani.skannan@kasadara.com | Sent At: 2026-07-17 11:54:49 |  | \u2014 DB Health Dashboard Alert Engine"
-  },
-  {
-    "timestamp": "2026-07-17 12:41:04",
-    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
-    "alert_type": "Test Alert",
-    "db_name": "",
-    "server": "",
-    "to": [
-      "mohanraj.krishnasamy@kasadara.com"
-    ],
-    "status": "failed",
-    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0004.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T07:11:03.754Z 08DEE2A3C0F2225C]')",
-    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@gmail.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-17 12:40:58 |  | \u2014 DB Health Dashboard Alert Engine"
-  },
-  {
-    "timestamp": "2026-07-17 12:41:06",
-    "subject": "Critical Alert - ORA Error Detected",
-    "alert_type": "ORA Error",
-    "db_name": "kasorcl",
-    "server": "10.10.10.11",
-    "to": [
-      "mohanraj.krishnasamy@kasadara.com"
-    ],
-    "status": "failed",
-    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0016.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T07:11:05.816Z 08DEE2C2AB5777DD]')",
-    "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-17 12:41:00 |  | ORA Error Code   : ORA-12012 | Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_1"
-  },
-  {
-    "timestamp": "2026-07-17 12:41:07",
-    "subject": "Critical Alert - ORA Error Detected",
-    "alert_type": "ORA Error",
-    "db_name": "kasorcl",
-    "server": "10.10.10.11",
-    "to": [
-      "mohanraj.krishnasamy@kasadara.com"
-    ],
-    "status": "failed",
-    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0007.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T07:11:07.223Z 08DEE2DD4B30C8F3]')",
-    "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-17 12:41:02 |  | ORA Error Code   : ORA-12012 | Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_1"
-  },
-  {
-    "timestamp": "2026-07-17 12:41:12",
-    "subject": "Critical Alert - Database Down",
-    "alert_type": "Database Down",
-    "db_name": "fa182",
-    "server": "10.10.4.164",
-    "to": [
-      "mohanraj.krishnasamy@kasadara.com"
-    ],
-    "status": "failed",
-    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0011.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T07:11:11.527Z 08DEE2D5FC7EBA1B]')",
-    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-17 12:41:06 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
-  },
-  {
-    "timestamp": "2026-07-17 12:41:18",
-    "subject": "Critical Alert - Listener Down",
-    "alert_type": "Listener Down",
-    "db_name": "fa182",
-    "server": "10.10.4.164",
-    "to": [
-      "mohanraj.krishnasamy@kasadara.com"
-    ],
-    "status": "failed",
-    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN5PR01CA0030.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T07:11:17.407Z 08DEE29BBFCA9BC2]')",
-    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-17 12:41:06 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
-  },
-  {
     "timestamp": "2026-07-17 12:41:18",
     "subject": "Critical Alert - Database Down",
     "alert_type": "Database Down",
@@ -2398,5 +2242,395 @@
     "status": "disabled",
     "error": "",
     "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : Blocking Session | Severity     : Critical | Date & Time  : 2026-07-27 18:07:31 |  | Blocking Sessions Detected: 1 |  | Session Details: |   SID=870 Serial=32659 User=SYS Blocking SID=2 Status=ACTIVE |  | Action: Investigate b"
+  },
+  {
+    "timestamp": "2026-08-03 15:01:04",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "Arthi",
+    "server": "Welcome123",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: Welcome123 | Database Name: Arthi | Host Name: Welcome123 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-03 15:01:04 |  | Problem: The Oracle Database instance 'Arthi' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-03 15:01:04",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "Arthi",
+    "server": "Welcome123",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: Welcome123 | Database Name: Arthi | Host Name: Welcome123 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-03 15:01:04 |  | Problem: The Oracle Listener for DB 'Arthi' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-03 15:07:45",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "Arthi",
+    "server": "None",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: None | Database Name: Arthi | Host Name: None | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-03 15:07:45 |  | Problem: The Oracle Database instance 'Arthi' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-03 15:07:45",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "Arthi",
+    "server": "None",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: None | Database Name: Arthi | Host Name: None | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-03 15:07:45 |  | Problem: The Oracle Listener for DB 'Arthi' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-03 15:24:16",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "sa",
+    "server": "Welcome123",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: Welcome123 | Database Name: sa | Host Name: Welcome123 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-03 15:24:16 |  | Problem: The Oracle Database instance 'sa' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-03 15:24:16",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "sa",
+    "server": "Welcome123",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: Welcome123 | Database Name: sa | Host Name: Welcome123 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-03 15:24:16 |  | Problem: The Oracle Listener for DB 'sa' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-03 21:00:16",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-03 21:00:16 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-03 21:00:16",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-03 21:00:16 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:44",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa129",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa129 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:43 |  | Problem: The Oracle Database instance 'fa129' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:44",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa129",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa129 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:43 |  | Problem: The Oracle Listener for DB 'fa129' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:44",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa169",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa169 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:44 |  | Problem: The Oracle Database instance 'fa169' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:44",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa169",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa169 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:44 |  | Problem: The Oracle Listener for DB 'fa169' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:44",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa171",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa171 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:44 |  | Problem: The Oracle Database instance 'fa171' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:45",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa171",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa171 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:44 |  | Problem: The Oracle Listener for DB 'fa171' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:45",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa173",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa173 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:45 |  | Problem: The Oracle Database instance 'fa173' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:45",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa173",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa173 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:45 |  | Problem: The Oracle Listener for DB 'fa173' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:45",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa175",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa175 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:45 |  | Problem: The Oracle Database instance 'fa175' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:45",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa175",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa175 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:45 |  | Problem: The Oracle Listener for DB 'fa175' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:46",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa181",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa181 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:46 |  | Problem: The Oracle Database instance 'fa181' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:46",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa181",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa181 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:46 |  | Problem: The Oracle Listener for DB 'fa181' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:46",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa183",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa183 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:46 |  | Problem: The Oracle Database instance 'fa183' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:46",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa183",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa183 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:46 |  | Problem: The Oracle Listener for DB 'fa183' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:47",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa184",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa184 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:47 |  | Problem: The Oracle Database instance 'fa184' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:47",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa184",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa184 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:47 |  | Problem: The Oracle Listener for DB 'fa184' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:47",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa185",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa185 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:47 |  | Problem: The Oracle Database instance 'fa185' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:47",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa185",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa185 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:47 |  | Problem: The Oracle Listener for DB 'fa185' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:48",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa186",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa186 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:47 |  | Problem: The Oracle Database instance 'fa186' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:48",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa186",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa186 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:47 |  | Problem: The Oracle Listener for DB 'fa186' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:48",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa187",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa187 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:48 |  | Problem: The Oracle Database instance 'fa187' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:48",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa187",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa187 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:48 |  | Problem: The Oracle Listener for DB 'fa187' is DOWN."
   }
 ]

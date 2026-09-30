@@ -148,6 +148,15 @@ html, body, [class*="css"] {
     100% { box-shadow: 0 0 12px rgba(239, 68, 68, 0.25); }
 }
 
+/* Small spinning-circle "loading" indicator (used by DB card / sidebar
+   "Connecting..." placeholders while live data is being fetched). This
+   keyframe was referenced by name in several places but never defined,
+   so those spinners rendered as a static, non-spinning circle. */
+@keyframes spin-loader {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 /* Float Animation for Card Icons */
 @keyframes float {
     0% { transform: translateY(0px); }

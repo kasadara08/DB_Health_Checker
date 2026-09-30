@@ -1,0 +1,420 @@
+--- EMAIL ALERT ---
+Date: 2026-08-03 15:01:04.335115
+Subject: Critical Alert - Database Down
+Body:
+Server Name: Welcome123
+Database Name: Arthi
+Host Name: Welcome123
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-03 15:01:04
+
+Problem: The Oracle Database instance 'Arthi' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-03 15:01:04.397063
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: Welcome123
+Database Name: Arthi
+Host Name: Welcome123
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-03 15:01:04
+
+Problem: The Oracle Listener for DB 'Arthi' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-03 15:07:45.683195
+Subject: Critical Alert - Database Down
+Body:
+Server Name: None
+Database Name: Arthi
+Host Name: None
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-03 15:07:45
+
+Problem: The Oracle Database instance 'Arthi' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-03 15:07:45.746167
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: None
+Database Name: Arthi
+Host Name: None
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-03 15:07:45
+
+Problem: The Oracle Listener for DB 'Arthi' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-03 15:24:16.136244
+Subject: Critical Alert - Database Down
+Body:
+Server Name: Welcome123
+Database Name: sa
+Host Name: Welcome123
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-03 15:24:16
+
+Problem: The Oracle Database instance 'sa' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-03 15:24:16.168932
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: Welcome123
+Database Name: sa
+Host Name: Welcome123
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-03 15:24:16
+
+Problem: The Oracle Listener for DB 'sa' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-03 21:00:16.562541
+Subject: Critical Alert - Database Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-03 21:00:16
+
+Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-03 21:00:16.693969
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: 10.10.10.11
+Database Name: kasorcl
+Host Name: 10.10.10.11
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-03 21:00:16
+
+Problem: The Oracle Listener for DB 'kasorcl' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:43.927790
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: fa129
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:43
+
+Problem: The Oracle Database instance 'fa129' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:44.066844
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: fa129
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:43
+
+Problem: The Oracle Listener for DB 'fa129' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:44.452218
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: fa169
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:44
+
+Problem: The Oracle Database instance 'fa169' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:44.683466
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: fa169
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:44
+
+Problem: The Oracle Listener for DB 'fa169' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:44.867312
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: fa171
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:44
+
+Problem: The Oracle Database instance 'fa171' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:45.054264
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: fa171
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:44
+
+Problem: The Oracle Listener for DB 'fa171' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:45.243806
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: fa173
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:45
+
+Problem: The Oracle Database instance 'fa173' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:45.314215
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: fa173
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:45
+
+Problem: The Oracle Listener for DB 'fa173' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:45.661924
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: fa175
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:45
+
+Problem: The Oracle Database instance 'fa175' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:45.728479
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: fa175
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:45
+
+Problem: The Oracle Listener for DB 'fa175' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:46.044152
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: fa181
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:46
+
+Problem: The Oracle Database instance 'fa181' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:46.216082
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: fa181
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:46
+
+Problem: The Oracle Listener for DB 'fa181' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:46.490926
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: fa183
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:46
+
+Problem: The Oracle Database instance 'fa183' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:46.677020
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: fa183
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:46
+
+Problem: The Oracle Listener for DB 'fa183' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:47.172273
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: fa184
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:47
+
+Problem: The Oracle Database instance 'fa184' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:47.324180
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: fa184
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:47
+
+Problem: The Oracle Listener for DB 'fa184' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:47.593571
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: fa185
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:47
+
+Problem: The Oracle Database instance 'fa185' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:47.661475
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: fa185
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:47
+
+Problem: The Oracle Listener for DB 'fa185' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:47.990876
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: fa186
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:47
+
+Problem: The Oracle Database instance 'fa186' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:48.097064
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: fa186
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:47
+
+Problem: The Oracle Listener for DB 'fa186' is DOWN.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:48.365513
+Subject: Critical Alert - Database Down
+Body:
+Server Name: unknown
+Database Name: fa187
+Host Name: unknown
+Alert Type: Database Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:48
+
+Problem: The Oracle Database instance 'fa187' is DOWN or unreachable.
+-----------------------
+--- EMAIL ALERT ---
+Date: 2026-08-10 16:25:48.465178
+Subject: Critical Alert - Listener Down
+Body:
+Server Name: unknown
+Database Name: fa187
+Host Name: unknown
+Alert Type: Listener Down
+Severity: Critical
+Status: DOWN
+Date & Time: 2026-08-10 16:25:48
+
+Problem: The Oracle Listener for DB 'fa187' is DOWN.
+-----------------------

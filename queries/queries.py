@@ -15,10 +15,16 @@ FROM v$instance
 """
 
 # 2. SESSION COUNT (Active, Inactive, Total)
+# type = 'USER' (not just username IS NOT NULL) to match the home portal
+# page's own "Active Sessions" count exactly (dashboard/home.py:
+# load_db_status_summary_basic) — Oracle background/internal processes
+# aren't guaranteed to have a null username, so the two filters can select
+# different session sets and disagree on the count.
 _SQL_SESSION_STATS = """
 SELECT status, COUNT(*) as cnt
 FROM v$session
 WHERE username IS NOT NULL
+  AND type = 'USER'
 GROUP BY status
 """
 
@@ -100,26 +106,32 @@ ORDER BY record_date ASC
 """
 
 # 7. CPU CONSUMING SESSIONS
+# Top 10 Oracle USER sessions by cumulative CPU time — covers both ACTIVE
+# and INACTIVE sessions (only KILLED is excluded; there is no status='ACTIVE'
+# filter). sql_text is resolved via scalar subqueries rather than a LEFT JOIN
+# on v$sql, because sql_id/prev_sql_id are not unique in v$sql (one row per
+# child cursor) — a JOIN there fans a single session out into multiple rows
+# and can silently push genuine top-10 sessions out of the final head(10).
 _SQL_CPU_SESSIONS = """
-SELECT s.sid, s.username, s.program, s.cpu_time_val,
-       COALESCE(q.sql_text, pq.sql_text) as sql_text,
-       COALESCE(s.sql_id, s.prev_sql_id) as sql_id
+SELECT sid, username, program, cpu_time_val,
+       NVL(
+         (SELECT sql_text FROM v$sql WHERE sql_id = s.sql_id AND ROWNUM = 1),
+         (SELECT sql_text FROM v$sql WHERE sql_id = s.prev_sql_id AND ROWNUM = 1)
+       ) AS sql_text,
+       NVL(s.sql_id, s.prev_sql_id) AS sql_id
 FROM (
-    SELECT sid, username, program, sql_id, prev_sql_id, cpu_time_val
-    FROM (
-        SELECT s.sid, s.username, s.program, s.sql_id, s.prev_sql_id, se.value as cpu_time_val
-        FROM v$session s
-        JOIN v$sesstat se ON s.sid = se.sid
-        JOIN v$statname sn ON se.statistic# = sn.statistic#
-        WHERE sn.name = 'CPU used by this session'
-          AND s.username IS NOT NULL
-          AND s.status != 'KILLED'
-          AND s.username NOT IN ('SYS', 'SYSTEM', 'DBSNMP', 'SYSMAN', 'SYSDG', 'SYSBACKUP', 'SYSKM', 'SYSRAC')
-        ORDER BY se.value DESC
-    ) WHERE ROWNUM <= 10
+    SELECT s.sid, s.username, s.program, s.sql_id, s.prev_sql_id, se.value as cpu_time_val
+    FROM v$session s
+    JOIN v$sesstat se ON s.sid = se.sid
+    JOIN v$statname sn ON se.statistic# = sn.statistic#
+    WHERE sn.name = 'CPU used by this session'
+      AND s.type = 'USER'
+      AND s.username IS NOT NULL
+      AND s.status != 'KILLED'
+      AND s.username NOT IN ('SYS', 'SYSTEM', 'DBSNMP', 'SYSMAN', 'SYSDG', 'SYSBACKUP', 'SYSKM', 'SYSRAC')
+    ORDER BY se.value DESC
 ) s
-LEFT JOIN v$sql q ON s.sql_id = q.sql_id
-LEFT JOIN v$sql pq ON s.prev_sql_id = pq.sql_id
+WHERE ROWNUM <= 10
 """
 
 # 8. BLOCKING & BLOCKED SESSIONS
@@ -261,6 +273,180 @@ FROM v$process p
 JOIN v$session s ON s.paddr = p.addr
 WHERE p.spid IS NOT NULL
 """
+
+
+# 23. DATA GUARD — Primary last generated log sequence per thread
+_SQL_PRIMARY_LOG_SEQ = """
+SELECT
+    THREAD#,
+    MAX(SEQUENCE#) AS PRIMARY_LAST_GENERATED
+FROM V$ARCHIVED_LOG
+GROUP BY THREAD#
+ORDER BY THREAD#
+"""
+
+# 24. DATA GUARD — Standby last received, last applied, and gap per thread
+# (run directly against the Standby, via OCI-key SSH into Production)
+_SQL_STANDBY_LOG_GAP = """
+SELECT
+    THREAD#,
+    MAX(SEQUENCE#)                                                     AS LAST_RECEIVED,
+    MAX(CASE WHEN APPLIED = 'YES' THEN SEQUENCE# END)                  AS LAST_APPLIED,
+    MAX(SEQUENCE#) - MAX(CASE WHEN APPLIED = 'YES' THEN SEQUENCE# END) AS LOG_GAP
+FROM V$ARCHIVED_LOG
+WHERE DEST_ID = 1
+GROUP BY THREAD#
+ORDER BY THREAD#
+"""
+
+# 25. DATA GUARD — Archive destination status/errors, run on the PRIMARY.
+# DEST_ID=1 is always the primary's own local archive destination, DEST_ID=2
+# is its Standby destination (a primary's archive destinations describe
+# where it's shipping redo to - this is not queried on the Standby itself).
+_SQL_ARCHIVE_DEST_STATUS = """
+SELECT
+    DEST_ID,
+    DEST_NAME,
+    STATUS,
+    ERROR,
+    DB_UNIQUE_NAME,
+    SYNCHRONIZATION_STATUS
+FROM V$ARCHIVE_DEST_STATUS
+WHERE DEST_ID IN (1, 2)
+"""
+
+
+def get_log_gap_info(primary_conn=None, standby_conn=None) -> dict:
+    """
+    Query the primary DB (direct connection) for the last generated log
+    sequence per thread AND the archive destination status/errors, and query
+    the standby DB - reached via OCI-key SSH into the primary host, see
+    db_connection._execute_query_via_ssh() - for the last received/applied
+    sequence and self-reported log gap per thread.
+    Returns a dict:
+      {
+        "configured": bool,
+        "threads": [
+            {
+                "thread": int,
+                "primary_generated": int or None,
+                "standby_received": int or None,
+                "standby_applied": int or None,
+                "gap": int or None,
+            }, ...
+        ],
+        "max_gap": int,   # maximum gap across all threads
+        "has_gap": bool,  # True if max_gap >= 2
+        "standby_dests": [
+            {
+                "dest_id": int,                    # 1 = primary's own local dest, 2 = standby dest
+                "dest_name": str,
+                "status": str,
+                "error": str,                       # "" when no error
+                "db_unique_name": str,
+                "synchronization_status": str,
+                "role": str,                        # "primary" | "standby" | ""
+            }, ...
+        ],
+        "error": str,     # error message if any
+      }
+    """
+    result = {
+        "configured": False,
+        "threads": [],
+        "max_gap": 0,
+        "has_gap": False,
+        "standby_dests": [],
+        "error": "",
+    }
+
+    if primary_conn is None:
+        result["error"] = "Primary connection not available"
+        return result
+
+    if standby_conn is None:
+        result["error"] = "Standby connection not available"
+        return result
+
+    # -- Primary: get standby destination status and error details -------
+    dest_errors = []
+    try:
+        cur = primary_conn.cursor()
+        cur.execute(_SQL_ARCHIVE_DEST_STATUS)
+        rows = cur.fetchall()
+        cols = [c[0].upper() for c in cur.description]
+        cur.close()
+        for row in rows:
+            d = dict(zip(cols, row))
+            dest_id = d.get("DEST_ID")
+            dest_errors.append({
+                "dest_id":                dest_id,
+                "dest_name":              d.get("DEST_NAME") or "",
+                "status":                 d.get("STATUS") or "",
+                "error":                  d.get("ERROR") or "",
+                "db_unique_name":         d.get("DB_UNIQUE_NAME") or "",
+                "synchronization_status": d.get("SYNCHRONIZATION_STATUS") or "",
+                "role":                   "primary" if str(dest_id) == "1" else ("standby" if str(dest_id) == "2" else ""),
+            })
+    except Exception:
+        pass
+    result["standby_dests"] = dest_errors
+
+    # -- Primary: get last generated sequence per thread -----------------
+    primary_map = {}
+    try:
+        cur = primary_conn.cursor()
+        cur.execute(_SQL_PRIMARY_LOG_SEQ)
+        rows = cur.fetchall()
+        cols = [c[0].upper() for c in cur.description]
+        cur.close()
+        for row in rows:
+            d = dict(zip(cols, row))
+            t = int(d.get("THREAD#", 1))
+            primary_map[t] = int(d.get("PRIMARY_LAST_GENERATED") or 0)
+    except Exception as e:
+        result["error"] = f"Primary query error: {e}"
+        return result
+
+    # -- Standby: get received/applied/gap per thread (via OCI-key SSH) --
+    try:
+        cur = standby_conn.cursor()
+        cur.execute(_SQL_STANDBY_LOG_GAP)
+        rows = cur.fetchall()
+        cols = [c[0].upper() for c in cur.description]
+        cur.close()
+    except Exception as e:
+        result["error"] = str(e) or "Standby query failed"
+        return result
+
+    # The gap is the Standby's own self-reported LOG_GAP (last_received -
+    # last_applied, computed by _SQL_STANDBY_LOG_GAP itself) - this is the
+    # authoritative sync/apply-lag signal. The Primary's own last-generated
+    # sequence is attached per thread purely for display context.
+    threads = []
+    max_gap = 0
+    for row in rows:
+        d = dict(zip(cols, row))
+        t         = int(d.get("THREAD#", 1))
+        received  = int(d.get("LAST_RECEIVED") or 0)
+        applied   = int(d.get("LAST_APPLIED") or 0)
+        gap       = max(0, int(d.get("LOG_GAP") or 0))
+        primary   = primary_map.get(t) if (primary_map and t in primary_map) else received
+        if gap > max_gap:
+            max_gap = gap
+        threads.append({
+            "thread":             t,
+            "primary_generated":  primary,
+            "standby_received":   received,
+            "standby_applied":    applied,
+            "gap":                gap,
+        })
+    result["configured"] = True
+    result["threads"]    = threads
+    result["max_gap"]    = max_gap
+    result["has_gap"]    = max_gap >= 2
+
+    return result
 
 
 # ─────────────────────────────────────────────────────────────────────────────

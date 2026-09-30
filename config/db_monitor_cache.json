@@ -6,20 +6,20 @@
     "balance_ts": [
       {
         "name": "SYSTEM",
-        "pct": 2.88,
-        "used_mb": 944.94,
-        "free_mb": 31823.05,
+        "pct": 2.9,
+        "used_mb": 949.06,
+        "free_mb": 31818.92,
         "total_mb": 32767.98,
         "allocated_mb": 950.0,
         "location": "/home/oracle/u01/app/oracle/oradata/KASORCL/datafile/o1_mf_system_o4wf2co6_.dbf"
       },
       {
         "name": "SYSAUX",
-        "pct": 2.02,
-        "used_mb": 660.63,
-        "free_mb": 32107.36,
+        "pct": 2.13,
+        "used_mb": 696.75,
+        "free_mb": 32071.23,
         "total_mb": 32767.98,
-        "allocated_mb": 710.0,
+        "allocated_mb": 750.0,
         "location": "/home/oracle/u01/app/oracle/oradata/KASORCL/datafile/o1_mf_sysaux_o4wf34qc_.dbf"
       },
       {
@@ -51,144 +51,20 @@
       }
     ],
     "full_ts": [],
-    "drives": [
-      {
-        "drive": "/dev/mapper/ol-root",
-        "mount_point": "/",
-        "total": 69.966,
-        "used": 15.003,
-        "free": 54.963,
-        "pct": 22.0,
-        "fs_type": "xfs",
-        "uuid": "",
-        "stype": "Linux",
-        "state": "ACTIVE",
-        "source": "ssh"
-      },
-      {
-        "drive": "/dev/sda2",
-        "mount_point": "/boot",
-        "total": 0.99,
-        "used": 0.658,
-        "free": 0.332,
-        "pct": 67.0,
-        "fs_type": "xfs",
-        "uuid": "",
-        "stype": "Linux",
-        "state": "ACTIVE",
-        "source": "ssh"
-      },
-      {
-        "drive": "/dev/sda1",
-        "mount_point": "/boot/efi",
-        "total": 0.585,
-        "used": 0.006,
-        "free": 0.579,
-        "pct": 1.0,
-        "fs_type": "vfat",
-        "uuid": "",
-        "stype": "Linux",
-        "state": "ACTIVE",
-        "source": "ssh"
-      },
-      {
-        "drive": "/dev/mapper/ol-home",
-        "mount_point": "/home",
-        "total": 124.396,
-        "used": 36.124,
-        "free": 88.272,
-        "pct": 30.0,
-        "fs_type": "xfs",
-        "uuid": "",
-        "stype": "Linux",
-        "state": "ACTIVE",
-        "source": "ssh"
-      }
-    ],
-    "processes": [
-      {
-        "pid": "0",
-        "name": "System Idle Process",
-        "username": "NT AUTHORITY\\SYSTEM",
-        "cpu": 547.9,
-        "mem": 0.0
-      },
-      {
-        "pid": "14448",
-        "name": "svchost.exe",
-        "username": "",
-        "cpu": 76.8,
-        "mem": 0.19
-      },
-      {
-        "pid": "3300",
-        "name": " /updateInstalled /background",
-        "username": "DESKTOP-CNENURG\\KTS",
-        "cpu": 19.8,
-        "mem": 0.42
-      },
-      {
-        "pid": "42200",
-        "name": "C:\\Users\\KTS\\AppData\\Local\\Programs\\Python\\Python310\\python.exe C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\Scripts\\streamlit.exe run app.py --server.port=8501 --server.address=0.0.0.0",
-        "username": "DESKTOP-CNENURG\\KTS",
-        "cpu": 19.2,
-        "mem": 0.93
-      },
-      {
-        "pid": "16104",
-        "name": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe --type=renderer --pdf-upsell-enabled --video-capture-use-gpu-memory-buffer --lang=en-US --js-flags=--ms-user-locale=en_IN --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=14 --time-ticks-at-unix-epoch=-1784176076155769 --launch-time-ticks=949645875887 --skip-read-main-dll --metrics-shmem-handle=7392,i,7071415896246583882,935368176036525907,2097152 --field-trial-handle=2520,i,7811458693787606323,2522580983778907810,262144 --variations-seed-version --pseudonymization-salt-handle=2536,i,13743373647773951820,1770990451749499185,4 --trace-process-track-uuid=3190708999430457380 --mojo-platform-channel-handle=7220 /prefetch:1",
-        "username": "DESKTOP-CNENURG\\KTS",
-        "cpu": 16.3,
-        "mem": 3.16
-      },
-      {
-        "pid": "40416",
-        "name": "C:\\Users\\KTS\\AppData\\Local\\Programs\\Python\\Python310\\python.exe C:\\Users\\KTS\\Desktop\\dash_manually\\venv\\Scripts\\streamlit.exe run app.py",
-        "username": "DESKTOP-CNENURG\\KTS",
-        "cpu": 14.1,
-        "mem": 1.09
-      },
-      {
-        "pid": "44524",
-        "name": "dwm.exe",
-        "username": "",
-        "cpu": 9.2,
-        "mem": 0.59
-      },
-      {
-        "pid": "4",
-        "name": "System",
-        "username": "NT AUTHORITY\\SYSTEM",
-        "cpu": 8.4,
-        "mem": 0.03
-      },
-      {
-        "pid": "39196",
-        "name": "C:\\Users\\KTS\\AppData\\Local\\Programs\\antigravity\\resources\\bin\\language_server.exe --standalone --override_ide_name antigravity --subclient_type hub --override_ide_version 2.3.1 --override_user_agent_name antigravity --https_server_port 0 --csrf_token 3fd4480a-3368-4536-ae7f-c0beaf70bf6e --app_data_dir antigravity --api_server_url https://generativelanguage.googleapis.com --cloud_code_endpoint https://daily-cloudcode-pa.googleapis.com --enable_sidecars",
-        "username": "DESKTOP-CNENURG\\KTS",
-        "cpu": 7.5,
-        "mem": 6.03
-      },
-      {
-        "pid": "38356",
-        "name": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe --profile-directory=Default",
-        "username": "DESKTOP-CNENURG\\KTS",
-        "cpu": 7.1,
-        "mem": 1.34
-      }
-    ],
+    "drives": [],
+    "processes": [],
     "system_res": {
       "num_cpus": 10,
-      "cpu_host_used_pct": 0.4,
-      "cpu_host_free_pct": 99.6,
-      "cpu_oracle_used_pct": 0.1,
-      "ram_total_gb": 9.59,
-      "ram_used_gb": 9.43,
-      "ram_free_gb": 0.16,
-      "ram_oracle_gb": 2.43,
-      "session_count": 116
+      "cpu_host_used_pct": 0.3,
+      "cpu_host_free_pct": 99.7,
+      "cpu_oracle_used_pct": 0.0,
+      "ram_total_gb": 9.82,
+      "ram_used_gb": 9.44,
+      "ram_free_gb": 0.38,
+      "ram_oracle_gb": 2.5,
+      "session_count": 104
     },
-    "arc_pct": 10.47,
+    "arc_pct": 38.48,
     "arc_configured": true,
     "arc_used_mb": 0.0,
     "arc_limit_mb": 0.0,
@@ -196,29 +72,36 @@
     "has_blocking": false,
     "blocking_details": [],
     "ora_errors": [
-      "  Result = ORA-0\n",
-      "  Result = ORA-0\n",
-      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_386415.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_669\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n",
-      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_382225.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_666\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n",
-      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_377925.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_663\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n",
-      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_373722.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_643\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n",
-      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_369512.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_623\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n",
-      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_361339.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_615\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n",
-      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_357291.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_612\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n",
-      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_352854.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_609\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n"
+      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_3036790.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_1323\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n",
+      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_3011738.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_1303\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n"
     ],
     "deadlock_detected": false,
     "session_maxed": false,
     "alert_log_errors": [],
     "tooltip_reasons": [
-      "ORA error:   Result = ORA-0\n"
+      "ORA error: Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorc"
     ],
-    "last_refresh": "2026-07-27 18:45:15",
+    "last_refresh": "2026-09-04 13:30:55",
     "arc_log_type": "FRA",
     "arc_dest_name": "/home/oracle/u01/app/oracle/fast_recovery_area",
     "arc_limit_gb": 8.06,
-    "arc_used_gb": 0.84,
-    "arc_free_gb": 7.220000000000001,
-    "mount_error": null
+    "arc_used_gb": 3.1,
+    "arc_free_gb": 4.960000000000001,
+    "standby_dests": [],
+    "primary_seqs": {
+      "1": 48
+    },
+    "reporting_status": "DOWN",
+    "reporting_listener": "UP",
+    "reporting_db_name": "orcl_arthi",
+    "reporting_configured": true,
+    "reporting_error_message": "ORA-12631: Username retrieval failed",
+    "reporting_response_time": 9437,
+    "reporting_checked_at": "2026-09-04 13:31:06",
+    "reporting_username": "arthi",
+    "reporting_password": "Arthi123",
+    "standby_configured": false,
+    "standby_log_gap": {},
+    "log_gap_alert": false
   }
 }
