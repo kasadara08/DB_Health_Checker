@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oracle System Dashboard - Sessions</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        html {
+            font-size: 14px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f1f5f9;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(71, 85, 105, 0.3);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        .status-badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .status-active {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .status-inactive {
+            background: rgba(148, 163, 184, 0.2);
+            color: #94a3b8;
+            border: 1px solid rgba(148, 163, 184, 0.3);
+        }
+
+        .status-waiting {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .session-count {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #60a5fa;
+            margin-bottom: 8px;
+        }
+
+        .session-label {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 200px;
+            margin: 20px 0;
+        }
+
+        .session-breakdown {
+            margin-top: 20px;
+        }
+
+        .session-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+        }
+
+        .session-item:last-child {
+            border-bottom: none;
+        }
+
+        .session-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .session-status {
+            font-weight: 500;
+            color: #f1f5f9;
+        }
+
+        .session-count-small {
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        .progress-bar {
+            width: 60px;
+            height: 4px;
+            background: rgba(71, 85, 105, 0.3);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-left: 12px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .refresh-btn {
+            background: rgba(96, 165, 250, 0.1);
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            color: #60a5fa;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .refresh-btn:hover {
+            background: rgba(96, 165, 250, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .refresh-btn.loading {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-top: 20px;
+        }
+
+        .error-message {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 16px;
+            text-align: center;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(96, 165, 250, 0.3);
+            border-radius: 50%;
+            border-top-color: #60a5fa;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: .5;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Oracle System Dashboard</h1>
+            <p>Real-time Session Monitoring</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- Session Monitor Card -->
+            <div class="card" id="sessionCard">
+                <div class="card-header">
+                    <h2 class="card-title">Session Monitor</h2>
+                    <button class="refresh-btn" id="refreshBtn" onclick="fetchSessionData()">
+                        <span id="refreshIcon">🔄</span>
+                        Refresh
+                    </button>
+                </div>
+
+                <div class="session-count" id="totalSessions">--</div>
+                <div class="session-label">Non-SYS/SYSTEM sessions</div>
+
+                <div class="chart-container">
+                    <canvas id="sessionChart"></canvas>
+                </div>
+
+                <div class="session-breakdown" id="sessionBreakdown">
+                    <!-- Session breakdown will be populated here -->
+                </div>
+
+                <div class="last-updated" id="lastUpdated">
+                    Loading...
+                </div>
+            </div>
+
+            <!-- Additional Info Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">System Information</h2>
+                </div>
+
+                <div class="session-breakdown">
+                    <div class="session-item">
+                        <div class="session-info">
+                            <span class="session-status">Database</span>
+                        </div>
+                        <span class="session-count-small" id="dbStatus">Checking...</span>
+                    </div>
+                    <div class="session-item">
+                        <div class="session-info">
+                            <span class="session-status">Listener</span>
+                        </div>
+                        <span class="session-count-small" id="listenerStatus">Checking...</span>
+                    </div>
+                    <div class="session-item">
+                        <div class="session-info">
+                            <span class="session-status">Version</span>
+                        </div>
+                        <span class="session-count-small">Oracle 19c</span>
+                    </div>
+                    <div class="session-item">
+                        <div class="session-info">
+                            <span class="session-status">Instance</span>
+                        </div>
+                        <span class="session-count-small">ORCL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="errorContainer"></div>
+    </div>
+
+    <script>
+        let sessionChart = null;
+        let lastUpdated = null;
+
+        // Status colors for chart
+        const statusColors = {
+            ACTIVE: '#22c55e',
+            INACTIVE: '#64748b',
+            WAITING: '#f59e0b',
+            KILLED: '#ef4444'
+        };
+
+        // Initialize the dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchSessionData();
+            fetchSystemStatus();
+
+            // Auto-refresh every 30 seconds
+            setInterval(fetchSessionData, 30000);
+            setInterval(fetchSystemStatus, 15000);
+        });
+
+        // Fetch session data from API
+        async function fetchSessionData() {
+            const refreshBtn = document.getElementById('refreshBtn');
+            const refreshIcon = document.getElementById('refreshIcon');
+
+            refreshBtn.classList.add('loading');
+            refreshIcon.textContent = '⏳';
+
+            try {
+                const response = await fetch('/api/sessions/count');
+                const data = await response.json();
+
+                if (data.error) {
+                    showError('Failed to load session data: ' + data.error);
+                    return;
+                }
+
+                updateSessionDisplay(data);
+                hideError();
+
+            } catch (error) {
+                showError('Network error: ' + error.message);
+            } finally {
+                refreshBtn.classList.remove('loading');
+                refreshIcon.textContent = '🔄';
+            }
+        }
+
+        // Update session display with data
+        function updateSessionDisplay(data) {
+            const totalSessions = document.getElementById('totalSessions');
+            const sessionBreakdown = document.getElementById('sessionBreakdown');
+            const lastUpdatedEl = document.getElementById('lastUpdated');
+
+            // Update total count
+            totalSessions.textContent = data.total || 0;
+            totalSessions.classList.add('pulse');
+
+            // Remove pulse after animation
+            setTimeout(() => {
+                totalSessions.classList.remove('pulse');
+            }, 1000);
+
+            // Update chart
+            updateChart(data.breakdown || []);
+
+            // Update breakdown list
+            sessionBreakdown.innerHTML = '';
+            const breakdown = data.breakdown || [];
+
+            if (breakdown.length === 0) {
+                sessionBreakdown.innerHTML = '<div class="session-item"><span class="session-status">No session data available</span></div>';
+                return;
+            }
+
+            breakdown.forEach(item => {
+                const color = statusColors[item.status] || statusColors.INACTIVE;
+
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'session-item';
+                itemDiv.innerHTML = `
+                    <div class="session-info">
+                        <div class="status-dot" style="background-color: ${color}"></div>
+                        <span class="session-status">${item.status}</span>
+                    </div>
+                    <span class="session-count-small">${item.count}</span>
+                `;
+                sessionBreakdown.appendChild(itemDiv);
+            });
+
+            // Update last updated time
+            lastUpdated = new Date();
+            updateLastUpdated();
+        }
+
+        // Update the chart
+        function updateChart(breakdown) {
+            const ctx = document.getElementById('sessionChart').getContext('2d');
+
+            if (sessionChart) {
+                sessionChart.destroy();
+            }
+
+            const data = {
+                labels: breakdown.map(item => item.status),
+                datasets: [{
+                    data: breakdown.map(item => item.count),
+                    backgroundColor: breakdown.map(item => statusColors[item.status] || statusColors.INACTIVE),
+                    borderWidth: 0,
+                    cutout: '75%'
+                }]
+            };
+
+            const options = {
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                maintainAspectRatio: false,
+                responsive: true
+            };
+
+            sessionChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: data,
+                options: options
+            });
+        }
+
+        // Fetch system status
+        async function fetchSystemStatus() {
+            try {
+                // Fetch DB status
+                const dbResponse = await fetch('/db-status');
+                const dbData = await dbResponse.json();
+                document.getElementById('dbStatus').textContent = dbData.status || 'Unknown';
+
+                // Fetch listener status
+                const listenerResponse = await fetch('/listener-status');
+                const listenerData = await listenerResponse.json();
+                document.getElementById('listenerStatus').textContent = listenerData.status || 'Unknown';
+
+            } catch (error) {
+                console.error('Failed to fetch system status:', error);
+                document.getElementById('dbStatus').textContent = 'Error';
+                document.getElementById('listenerStatus').textContent = 'Error';
+            }
+        }
+
+        // Update last updated display
+        function updateLastUpdated() {
+            const lastUpdatedEl = document.getElementById('lastUpdated');
+
+            if (!lastUpdated) {
+                lastUpdatedEl.textContent = 'Never updated';
+                return;
+            }
+
+            const now = new Date();
+            const secondsAgo = Math.floor((now - lastUpdated) / 1000);
+
+            if (secondsAgo < 60) {
+                lastUpdatedEl.textContent = `Last updated: ${secondsAgo}s ago`;
+            } else {
+                const minutesAgo = Math.floor(secondsAgo / 60);
+                lastUpdatedEl.textContent = `Last updated: ${minutesAgo}m ago`;
+            }
+        }
+
+        // Show error message
+        function showError(message) {
+            const errorContainer = document.getElementById('errorContainer');
+            errorContainer.innerHTML = `<div class="error-message">${message}</div>`;
+        }
+
+        // Hide error message
+        function hideError() {
+            const errorContainer = document.getElementById('errorContainer');
+            errorContainer.innerHTML = '';
+        }
+
+        // Update last updated every second
+        setInterval(updateLastUpdated, 1000);
+    </script>
+</body>
+</html>

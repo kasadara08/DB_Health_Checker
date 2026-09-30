@@ -1,0 +1,9 @@
+﻿build/
+dist/
+logs/
+scratch/
+oracle_client/
+__pycache__/
+*.bak
+.env
+data/
