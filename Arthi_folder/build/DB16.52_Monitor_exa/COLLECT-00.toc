@@ -1,0 +1,1679 @@
+([('DB16.52_Monitor_exa.exe',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\build\\DB16.52_Monitor_exa\\DB16.52_Monitor_exa.exe',
+   'EXECUTABLE'),
+  ('MSVCP140.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\MSVCP140.dll',
+   'BINARY'),
+  ('OCI.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\OCI.dll',
+   'BINARY'),
+  ('VCRUNTIME140.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('VCRUNTIME140_1.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\VCRUNTIME140_1.dll',
+   'BINARY'),
+  ('_asyncio.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_asyncio.pyd',
+   'EXTENSION'),
+  ('_bz2.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('_cffi_backend.cp312-win_amd64.pyd',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\_cffi_backend.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('_ctypes.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_ctypes.pyd',
+   'EXTENSION'),
+  ('_decimal.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_elementtree.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_elementtree.pyd',
+   'EXTENSION'),
+  ('_hashlib.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('_lzma.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_multiprocessing.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_multiprocessing.pyd',
+   'EXTENSION'),
+  ('_overlapped.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_overlapped.pyd',
+   'EXTENSION'),
+  ('_queue.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_queue.pyd',
+   'EXTENSION'),
+  ('_socket.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('_ssl.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_ssl.pyd',
+   'EXTENSION'),
+  ('_uuid.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_uuid.pyd',
+   'EXTENSION'),
+  ('_wmi.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\_wmi.pyd',
+   'EXTENSION'),
+  ('ada92cb5d92a588d1b93__mypyc.cp312-win_amd64.pyd',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\ada92cb5d92a588d1b93__mypyc.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('base_library.zip',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\build\\DB16.52_Monitor_exa\\base_library.zip',
+   'DATA'),
+  ('bcrypt\\_bcrypt.pyd',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\bcrypt\\_bcrypt.pyd',
+   'EXTENSION'),
+  ('certifi\\cacert.pem',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\certifi\\cacert.pem',
+   'DATA'),
+  ('certifi\\py.typed',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\certifi\\py.typed',
+   'DATA'),
+  ('charset_normalizer\\cd.cp312-win_amd64.pyd',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\charset_normalizer\\cd.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('charset_normalizer\\md.cp312-win_amd64.pyd',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\charset_normalizer\\md.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('click-8.3.3.dist-info\\INSTALLER',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\click-8.3.3.dist-info\\INSTALLER',
+   'DATA'),
+  ('click-8.3.3.dist-info\\METADATA',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\click-8.3.3.dist-info\\METADATA',
+   'DATA'),
+  ('click-8.3.3.dist-info\\RECORD',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\click-8.3.3.dist-info\\RECORD',
+   'DATA'),
+  ('click-8.3.3.dist-info\\WHEEL',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\click-8.3.3.dist-info\\WHEEL',
+   'DATA'),
+  ('click-8.3.3.dist-info\\licenses\\LICENSE.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\click-8.3.3.dist-info\\licenses\\LICENSE.txt',
+   'DATA'),
+  ('cryptography-48.0.0.dist-info\\INSTALLER',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography-48.0.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('cryptography-48.0.0.dist-info\\METADATA',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography-48.0.0.dist-info\\METADATA',
+   'DATA'),
+  ('cryptography-48.0.0.dist-info\\RECORD',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography-48.0.0.dist-info\\RECORD',
+   'DATA'),
+  ('cryptography-48.0.0.dist-info\\WHEEL',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography-48.0.0.dist-info\\WHEEL',
+   'DATA'),
+  ('cryptography-48.0.0.dist-info\\licenses\\LICENSE',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography-48.0.0.dist-info\\licenses\\LICENSE',
+   'DATA'),
+  ('cryptography-48.0.0.dist-info\\licenses\\LICENSE.APACHE',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography-48.0.0.dist-info\\licenses\\LICENSE.APACHE',
+   'DATA'),
+  ('cryptography-48.0.0.dist-info\\licenses\\LICENSE.BSD',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography-48.0.0.dist-info\\licenses\\LICENSE.BSD',
+   'DATA'),
+  ('cryptography-48.0.0.dist-info\\sboms\\cryptography-rust.cyclonedx.json',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography-48.0.0.dist-info\\sboms\\cryptography-rust.cyclonedx.json',
+   'DATA'),
+  ('cryptography-48.0.0.dist-info\\sboms\\sbom.json',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography-48.0.0.dist-info\\sboms\\sbom.json',
+   'DATA'),
+  ('cryptography\\__about__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\__about__.py',
+   'DATA'),
+  ('cryptography\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\__init__.py',
+   'DATA'),
+  ('cryptography\\exceptions.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\exceptions.py',
+   'DATA'),
+  ('cryptography\\fernet.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\fernet.py',
+   'DATA'),
+  ('cryptography\\hazmat\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\__init__.py',
+   'DATA'),
+  ('cryptography\\hazmat\\_oid.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\_oid.py',
+   'DATA'),
+  ('cryptography\\hazmat\\asn1\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\asn1\\__init__.py',
+   'DATA'),
+  ('cryptography\\hazmat\\asn1\\asn1.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\asn1\\asn1.py',
+   'DATA'),
+  ('cryptography\\hazmat\\backends\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\backends\\__init__.py',
+   'DATA'),
+  ('cryptography\\hazmat\\backends\\openssl\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__init__.py',
+   'DATA'),
+  ('cryptography\\hazmat\\backends\\openssl\\backend.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\backend.py',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\__init__.py',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust.pyd',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd',
+   'EXTENSION'),
+  ('cryptography\\hazmat\\bindings\\_rust\\__init__.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\__init__.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\_openssl.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\_openssl.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\asn1.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\asn1.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\declarative_asn1.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\declarative_asn1.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\exceptions.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\exceptions.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\ocsp.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\ocsp.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\__init__.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\__init__.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\aead.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\aead.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\ciphers.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\ciphers.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\cmac.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\cmac.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\dh.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\dh.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\dsa.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\dsa.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\ec.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\ec.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\ed25519.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\ed25519.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\ed448.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\ed448.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\hashes.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\hashes.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\hmac.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\hmac.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\hpke.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\hpke.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\kdf.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\kdf.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\keys.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\keys.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\mldsa.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\mldsa.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\mlkem.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\mlkem.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\poly1305.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\poly1305.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\rsa.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\rsa.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\x25519.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\x25519.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\openssl\\x448.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\openssl\\x448.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\pkcs12.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\pkcs12.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\pkcs7.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\pkcs7.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\test_support.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\test_support.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\_rust\\x509.pyi',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust\\x509.pyi',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\openssl\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\__init__.py',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\openssl\\_conditional.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\_conditional.py',
+   'DATA'),
+  ('cryptography\\hazmat\\bindings\\openssl\\binding.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\binding.py',
+   'DATA'),
+  ('cryptography\\hazmat\\decrepit\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\decrepit\\__init__.py',
+   'DATA'),
+  ('cryptography\\hazmat\\decrepit\\ciphers\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\decrepit\\ciphers\\__init__.py',
+   'DATA'),
+  ('cryptography\\hazmat\\decrepit\\ciphers\\algorithms.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\decrepit\\ciphers\\algorithms.py',
+   'DATA'),
+  ('cryptography\\hazmat\\decrepit\\ciphers\\modes.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\decrepit\\ciphers\\modes.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\__init__.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\_asymmetric.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\_asymmetric.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\_cipheralgorithm.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\_cipheralgorithm.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\_modes.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\_modes.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\_serialization.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\_serialization.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\asymmetric\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\__init__.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\asymmetric\\dh.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dh.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\asymmetric\\dsa.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dsa.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\asymmetric\\ec.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ec.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\asymmetric\\ed25519.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed25519.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\asymmetric\\ed448.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed448.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\asymmetric\\mldsa.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\mldsa.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\asymmetric\\mlkem.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\mlkem.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\asymmetric\\padding.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\padding.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\asymmetric\\rsa.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\rsa.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\asymmetric\\types.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\types.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\asymmetric\\utils.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\utils.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\asymmetric\\x25519.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x25519.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\asymmetric\\x448.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x448.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\ciphers\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\__init__.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\ciphers\\aead.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\aead.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\ciphers\\algorithms.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\algorithms.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\ciphers\\base.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\base.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\ciphers\\modes.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\modes.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\cmac.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\cmac.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\constant_time.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\constant_time.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\hashes.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\hashes.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\hmac.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\hmac.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\hpke.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\hpke.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\kdf\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\__init__.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\kdf\\argon2.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\argon2.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\kdf\\concatkdf.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\concatkdf.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\kdf\\hkdf.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\hkdf.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\kdf\\kbkdf.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\kbkdf.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\kdf\\pbkdf2.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\pbkdf2.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\kdf\\scrypt.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\scrypt.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\kdf\\x963kdf.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\kdf\\x963kdf.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\keywrap.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\keywrap.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\padding.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\padding.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\poly1305.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\poly1305.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\serialization\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\__init__.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\serialization\\base.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\base.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\serialization\\pkcs12.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\pkcs12.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\serialization\\pkcs7.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\pkcs7.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\serialization\\ssh.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\ssh.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\twofactor\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\twofactor\\__init__.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\twofactor\\hotp.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\twofactor\\hotp.py',
+   'DATA'),
+  ('cryptography\\hazmat\\primitives\\twofactor\\totp.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\hazmat\\primitives\\twofactor\\totp.py',
+   'DATA'),
+  ('cryptography\\py.typed',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\py.typed',
+   'DATA'),
+  ('cryptography\\utils.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\utils.py',
+   'DATA'),
+  ('cryptography\\x509\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\x509\\__init__.py',
+   'DATA'),
+  ('cryptography\\x509\\base.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\x509\\base.py',
+   'DATA'),
+  ('cryptography\\x509\\certificate_transparency.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\x509\\certificate_transparency.py',
+   'DATA'),
+  ('cryptography\\x509\\extensions.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\x509\\extensions.py',
+   'DATA'),
+  ('cryptography\\x509\\general_name.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\x509\\general_name.py',
+   'DATA'),
+  ('cryptography\\x509\\name.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\x509\\name.py',
+   'DATA'),
+  ('cryptography\\x509\\ocsp.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\x509\\ocsp.py',
+   'DATA'),
+  ('cryptography\\x509\\oid.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\x509\\oid.py',
+   'DATA'),
+  ('cryptography\\x509\\verification.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\cryptography\\x509\\verification.py',
+   'DATA'),
+  ('data\\alert_history.json',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy (2)\\data\\alert_history.json',
+   'DATA'),
+  ('data\\archive_cleanup_history.json',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\data\\archive_cleanup_history.json',
+   'DATA'),
+  ('data\\databases.csv',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy (2)\\data\\databases.csv',
+   'DATA'),
+  ('data\\databases_14.csv',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy (2)\\data\\databases_14.csv',
+   'DATA'),
+  ('data\\databases_24.csv',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy (2)\\data\\databases_24.csv',
+   'DATA'),
+  ('data\\email_alert_settings.json',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\data\\email_alert_settings.json',
+   'DATA'),
+  ('data\\email_history.json',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy (2)\\data\\email_history.json',
+   'DATA'),
+  ('data\\email_settings.json',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\data\\email_settings.json',
+   'DATA'),
+  ('data\\growth_history.json',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\data\\growth_history.json',
+   'DATA'),
+  ('data\\smtp_config.json',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy (2)\\data\\smtp_config.json',
+   'DATA'),
+  ('data\\upload_history.json',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\data\\upload_history.json',
+   'DATA'),
+  ('data\\uploads\\upload_20260907_163635_20bc2286_3DB.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\data\\uploads\\upload_20260907_163635_20bc2286_3DB.txt',
+   'DATA'),
+  ('flask-3.1.3.dist-info\\INSTALLER',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\flask-3.1.3.dist-info\\INSTALLER',
+   'DATA'),
+  ('flask-3.1.3.dist-info\\METADATA',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\flask-3.1.3.dist-info\\METADATA',
+   'DATA'),
+  ('flask-3.1.3.dist-info\\RECORD',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\flask-3.1.3.dist-info\\RECORD',
+   'DATA'),
+  ('flask-3.1.3.dist-info\\REQUESTED',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\flask-3.1.3.dist-info\\REQUESTED',
+   'DATA'),
+  ('flask-3.1.3.dist-info\\WHEEL',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\flask-3.1.3.dist-info\\WHEEL',
+   'DATA'),
+  ('flask-3.1.3.dist-info\\entry_points.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\flask-3.1.3.dist-info\\entry_points.txt',
+   'DATA'),
+  ('flask-3.1.3.dist-info\\licenses\\LICENSE.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\flask-3.1.3.dist-info\\licenses\\LICENSE.txt',
+   'DATA'),
+  ('invoke-3.0.3.dist-info\\INSTALLER',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\invoke-3.0.3.dist-info\\INSTALLER',
+   'DATA'),
+  ('invoke-3.0.3.dist-info\\METADATA',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\invoke-3.0.3.dist-info\\METADATA',
+   'DATA'),
+  ('invoke-3.0.3.dist-info\\RECORD',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\invoke-3.0.3.dist-info\\RECORD',
+   'DATA'),
+  ('invoke-3.0.3.dist-info\\WHEEL',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\invoke-3.0.3.dist-info\\WHEEL',
+   'DATA'),
+  ('invoke-3.0.3.dist-info\\entry_points.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\invoke-3.0.3.dist-info\\entry_points.txt',
+   'DATA'),
+  ('invoke-3.0.3.dist-info\\licenses\\LICENSE',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\invoke-3.0.3.dist-info\\licenses\\LICENSE',
+   'DATA'),
+  ('invoke-3.0.3.dist-info\\top_level.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\invoke-3.0.3.dist-info\\top_level.txt',
+   'DATA'),
+  ('itsdangerous-2.2.0.dist-info\\INSTALLER',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('itsdangerous-2.2.0.dist-info\\LICENSE.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\LICENSE.txt',
+   'DATA'),
+  ('itsdangerous-2.2.0.dist-info\\METADATA',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\METADATA',
+   'DATA'),
+  ('itsdangerous-2.2.0.dist-info\\RECORD',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\RECORD',
+   'DATA'),
+  ('itsdangerous-2.2.0.dist-info\\WHEEL',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\itsdangerous-2.2.0.dist-info\\WHEEL',
+   'DATA'),
+  ('libcrypto-3.dll',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\libcrypto-3.dll',
+   'BINARY'),
+  ('libffi-8.dll',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\libffi-8.dll',
+   'BINARY'),
+  ('libssl-3.dll',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\libssl-3.dll',
+   'BINARY'),
+  ('markupsafe-3.0.3.dist-info\\INSTALLER',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\markupsafe-3.0.3.dist-info\\INSTALLER',
+   'DATA'),
+  ('markupsafe-3.0.3.dist-info\\METADATA',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\markupsafe-3.0.3.dist-info\\METADATA',
+   'DATA'),
+  ('markupsafe-3.0.3.dist-info\\RECORD',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\markupsafe-3.0.3.dist-info\\RECORD',
+   'DATA'),
+  ('markupsafe-3.0.3.dist-info\\WHEEL',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\markupsafe-3.0.3.dist-info\\WHEEL',
+   'DATA'),
+  ('markupsafe-3.0.3.dist-info\\licenses\\LICENSE.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\markupsafe-3.0.3.dist-info\\licenses\\LICENSE.txt',
+   'DATA'),
+  ('markupsafe-3.0.3.dist-info\\top_level.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\markupsafe-3.0.3.dist-info\\top_level.txt',
+   'DATA'),
+  ('markupsafe\\_speedups.cp312-win_amd64.pyd',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\markupsafe\\_speedups.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('msal-1.37.0.dist-info\\INSTALLER',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal-1.37.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('msal-1.37.0.dist-info\\METADATA',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal-1.37.0.dist-info\\METADATA',
+   'DATA'),
+  ('msal-1.37.0.dist-info\\RECORD',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal-1.37.0.dist-info\\RECORD',
+   'DATA'),
+  ('msal-1.37.0.dist-info\\REQUESTED',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal-1.37.0.dist-info\\REQUESTED',
+   'DATA'),
+  ('msal-1.37.0.dist-info\\WHEEL',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal-1.37.0.dist-info\\WHEEL',
+   'DATA'),
+  ('msal-1.37.0.dist-info\\licenses\\LICENSE',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal-1.37.0.dist-info\\licenses\\LICENSE',
+   'DATA'),
+  ('msal-1.37.0.dist-info\\top_level.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal-1.37.0.dist-info\\top_level.txt',
+   'DATA'),
+  ('msal\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\__init__.py',
+   'DATA'),
+  ('msal\\__main__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\__main__.py',
+   'DATA'),
+  ('msal\\application.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\application.py',
+   'DATA'),
+  ('msal\\auth_scheme.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\auth_scheme.py',
+   'DATA'),
+  ('msal\\authority.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\authority.py',
+   'DATA'),
+  ('msal\\broker.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\broker.py',
+   'DATA'),
+  ('msal\\cloudshell.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\cloudshell.py',
+   'DATA'),
+  ('msal\\exceptions.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\exceptions.py',
+   'DATA'),
+  ('msal\\individual_cache.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\individual_cache.py',
+   'DATA'),
+  ('msal\\managed_identity.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\managed_identity.py',
+   'DATA'),
+  ('msal\\mex.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\mex.py',
+   'DATA'),
+  ('msal\\oauth2cli\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\oauth2cli\\__init__.py',
+   'DATA'),
+  ('msal\\oauth2cli\\assertion.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\oauth2cli\\assertion.py',
+   'DATA'),
+  ('msal\\oauth2cli\\authcode.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\oauth2cli\\authcode.py',
+   'DATA'),
+  ('msal\\oauth2cli\\http.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\oauth2cli\\http.py',
+   'DATA'),
+  ('msal\\oauth2cli\\oauth2.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\oauth2cli\\oauth2.py',
+   'DATA'),
+  ('msal\\oauth2cli\\oidc.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\oauth2cli\\oidc.py',
+   'DATA'),
+  ('msal\\region.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\region.py',
+   'DATA'),
+  ('msal\\sku.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\sku.py',
+   'DATA'),
+  ('msal\\telemetry.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\telemetry.py',
+   'DATA'),
+  ('msal\\throttled_http_client.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\throttled_http_client.py',
+   'DATA'),
+  ('msal\\token_cache.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\token_cache.py',
+   'DATA'),
+  ('msal\\wstrust_request.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\wstrust_request.py',
+   'DATA'),
+  ('msal\\wstrust_response.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\msal\\wstrust_response.py',
+   'DATA'),
+  ('nacl\\_sodium.pyd',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\nacl\\_sodium.pyd',
+   'EXTENSION'),
+  ('nacl\\py.typed',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\nacl\\py.typed',
+   'DATA'),
+  ('oraasmclnt19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\oraasmclnt19.dll',
+   'BINARY'),
+  ('oracell19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\oracell19.dll',
+   'BINARY'),
+  ('oracle_client\\META-INF\\MANIFEST.MF',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\META-INF\\MANIFEST.MF',
+   'DATA'),
+  ('oracle_client\\META-INF\\ORACLE_C.RSA',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\META-INF\\ORACLE_C.RSA',
+   'DATA'),
+  ('oracle_client\\META-INF\\ORACLE_C.SF',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\META-INF\\ORACLE_C.SF',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\BASIC_LICENSE',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\BASIC_LICENSE',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\BASIC_README',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\BASIC_README',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\adrci.exe',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\adrci.exe',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\adrci.sym',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\adrci.sym',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\ccme_asym.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\ccme_asym.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\ccme_base.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\ccme_base.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\ccme_base_non_fips.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\ccme_base_non_fips.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\ccme_ecc.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\ccme_ecc.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\ccme_ecc_non_fips.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\ccme_ecc_non_fips.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\cryptocme.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\cryptocme.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\genezi.exe',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\genezi.exe',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\genezi.sym',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\genezi.sym',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\msvcp140.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\msvcp140.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\msvcp140_1.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\msvcp140_1.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\msvcp140_2.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\msvcp140_2.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\oci.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oci.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\oci.sym',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oci.sym',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\ocijdbc19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\ocijdbc19.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\ocijdbc19.sym',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\ocijdbc19.sym',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\ociw32.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\ociw32.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\ociw32.sym',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\ociw32.sym',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\ojdbc8.jar',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\ojdbc8.jar',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\oraclient19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oraclient19.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\oracommon19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oracommon19.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\oracore19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oracore19.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\oramysql19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oramysql19.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\oramysql19.sym',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oramysql19.sym',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\oran19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oran19.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\oranls19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oranls19.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\orannzsbb19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\orannzsbb19.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\orannzsbb19.sym',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\orannzsbb19.sym',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\oraocci19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oraocci19.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\oraocci19.sym',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oraocci19.sym',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\oraocci19d.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oraocci19d.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\oraocci19d.sym',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oraocci19d.sym',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\oraociei19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oraociei19.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\oraociei19.sym',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oraociei19.sym',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\oraons.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oraons.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\orasql19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\orasql19.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\orasql19.sym',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\orasql19.sym',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\orazt19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\orazt19.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\oraztkg19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oraztkg19.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\ucp.jar',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\ucp.jar',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\uidrvci.exe',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\uidrvci.exe',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\uidrvci.sym',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\uidrvci.sym',
+   'DATA'),
+  ('oracle_client\\instantclient_19_31\\vcruntime140.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\vcruntime140.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\vcruntime140_1.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\vcruntime140_1.dll',
+   'BINARY'),
+  ('oracle_client\\instantclient_19_31\\xstreams.jar',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\xstreams.jar',
+   'DATA'),
+  ('oracledb-4.0.0.dist-info\\INSTALLER',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb-4.0.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('oracledb-4.0.0.dist-info\\METADATA',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb-4.0.0.dist-info\\METADATA',
+   'DATA'),
+  ('oracledb-4.0.0.dist-info\\RECORD',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb-4.0.0.dist-info\\RECORD',
+   'DATA'),
+  ('oracledb-4.0.0.dist-info\\REQUESTED',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb-4.0.0.dist-info\\REQUESTED',
+   'DATA'),
+  ('oracledb-4.0.0.dist-info\\WHEEL',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb-4.0.0.dist-info\\WHEEL',
+   'DATA'),
+  ('oracledb-4.0.0.dist-info\\licenses\\LICENSE.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb-4.0.0.dist-info\\licenses\\LICENSE.txt',
+   'DATA'),
+  ('oracledb-4.0.0.dist-info\\licenses\\NOTICE.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb-4.0.0.dist-info\\licenses\\NOTICE.txt',
+   'DATA'),
+  ('oracledb-4.0.0.dist-info\\licenses\\THIRD_PARTY_LICENSES.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb-4.0.0.dist-info\\licenses\\THIRD_PARTY_LICENSES.txt',
+   'DATA'),
+  ('oracledb-4.0.0.dist-info\\top_level.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb-4.0.0.dist-info\\top_level.txt',
+   'DATA'),
+  ('oracledb\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\__init__.py',
+   'DATA'),
+  ('oracledb\\aq.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\aq.py',
+   'DATA'),
+  ('oracledb\\arrow_array.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\arrow_array.py',
+   'DATA'),
+  ('oracledb\\arrow_impl.cp312-win_amd64.pyd',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\arrow_impl.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('oracledb\\base.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\base.py',
+   'DATA'),
+  ('oracledb\\base_impl.cp312-win_amd64.pyd',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\base_impl.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('oracledb\\builtin_hooks.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\builtin_hooks.py',
+   'DATA'),
+  ('oracledb\\connect_params.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\connect_params.py',
+   'DATA'),
+  ('oracledb\\connection.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\connection.py',
+   'DATA'),
+  ('oracledb\\constants.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\constants.py',
+   'DATA'),
+  ('oracledb\\constructors.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\constructors.py',
+   'DATA'),
+  ('oracledb\\cursor.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\cursor.py',
+   'DATA'),
+  ('oracledb\\dataframe.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\dataframe.py',
+   'DATA'),
+  ('oracledb\\dbobject.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\dbobject.py',
+   'DATA'),
+  ('oracledb\\defaults.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\defaults.py',
+   'DATA'),
+  ('oracledb\\driver_mode.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\driver_mode.py',
+   'DATA'),
+  ('oracledb\\dsn.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\dsn.py',
+   'DATA'),
+  ('oracledb\\end_user_security_context.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\end_user_security_context.py',
+   'DATA'),
+  ('oracledb\\enums.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\enums.py',
+   'DATA'),
+  ('oracledb\\errors.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\errors.py',
+   'DATA'),
+  ('oracledb\\exceptions.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\exceptions.py',
+   'DATA'),
+  ('oracledb\\fetch_info.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\fetch_info.py',
+   'DATA'),
+  ('oracledb\\future.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\future.py',
+   'DATA'),
+  ('oracledb\\lob.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\lob.py',
+   'DATA'),
+  ('oracledb\\pipeline.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\pipeline.py',
+   'DATA'),
+  ('oracledb\\plugins\\azure_config_provider.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\plugins\\azure_config_provider.py',
+   'DATA'),
+  ('oracledb\\plugins\\azure_tokens.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\plugins\\azure_tokens.py',
+   'DATA'),
+  ('oracledb\\plugins\\end_user_sec_provider.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\plugins\\end_user_sec_provider.py',
+   'DATA'),
+  ('oracledb\\plugins\\oci_config_provider.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\plugins\\oci_config_provider.py',
+   'DATA'),
+  ('oracledb\\plugins\\oci_tokens.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\plugins\\oci_tokens.py',
+   'DATA'),
+  ('oracledb\\pool.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\pool.py',
+   'DATA'),
+  ('oracledb\\pool_params.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\pool_params.py',
+   'DATA'),
+  ('oracledb\\py.typed',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\py.typed',
+   'DATA'),
+  ('oracledb\\secret_values.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\secret_values.py',
+   'DATA'),
+  ('oracledb\\soda.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\soda.py',
+   'DATA'),
+  ('oracledb\\sparse_vector.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\sparse_vector.py',
+   'DATA'),
+  ('oracledb\\subscr.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\subscr.py',
+   'DATA'),
+  ('oracledb\\thick_impl.cp312-win_amd64.pyd',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\thick_impl.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('oracledb\\thin_impl.cp312-win_amd64.pyd',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\thin_impl.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('oracledb\\utils.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\utils.py',
+   'DATA'),
+  ('oracledb\\var.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\var.py',
+   'DATA'),
+  ('oracledb\\version.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\oracledb\\version.py',
+   'DATA'),
+  ('oraclient19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oraclient19.dll',
+   'BINARY'),
+  ('oraclsce19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\oraclsce19.dll',
+   'BINARY'),
+  ('oracommon19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oracommon19.dll',
+   'BINARY'),
+  ('oracore19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oracore19.dll',
+   'BINARY'),
+  ('orageneric19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\orageneric19.dll',
+   'BINARY'),
+  ('orahasgen19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\orahasgen19.dll',
+   'BINARY'),
+  ('oraldapclnt19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\oraldapclnt19.dll',
+   'BINARY'),
+  ('oran19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oran19.dll',
+   'BINARY'),
+  ('orancds19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\orancds19.dll',
+   'BINARY'),
+  ('orancrypt19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\orancrypt19.dll',
+   'BINARY'),
+  ('orangsmshd19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\orangsmshd19.dll',
+   'BINARY'),
+  ('oranhost19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\oranhost19.dll',
+   'BINARY'),
+  ('oranl19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\oranl19.dll',
+   'BINARY'),
+  ('oranldap19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\oranldap19.dll',
+   'BINARY'),
+  ('oranls19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oranls19.dll',
+   'BINARY'),
+  ('orannzsbb19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\orannzsbb19.dll',
+   'BINARY'),
+  ('oranro19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\oranro19.dll',
+   'BINARY'),
+  ('orantcp19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\orantcp19.dll',
+   'BINARY'),
+  ('orantns19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\orantns19.dll',
+   'BINARY'),
+  ('oraocr19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\oraocr19.dll',
+   'BINARY'),
+  ('oraocrb19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\oraocrb19.dll',
+   'BINARY'),
+  ('oraocrutl19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\oraocrutl19.dll',
+   'BINARY'),
+  ('oraons.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oraons.dll',
+   'BINARY'),
+  ('oraplp19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\oraplp19.dll',
+   'BINARY'),
+  ('orapls19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\orapls19.dll',
+   'BINARY'),
+  ('oraslax19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\oraslax19.dll',
+   'BINARY'),
+  ('orasnls19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\orasnls19.dll',
+   'BINARY'),
+  ('orasql19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\orasql19.dll',
+   'BINARY'),
+  ('oraunls19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\oraunls19.dll',
+   'BINARY'),
+  ('orauts.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\orauts.dll',
+   'BINARY'),
+  ('oravsn19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\oravsn19.dll',
+   'BINARY'),
+  ('orawsec19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\orawsec19.dll',
+   'BINARY'),
+  ('oraxml19.dll',
+   'C:\\Users\\Admin\\Downloads\\WINDOWS.X64_193000_db_home\\bin\\oraxml19.dll',
+   'BINARY'),
+  ('orazt19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\orazt19.dll',
+   'BINARY'),
+  ('oraztkg19.dll',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\oracle_client\\instantclient_19_31\\oraztkg19.dll',
+   'BINARY'),
+  ('paramiko-5.0.0.dist-info\\INSTALLER',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko-5.0.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('paramiko-5.0.0.dist-info\\METADATA',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko-5.0.0.dist-info\\METADATA',
+   'DATA'),
+  ('paramiko-5.0.0.dist-info\\RECORD',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko-5.0.0.dist-info\\RECORD',
+   'DATA'),
+  ('paramiko-5.0.0.dist-info\\REQUESTED',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko-5.0.0.dist-info\\REQUESTED',
+   'DATA'),
+  ('paramiko-5.0.0.dist-info\\WHEEL',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko-5.0.0.dist-info\\WHEEL',
+   'DATA'),
+  ('paramiko-5.0.0.dist-info\\licenses\\LICENSE',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko-5.0.0.dist-info\\licenses\\LICENSE',
+   'DATA'),
+  ('paramiko-5.0.0.dist-info\\top_level.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko-5.0.0.dist-info\\top_level.txt',
+   'DATA'),
+  ('paramiko\\__init__.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\__init__.py',
+   'DATA'),
+  ('paramiko\\_winapi.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\_winapi.py',
+   'DATA'),
+  ('paramiko\\agent.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\agent.py',
+   'DATA'),
+  ('paramiko\\auth_handler.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\auth_handler.py',
+   'DATA'),
+  ('paramiko\\auth_strategy.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\auth_strategy.py',
+   'DATA'),
+  ('paramiko\\ber.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\ber.py',
+   'DATA'),
+  ('paramiko\\buffered_pipe.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\buffered_pipe.py',
+   'DATA'),
+  ('paramiko\\channel.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\channel.py',
+   'DATA'),
+  ('paramiko\\client.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\client.py',
+   'DATA'),
+  ('paramiko\\common.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\common.py',
+   'DATA'),
+  ('paramiko\\compress.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\compress.py',
+   'DATA'),
+  ('paramiko\\config.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\config.py',
+   'DATA'),
+  ('paramiko\\ecdsakey.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\ecdsakey.py',
+   'DATA'),
+  ('paramiko\\ed25519key.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\ed25519key.py',
+   'DATA'),
+  ('paramiko\\file.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\file.py',
+   'DATA'),
+  ('paramiko\\hostkeys.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\hostkeys.py',
+   'DATA'),
+  ('paramiko\\kex_curve25519.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\kex_curve25519.py',
+   'DATA'),
+  ('paramiko\\kex_ecdh_nist.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\kex_ecdh_nist.py',
+   'DATA'),
+  ('paramiko\\kex_gex.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\kex_gex.py',
+   'DATA'),
+  ('paramiko\\kex_group14.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\kex_group14.py',
+   'DATA'),
+  ('paramiko\\kex_group16.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\kex_group16.py',
+   'DATA'),
+  ('paramiko\\message.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\message.py',
+   'DATA'),
+  ('paramiko\\packet.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\packet.py',
+   'DATA'),
+  ('paramiko\\pipe.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\pipe.py',
+   'DATA'),
+  ('paramiko\\pkey.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\pkey.py',
+   'DATA'),
+  ('paramiko\\primes.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\primes.py',
+   'DATA'),
+  ('paramiko\\proxy.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\proxy.py',
+   'DATA'),
+  ('paramiko\\rsakey.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\rsakey.py',
+   'DATA'),
+  ('paramiko\\server.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\server.py',
+   'DATA'),
+  ('paramiko\\sftp.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\sftp.py',
+   'DATA'),
+  ('paramiko\\sftp_attr.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\sftp_attr.py',
+   'DATA'),
+  ('paramiko\\sftp_client.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\sftp_client.py',
+   'DATA'),
+  ('paramiko\\sftp_file.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\sftp_file.py',
+   'DATA'),
+  ('paramiko\\sftp_handle.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\sftp_handle.py',
+   'DATA'),
+  ('paramiko\\sftp_server.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\sftp_server.py',
+   'DATA'),
+  ('paramiko\\sftp_si.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\sftp_si.py',
+   'DATA'),
+  ('paramiko\\ssh_exception.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\ssh_exception.py',
+   'DATA'),
+  ('paramiko\\transport.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\transport.py',
+   'DATA'),
+  ('paramiko\\util.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\util.py',
+   'DATA'),
+  ('paramiko\\win_openssh.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\win_openssh.py',
+   'DATA'),
+  ('paramiko\\win_pageant.py',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\paramiko\\win_pageant.py',
+   'DATA'),
+  ('psutil\\_psutil_windows.pyd',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\psutil\\_psutil_windows.pyd',
+   'EXTENSION'),
+  ('pyexpat.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\pyexpat.pyd',
+   'EXTENSION'),
+  ('python3.dll',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\python3.dll',
+   'BINARY'),
+  ('python312.dll',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\python312.dll',
+   'BINARY'),
+  ('select.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\INSTALLER',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\INSTALLER',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\METADATA',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\METADATA',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\RECORD',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\RECORD',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\REQUESTED',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\REQUESTED',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\WHEEL',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\WHEEL',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\licenses\\LICENSE',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\licenses\\LICENSE',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\top_level.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\top_level.txt',
+   'DATA'),
+  ('setuptools\\_vendor\\jaraco\\text\\Lorem ipsum.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
+   'ipsum.txt',
+   'DATA'),
+  ('static\\css\\style.css',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy (2)\\static\\css\\style.css',
+   'DATA'),
+  ('static\\js\\script.js',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy (2)\\static\\js\\script.js',
+   'DATA'),
+  ('templates\\backup_graph.html',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\templates\\backup_graph.html',
+   'DATA'),
+  ('templates\\index.html',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy (2)\\templates\\index.html',
+   'DATA'),
+  ('unicodedata.pyd',
+   'C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('werkzeug-3.1.8.dist-info\\INSTALLER',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\werkzeug-3.1.8.dist-info\\INSTALLER',
+   'DATA'),
+  ('werkzeug-3.1.8.dist-info\\METADATA',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\werkzeug-3.1.8.dist-info\\METADATA',
+   'DATA'),
+  ('werkzeug-3.1.8.dist-info\\RECORD',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\werkzeug-3.1.8.dist-info\\RECORD',
+   'DATA'),
+  ('werkzeug-3.1.8.dist-info\\WHEEL',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\werkzeug-3.1.8.dist-info\\WHEEL',
+   'DATA'),
+  ('werkzeug-3.1.8.dist-info\\licenses\\LICENSE.txt',
+   'C:\\Users\\Admin\\Desktop\\greenworld - Copy '
+   '(2)\\.venv-1\\Lib\\site-packages\\werkzeug-3.1.8.dist-info\\licenses\\LICENSE.txt',
+   'DATA')],)

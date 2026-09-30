@@ -1,10 +1,5 @@
-﻿build/
-dist/
-logs/
-scratch/
-oracle_client/
-__pycache__/
-*.bak
+﻿__pycache__/
 .env
-data/
-VC_redist.x64.exe
+smtp_config.json
+email_settings.json
+email_alert_settings.json

@@ -1,0 +1,1437 @@
+{
+  "2026-05-05T16:00:32.879533": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:00:53.070261": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:01:45.867737": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:02:25.277164": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:03:40.832452": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:04:22.139599": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:05:12.672545": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:05:20.448516": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:05:25.597188": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:06:02.668684": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:06:47.600919": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:06:55.068594": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:06:59.053538": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:07:33.793385": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:08:22.324693": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:08:28.980430": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:08:32.836977": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:09:05.278832": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:09:55.452205": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:09:55.455541": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:10:02.088253": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:10:06.191951": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:10:41.108330": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:11:29.991518": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:11:36.939298": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:11:41.154405": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:12:17.325859": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:13:07.124159": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:13:13.594133": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:13:17.494130": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:13:48.144379": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:14:30.656159": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:14:37.535569": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:14:41.825150": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  },
+  "2026-05-05T16:15:14.144116": {
+    "total_gb": 130.18,
+    "used_gb": 129.19,
+    "tablespaces": [
+      {
+        "tablespace_name": "SYSTEM",
+        "total_gb": 1.76,
+        "used_gb": 1.75,
+        "free_gb": 0.01,
+        "used_percent": 99.65
+      },
+      {
+        "tablespace_name": "SYSAUX",
+        "total_gb": 120.2,
+        "used_gb": 120.12,
+        "free_gb": 0.08,
+        "used_percent": 99.93
+      },
+      {
+        "tablespace_name": "UNDOTBS1",
+        "total_gb": 7.12,
+        "used_gb": 6.35,
+        "free_gb": 0.77,
+        "used_percent": 89.17
+      },
+      {
+        "tablespace_name": "USERS",
+        "total_gb": 0.97,
+        "used_gb": 0.97,
+        "free_gb": 0,
+        "used_percent": 99.79
+      },
+      {
+        "tablespace_name": "TEMP",
+        "total_gb": 0.13,
+        "used_gb": 0.0,
+        "free_gb": 0.13,
+        "used_percent": 0.0
+      }
+    ]
+  }
+}

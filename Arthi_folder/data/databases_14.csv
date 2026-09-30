@@ -1,0 +1,2 @@
+db_id,host,port,service_name,username,password,os_user,os_password,rep_db_id,rep_host,rep_port,rep_service_name,rep_username,rep_password
+kasorcl,10.10.10.11,1521,kasorcl,sys,Welcome123,oracle,oracle123,kasorcl_rep,10.10.10.12,1521,kasorcl_rep,sys,Welcome123
