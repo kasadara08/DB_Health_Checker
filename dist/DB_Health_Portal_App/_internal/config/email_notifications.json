@@ -1,0 +1,142 @@
+[
+  {
+    "type": "error",
+    "subject": "Critical Alert - ORA Error Detected",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0025.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:44:51.195Z 08DEE55FDFAD9136]')",
+    "timestamp": "2026-07-20 21:14:50",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "Critical Alert - Database Down",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0245.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:44:57.145Z 08DEE00CB458B621]')",
+    "timestamp": "2026-07-20 21:14:56",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "Critical Alert - Listener Down",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0236.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:45:03.009Z 08DEE548686BAAE9]')",
+    "timestamp": "2026-07-20 21:15:02",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0004.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T15:45:53.211Z 08DEE567890F5DB9]')",
+    "timestamp": "2026-07-20 21:15:52",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "Critical Alert - ORA Error Detected",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4P287CA0062.INDP287.PROD.OUTLOOK.COM 2026-07-20T16:05:51.623Z 08DEE558EB9225BB]')",
+    "timestamp": "2026-07-20 21:35:51",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0245.INDP287.PROD.OUTLOOK.COM 2026-07-21T05:14:28.979Z 08DEE00CB45CEE96]')",
+    "timestamp": "2026-07-21 10:44:29",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "Critical Alert - ORA Error Detected",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0274.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:05.257Z 08DEE6D5011F0DF3]')",
+    "timestamp": "2026-07-21 16:37:05",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "Critical Alert - Database Down",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0267.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:07:10.914Z 08DEE68C4339B4DA]')",
+    "timestamp": "2026-07-21 16:37:11",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "Critical Alert - Listener Down",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0271.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:07:16.597Z 08DEE6D87C3A92EB]')",
+    "timestamp": "2026-07-21 16:37:16",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "Critical Alert - ORA Error Detected",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN2PR01CA0210.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:22.919Z 08DEE6CB874CA512]')",
+    "timestamp": "2026-07-21 16:37:23",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "Critical Alert - ORA Error Detected",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN2PR01CA0208.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:28.684Z 08DEE6E7F7F69ED8]')",
+    "timestamp": "2026-07-21 16:37:28",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "Critical Alert - ORA Error Detected",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0249.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:34.639Z 08DEE6CF39ABEBF5]')",
+    "timestamp": "2026-07-21 16:37:34",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "Critical Alert - ORA Error Detected",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0250.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:40.342Z 08DEE6D58C341342]')",
+    "timestamp": "2026-07-21 16:37:40",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "Critical Alert - Database Down",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0052.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:46.299Z 08DEE5DE9F827E57]')",
+    "timestamp": "2026-07-21 16:37:46",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "Critical Alert - Listener Down",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0080.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:07:52.414Z 08DEE2A9172B1F8B]')",
+    "timestamp": "2026-07-21 16:37:52",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "Critical Alert - Database Down",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4P287CA0080.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:49:00.775Z 08DEE6C82D5D1D56]')",
+    "timestamp": "2026-07-21 17:19:00",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "Critical Alert - Listener Down",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0069.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:49:06.704Z 08DEE6CCF7C0A14B]')",
+    "timestamp": "2026-07-21 17:19:06",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "Critical Alert - Database Down",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0048.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:49:12.756Z 08DEE6D5424D5363]')",
+    "timestamp": "2026-07-21 17:19:12",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "Critical Alert - Listener Down",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0174.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:49:18.968Z 08DEE6B315434584]')",
+    "timestamp": "2026-07-21 17:19:19",
+    "seen": true
+  },
+  {
+    "type": "error",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "message": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0209.INDPRD01.PROD.OUTLOOK.COM 2026-07-22T07:55:21.899Z 08DEE6D31FABF37A]')",
+    "timestamp": "2026-07-22 13:25:23",
+    "seen": true
+  }
+]

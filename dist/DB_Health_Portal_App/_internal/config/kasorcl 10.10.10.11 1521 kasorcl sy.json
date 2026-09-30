@@ -1,0 +1,12 @@
+{
+    "smtp_server": "smtp.office.365.com",
+    "smtp_port": 587,
+    "smtp_username": "yuvarani.skannan@kasadara.com",
+    "smtp_password": "Yuva@2004",
+    "from_email": "yuvarani.skannan@kasadara.com",
+    "to_emails": [
+        "arthi.ashokkumar@kasadara.com"
+    ],
+    "enabled": false,
+    "preferences": {}
+}

@@ -1,0 +1,1 @@
+# Make queries a package

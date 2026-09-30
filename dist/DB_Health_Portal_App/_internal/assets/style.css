@@ -1,0 +1,235 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+/* Global Root Variables for Light/White Theme */
+:root {
+    --neon-blue: #3b82f6;      /* Modern light theme blue */
+    --neon-purple: #9d50bb;
+    --neon-pink: #ff007f;
+    --emerald: #10b981;        /* Success green */
+    --amber: #f59e0b;          /* Warning yellow */
+    --rose: #ef4444;           /* Critical red */
+    
+    /* Light Theme Colors */
+    --bg-primary: #f9fafb;     /* Very light grey */
+    --bg-secondary: #ffffff;   /* Pure white cards */
+    --border-color: #e5e7eb;   /* Soft grey border */
+    --text-primary: #1f2937;   /* Dark text */
+    --text-secondary: #6b7280; /* Muted text */
+}
+
+/* App-wide resets */
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+}
+
+.stApp {
+    background: var(--bg-primary);
+}
+
+/* Welcome Page Light Gradient Background */
+.welcome-container {
+    background: linear-gradient(-45deg, #f9fafb, #f3f4f6, #eff6ff, #f9fafb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    min-height: 90vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism Cards in Light Theme */
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 8px 30px 0 rgba(59, 130, 246, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Portal/Welcome Header */
+.welcome-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.welcome-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Dashboard Status Grid (Light Theme) */
+.status-card {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 6px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--border-color);
+    height: 75px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.status-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Dynamic State Outlines & Glows (Light Theme) */
+.state-green {
+    border-color: var(--emerald);
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.1);
+    animation: glow-green 2.5s infinite alternate;
+}
+
+.state-orange {
+    border-color: var(--amber);
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.1);
+    animation: glow-orange 2.5s infinite alternate;
+}
+
+.state-red {
+    border-color: var(--rose);
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.1);
+    animation: glow-red 2.5s infinite alternate;
+}
+
+.state-purple {
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 8px rgba(157, 80, 187, 0.1);
+}
+
+/* Animations for Status Cards */
+@keyframes glow-green {
+    0% { box-shadow: 0 0 2px rgba(16, 185, 129, 0.1); }
+    100% { box-shadow: 0 0 12px rgba(16, 185, 129, 0.25); }
+}
+
+@keyframes glow-orange {
+    0% { box-shadow: 0 0 2px rgba(245, 158, 11, 0.1); }
+    100% { box-shadow: 0 0 12px rgba(245, 158, 11, 0.25); }
+}
+
+@keyframes glow-red {
+    0% { box-shadow: 0 0 2px rgba(239, 68, 68, 0.1); }
+    100% { box-shadow: 0 0 12px rgba(239, 68, 68, 0.25); }
+}
+
+/* Small spinning-circle "loading" indicator (used by DB card / sidebar
+   "Connecting..." placeholders while live data is being fetched). This
+   keyframe was referenced by name in several places but never defined,
+   so those spinners rendered as a static, non-spinning circle. */
+@keyframes spin-loader {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Float Animation for Card Icons */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-4px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-icon {
+    animation: float 2.5s ease-in-out infinite;
+    display: inline-block;
+}
+
+/* Tablespace Custom Section (Light Theme) */
+.tablespace-container {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.ts-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+
+.ts-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.ts-name {
+    color: var(--text-primary);
+}
+
+.ts-pct-good { color: var(--emerald); }
+.ts-pct-warning { color: var(--amber); }
+.ts-pct-critical { color: var(--rose); font-weight: 700; }
+
+.ts-bar-outer {
+    background: #e5e7eb;       /* Light grey track */
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.ts-bar-inner {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom Table/DataFrame Styles */
+.stDataFrame {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+}
+
+/* Sidebar Custom Styling for Light Theme */
+section[data-testid="stSidebar"] {
+    background-color: #ffffff !important;
+    border-right: 1px solid var(--border-color) !important;
+}
+
+/* Hide Default Streamlit Branding but keep header buttons for sidebar toggle */
+#MainMenu { visibility: hidden !important; }
+header [data-testid="stHeaderActionButton"] { display: none !important; }
+footer { visibility: hidden !important; }
+div.block-container { padding-top: 1.5rem !important; }

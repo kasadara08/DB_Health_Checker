@@ -1,0 +1,11 @@
+{
+    "smtp_server": "smtp.office.com",
+    "smtp_port": 587,
+    "smtp_username": "yuvarani@kasadara.com",
+    "smtp_password": "yuiou",
+    "from_email": "yuvaranis@kasadara.com",
+    "to_emails": [
+        "yuva@kasadara.com"
+    ],
+    "enabled": false
+}

@@ -1,0 +1,2636 @@
+[
+  {
+    "timestamp": "2026-07-17 12:41:18",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN5PR01CA0033.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T07:11:17.917Z 08DEE28E980250C4]')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-17 12:41:12 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-17 12:41:24",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN3PR01CA0040.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T07:11:23.740Z 08DEE2C088BD40C6]')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-17 12:41:12 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-17 12:47:32",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN3PR01CA0182.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T07:17:32.242Z 08DEE2B84149EB86]')",
+    "body_preview": "Server Name: unknown | Database Name: fa182 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-17 12:47:27 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-17 12:47:38",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN3PR01CA0192.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T07:17:37.816Z 08DEE37B12531FC7]')",
+    "body_preview": "Server Name: unknown | Database Name: fa182 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-17 12:47:27 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-17 13:02:59",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "kasorcl",
+    "server": "unknown",
+    "to": [],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name  : unknown | Database Name: kasorcl | Host Name    : unknown | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-17 13:02:59 |  | ORA Error Code   : ORA-12012 | Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_114389.tr"
+  },
+  {
+    "timestamp": "2026-07-17 13:26:08",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuva@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Network Error: Cannot reach SMTP server smtp.office.com:587. Detail: [Errno 11001] getaddrinfo failed",
+    "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-17 13:26:08 |  | ORA Error Code   : ORA-12012 | Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_1"
+  },
+  {
+    "timestamp": "2026-07-17 13:26:08",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "yuva@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Network Error: Cannot reach SMTP server smtp.office.com:587. Detail: [Errno 11001] getaddrinfo failed",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-17 13:26:08 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-17 13:26:08",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "yuva@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Network Error: Cannot reach SMTP server smtp.office.com:587. Detail: [Errno 11001] getaddrinfo failed",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-17 13:26:08 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-17 17:59:36",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [],
+    "status": "failed",
+    "error": "No recipient emails configured. Cannot send alert.",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: :587 | From:  | To:  | Sent At: 2026-07-17 17:59:36 |  | \u2014 DB Health Dashboard Alert Engine"
+  },
+  {
+    "timestamp": "2026-07-17 18:03:21",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0337.INDP287.PROD.OUTLOOK.COM 2026-07-17T12:33:20.793Z 08DEE2ACC175F361]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-17 18:03:16 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-17 18:05:23",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name  : unknown | Database Name: ORCL_Arthi | Host Name    : unknown | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-17 18:05:23 |  | ORA Error Code   : ORA-06512 | Complete Message : ORA-06512: at \"SYS.DBMS_QOPATCH\", line 2309 |  |  | Action: Please investigate immediately."
+  },
+  {
+    "timestamp": "2026-07-17 18:05:24",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name  : unknown | Database Name: ORCL_Arthi | Host Name    : unknown | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-17 18:05:23 |  | ORA Error Code   : ORA-29400 | Complete Message : ORA-29400: data cartridge error |  |  | Action: Please investigate immediately."
+  },
+  {
+    "timestamp": "2026-07-17 18:05:24",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name  : unknown | Database Name: ORCL_Arthi | Host Name    : unknown | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-17 18:05:23 |  | ORA Error Code   : ORA-06510 | Complete Message : ORA-06510: PL/SQL: unhandled user-defined exception |  |  | Action: Please investigate immediately."
+  },
+  {
+    "timestamp": "2026-07-17 18:05:25",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name  : unknown | Database Name: ORCL_Arthi | Host Name    : unknown | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-17 18:05:23 |  | ORA Error Code   : ORA-29913 | Complete Message : ORA-29913: error in executing ODCIEXTTABLEFETCH callout |  |  | Action: Please investigate immediatel"
+  },
+  {
+    "timestamp": "2026-07-17 18:05:25",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "orcl",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: orcl | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-17 18:05:25 |  | Problem: The Oracle Database instance 'orcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-17 18:05:26",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "orcl",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: orcl | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-17 18:05:25 |  | Problem: The Oracle Listener for DB 'orcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-17 18:31:32",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Unexpected email error: UnboundLocalError: local variable '_ssl' referenced before assignment",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-17 18:31:32 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-17 18:41:57",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Network Error: Cannot reach SMTP server smtp.office365.com:587. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN3PR01CA0135.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T13:11:57.285Z 08DEE2BB2F5CACF6]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-17 18:41:51 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-17 18:48:56",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Network Error: Cannot reach SMTP server smtp.office365.com:587. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN2PR01CA0244.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T13:18:56.189Z 08DEE2AFF18F01AF]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-17 18:48:50 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-17 18:52:58",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Network Error: Cannot reach SMTP server smtp.office365.com:587. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4P287CA0079.INDP287.PROD.OUTLOOK.COM 2026-07-17T13:22:58.025Z 08DEE289ED3BDDD1]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-17 18:52:52 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-17 18:55:06",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Network Error: Cannot reach SMTP server smtp.office365.com:587. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0064.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T13:25:06.737Z 08DEE292A8E7CBAA]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-17 18:55:01 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-17 18:56:39",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Network Error: Cannot reach SMTP server smtp.office365.com:587. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0076.INDPRD01.PROD.OUTLOOK.COM 2026-07-17T13:26:38.993Z 08DEE2A371225F3A]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-17 18:56:33 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-17 18:59:32",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Network Error: Cannot reach SMTP server smtp.office365.com:587. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4P287CA0020.INDP287.PROD.OUTLOOK.COM 2026-07-17T13:29:32.392Z 08DEE28EF7DDB1EC]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-17 18:59:26 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-19 18:52:59",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 18:52:59 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-19 18:53:01",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 18:52:59 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-19 20:18:14",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. For Office 365, ensure SMTP AUTH is enabled in Admin Center and use an App Password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0051.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T14:48:13.873Z 08DEE5425CD989EB]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-19 20:18:09 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-19 20:29:15",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN2PR01CA0209.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T14:59:15.070Z 08DEE562CC3B1F7E]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-19 20:29:09 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-19 20:32:35",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5PR01CA0282.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:02:34.899Z 08DEE56C609B569E]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-19 20:32:30 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-19 20:33:05",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5PR01CA0130.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:03:04.359Z 08DEE56211CAB6B9]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-19 20:32:59 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-19 20:45:34",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA0PR01CA0089.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:15:33.978Z 08DEE568C1C4FEFC]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:25 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-19 20:45:29 |  | \u2014 DB Health Dashboard Alert Engine"
+  },
+  {
+    "timestamp": "2026-07-19 20:45:40",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0199.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:15:39.714Z 08DEE55356003D94]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:25 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com | Sent At: 2026-07-19 20:45:35 |  | \u2014 DB Health Dashboard Alert Engine"
+  },
+  {
+    "timestamp": "2026-07-19 20:45:55",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0066.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:15:55.053Z 08DEE5484342E146]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 20:45:50 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-19 20:46:01",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5PR01CA0123.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:16:00.469Z 08DEE5478CECCE31]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 20:45:50 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-19 20:46:06",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA0PR01CA0123.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:16:05.988Z 08DEE54FED4B9D03]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 20:46:01 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-19 20:46:12",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0195.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:16:11.495Z 08DEE53900E432E0]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 20:46:01 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-19 20:46:17",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PNYP287CA0073.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:16:17.014Z 08DEE54A052F0696]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-19 20:46:12 |  | ORA Error Code   : ORA-06512 | Complete Message : ORA-06512: at \"SYS.DBMS_QOPATCH\", line 2309 |  |  | Action: Please investigate immediately."
+  },
+  {
+    "timestamp": "2026-07-19 20:46:23",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN4PR01CA0079.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:16:22.706Z 08DEE500A037E031]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-19 20:46:12 |  | ORA Error Code   : ORA-29400 | Complete Message : ORA-29400: data cartridge error |  |  | Action: Please investigate immediately."
+  },
+  {
+    "timestamp": "2026-07-19 20:46:29",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN2PR01CA0044.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:16:28.250Z 08DEE5563EB66B2D]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-19 20:46:12 |  | ORA Error Code   : ORA-06510 | Complete Message : ORA-06510: PL/SQL: unhandled user-defined exception |  |  | Action: Please investigate immediat"
+  },
+  {
+    "timestamp": "2026-07-19 20:46:34",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5PR01CA0049.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:16:33.738Z 08DEE5417C3AF9F9]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-19 20:46:12 |  | ORA Error Code   : ORA-29913 | Complete Message : ORA-29913: error in executing ODCIEXTTABLEFETCH callout |  |  | Action: Please investigate imme"
+  },
+  {
+    "timestamp": "2026-07-19 20:46:39",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "orcl",
+    "server": "orcl",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5PR01CA0002.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:16:39.266Z 08DEE5526BF816D9]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name: orcl | Database Name: orcl | Host Name: orcl | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 20:46:34 |  | Problem: The Oracle Database instance 'orcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-19 20:46:45",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "orcl",
+    "server": "orcl",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0014.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:16:44.933Z 08DEE55C71A11F39]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name: orcl | Database Name: orcl | Host Name: orcl | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 20:46:34 |  | Problem: The Oracle Listener for DB 'orcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-19 20:50:54",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN1PEPF000067F8.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:20:54.087Z 08DEE57411A842C0]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: mohanraj.krishnasamy@kasadara.com | To: yuvarani.skannan@kasadara.com | Sent At: 2026-07-19 20:50:49 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-19 21:09:04",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN2PR01CA0210.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:03.506Z 08DEE54A75A85C2C]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 21:08:58 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-19 21:09:08",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0171.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:39:08.306Z 08DEE53682261BD6]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 21:09:03 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-19 21:09:09",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0175.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:39:08.955Z 08DEE53C9046E3C4]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 21:08:58 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-19 21:09:14",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN3PR01CA0111.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:13.795Z 08DEE5894A7C255A]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 21:09:03 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-19 21:09:15",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA0PR01CA0117.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:14.311Z 08DEE569E2F74235]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 21:09:09 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-19 21:09:20",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN4PR01CA0021.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:20.011Z 08DEE500E17F370E]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 21:09:09 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-19 21:09:25",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN2PR01CA0239.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:24.314Z 08DEE58197CC1110]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 21:09:19 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-19 21:09:29",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN2PR01CA0229.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:28.623Z 08DEE559A199907E]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 21:09:23 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-19 21:09:30",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN2PR01CA0237.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:29.951Z 08DEE556A9C19873]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 21:09:19 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-19 21:09:31",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN2PR01CA0239.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:30.715Z 08DEE58197CC1112]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-19 21:09:20 |  | ORA Error Code   : ORA-06512 | Complete Message : ORA-06512: at \"SYS.DBMS_QOPATCH\", line 2309 |  |  | Action: Please investigate immediately."
+  },
+  {
+    "timestamp": "2026-07-19 21:09:35",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN2PR01CA0239.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:39:34.237Z 08DEE58197CC1121]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 21:09:24 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-19 21:09:36",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0237.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:39:35.606Z 08DEE5378B171B9B]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: mohanraj.krishnasamy@kasadara.com | To: yuvarani.skannan@kasadara.com | Sent At: 2026-07-19 21:09:31 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-19 21:09:40",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PNYP287CA0082.INDP287.PROD.OUTLOOK.COM 2026-07-19T15:39:40.149Z 08DEE53874546957]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 21:09:24 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-19 21:10:05",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN3PR01CA0055.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:40:04.648Z 08DEE55523733E28]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 21:09:59 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-19 21:10:13",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [BN1PR12CA0011.namprd12.prod.outlook.com 2026-07-19T15:40:12.511Z 08DEE57A4EA90B1B]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 21:09:59 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-19 21:10:19",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PNYPR01CA0028.INDPRD01.PROD.OUTLOOK.COM 2026-07-19T15:40:18.250Z 08DEE57805FB74A8]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 21:10:13 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-19 21:10:26",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [BN9PR03CA0434.namprd03.prod.outlook.com 2026-07-19T15:40:25.910Z 08DEE53D8CC1986F]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-19 21:10:13 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 10:56:36",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0133.INDP287.PROD.OUTLOOK.COM 2026-07-20T05:26:36.072Z 08DEE55D94D724D5]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: mohanraj.krishnasamy@kasadara.com | To: yuvarani.skannan@kasadara.com | Sent At: 2026-07-20 10:56:30 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-20 10:56:37",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0141.INDP287.PROD.OUTLOOK.COM 2026-07-20T05:26:37.314Z 08DEE55794C3584E]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 10:56:31 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 10:56:39",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5P287CA0136.INDP287.PROD.OUTLOOK.COM 2026-07-20T05:26:38.583Z 08DEE554EDB4801B]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: mohanraj.krishnasamy@kasadara.com | To: yuvarani.skannan@kasadara.com | Sent At: 2026-07-20 10:56:32 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-20 10:58:16",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [PN3PEPF0000017E.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T05:28:15.806Z 08DEE56F1372A5A9]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 10:58:10 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 10:58:22",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA1PR01CA0183.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T05:28:21.867Z 08DEE58B28848A49]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 10:58:10 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 10:58:33",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5PR01CA0117.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T05:28:32.965Z 08DEE53F3817B0E7]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 10:58:27 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 10:58:39",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'mohanraj.krishnasamy@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. [MA5PR01CA0123.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T05:28:38.895Z 08DEE5478CF0396B]', 'mohanraj.krishnasamy@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 10:58:27 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 12:52:29",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "sent",
+    "error": "",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: mohanraj.krishnasamy@kasadara.com | To: yuvarani.skannan@kasadara.com | Sent At: 2026-07-20 12:52:25 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-20 12:57:15",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.comarthi"
+    ],
+    "status": "failed",
+    "error": "SMTP Data Error: Server rejected email content. Detail: (554, b'5.2.252 SendAsDenied; mohanraj.krishnasamy@kasadara.com not allowed to send as yuvarani.skannan@kasadara.com; STOREDRV.Submission.Exception:SendAsDeniedException.MapiExceptionSendAsDenied; Failed to process message due to a permanent exception with message [BeginDiagnosticData]Cannot submit message. 1.84300:01000000, 1.84300:0B000000, 1.84300:0A000000, 1.84300:0A000000, 1.84300:0E000000, 1.84300:32000000, 1.73948:00000000, 5.71140:67000000446F526F70730000, 1.108572:00000000, 0.117068:07000000, 1.79180:0B000000, 1.79180:0A000000, 1.79180:0A000000, 1.79180:0E000000, 1.79180:32000000, 1.79180:FA000000, 255.73100:76657200, 5.95292:67000000446F526F7073006E, 8.111356:9552F9FE86593ECC1F1F572B2F8F6BAC0BAFA94C, 0.38698:00000000, 1.41134:86000000, 1.98628:00000000, 1.41134:86000000, 1.98628:00000000, 1.41134:86000000, 1.98628:00000000, 1.41134:46000000, 1.98628:00000000, 0.37692:00000000, 0.44092:00000000, 0.41232:00000000, 0.60208:86000000, 0.37136:00000000, 0.34608:86000000, 0.55056:00000000, 0.42768:57791700, 0.56112:00000000, 0.52807:01000000, 0.46663:00000000, 1.41134:46000000, 1.98628:00000000, 7.36354:010000000000010900000000, 1.46439:0A000000, 1.115228:00000000, 0.104668:86000000, 1.44903:25000000, 1.115228:00000000, 0.57310:00000000, 0.38878:1F000000, 5.50564:00000000532D312D352D32312D323437323733333932382D323932373032383939372D343131363735303332372D3132353733313331001000000000, 5.33016:DC040000534F424F207269676874732068617665206265656E20636865636B65642062757420617265206E6F74206772616E74656400111001000000, 7.40748:010000000000010B59E41700, 7.57132:000000000000000000000000, 4.39640:DC040000, 1.63016:32000000, 8.45434:839F567BD14D884591B0B99DE61740FD86000000, 0.104348:00000000, 5.46798:040000004D61696C4974656D5375626D697373696F6E001086000000, 7.51330:6B147C5230E6DE0886000000, 5.10786:0000000031352E32312E303232332E3030353A504E34503238374D42353036373A35303930643234392D373434622D343035322D393437392D3061363863383533303837383A3133393933363A2E4E45542031302E302E3900000000, 0.39570:00000000, 1.55954:0B000000, 0.40818:02000000, 1.33010:0B000000, 2.54258:00000000, 0.59634:02000000, 1.56562:00000000, 1.33010:0B000000, 2.54258:00000000, 0.59634:56000000, 1.56562:00000000, 1.55954:0A000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:00000000, 1.56562:00000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:00000000, 1.56562:00000000, 1.55954:0A000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:00000000, 1.56562:00000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:07000000, 1.56562:00000000, 1.64146:0E000000, 1.33010:0E000000, 2.54258:00000000, 1.33010:0E000000, 2.54258:00000000, 1.64146:32000000, 1.33010:32000000, 2.54258:DC040000, 1.33010:32000000, 2.54258:DC040000, 255.79500:0E000000, 0.100684:0E000000, 255.66700:00000000, 5.95292:67000000446F526F7073006E, 8.111356:9552F9FE86593ECC1F1F572B2F8F6BAC0BAFA94C, 0.38698:00000000, 1.41134:86000000, 1.98628:00000000, 1.41134:86000000, 1.98628:00000000, 1.41134:86000000, 1.98628:00000000, 1.41134:46000000, 1.98628:00000000, 0.37692:00000000, 0.44092:00000000, 0.41232:00000000, 0.60208:86000000, 0.37136:00000000, 0.34608:86000000, 0.55056:00000000, 0.42768:57791700, 0.56112:00000000, 0.52807:01000000, 0.46663:00000000, 1.41134:46000000, 1.98628:00000000, 7.36354:010000000000010900000000, 1.46439:0A000000, 1.115228:00000000, 0.104668:86000000, 1.44903:25000000, 1.115228:00000000, 0.57310:00000000, 0.38878:1F000000, 5.50564:00000000532D312D352D32312D323437323733333932382D323932373032383939372D343131363735303332372D3132353733313331001000000000, 5.33016:DC040000534F424F207269676874732068617665206265656E20636865636B65642062757420617265206E6F74206772616E74656400111001000000, 7.40748:010000000000010B59E41700, 7.57132:000000000000000000000000, 4.39640:DC040000, 1.63016:32000000, 8.45434:839F567BD14D884591B0B99DE61740FD86000000, 0.104348:00000000, 5.46798:040000004D61696C4974656D5375626D697373696F6E001086000000, 7.51330:6B147C5230E6DE0886000000, 5.10786:0000000031352E32312E303232332E3030353A504E34503238374D42353036373A35303930643234392D373434622D343035322D393437392D3061363863383533303837383A3133393933363A2E4E45542031302E302E3900000000, 0.39570:00000000, 1.55954:0B000000, 0.40818:02000000, 1.33010:0B000000, 2.54258:00000000, 0.59634:02000000, 1.56562:00000000, 1.33010:0B000000, 2.54258:00000000, 0.59634:56000000, 1.56562:00000000, 1.55954:0A000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:00000000, 1.56562:00000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:00000000, 1.56562:00000000, 1.55954:0A000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:00000000, 1.56562:00000000, 1.33010:0A000000, 2.54258:00000000, 0.40002:07000000, 1.56562:00000000, 1.64146:0E000000, 1.33010:0E000000, 2.54258:00000000, 1.33010:0E000000, 2.54258:00000000, 1.64146:32000000, 1.33010:32000000, 2.54258:DC040000, 1.33010:32000000, 2.54258:DC040000, 255.97900:9E000000, 4.120460:DC040000, 1.52466:02000000, 1.52466:02000000, 1.42738:05000000, 0.37698:08000000, 1.42738:05000000, 0.37698:75000000, 1.52466:01000000, 0.60402:02000000, 1.52466:01000000[EndDiagnosticData] [Hostname=PN4P287MB5067.INDP287.PROD.OUTLOOK.COM]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.comarthi | Sent At: 2026-07-20 12:57:13 |  | \u2014 DB Health Dashboard Alert "
+  },
+  {
+    "timestamp": "2026-07-20 13:29:00",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.comarthi"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0071.INDP287.PROD.OUTLOOK.COM 2026-07-20T07:59:00.492Z 08DEE56148CAA8B2]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.comarthi | Sent At: 2026-07-20 13:28:54 |  | \u2014 DB Health Dashboard Alert "
+  },
+  {
+    "timestamp": "2026-07-20 15:45:54",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.comarthi"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0012.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:15:54.943Z 08DEE5573AA6EDE1]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.comarthi | Sent At: 2026-07-20 15:45:49 |  | \u2014 DB Health Dashboard Alert "
+  },
+  {
+    "timestamp": "2026-07-20 15:46:09",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.comarthi"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN3PR01CA0169.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T10:16:09.285Z 08DEE53B8808FCE3]')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 15:46:03 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 15:46:15",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.comarthi"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN3PR01CA0175.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T10:16:15.125Z 08DEE57F03510FE9]')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 15:46:03 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 15:46:21",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.comarthi"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PNYP287CA0110.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:16:21.869Z 08DEE55E70B10DF5]')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 15:46:15 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 15:46:27",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.comarthi"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN3PR01CA0095.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T10:16:27.668Z 08DEE57D501B6C20]')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 15:46:15 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 15:46:33",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.comarthi"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN3PR01CA0107.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T10:16:33.587Z 08DEE58EBEF1D958]')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 15:46:27 |  | ORA Error Code   : ORA-06512 | Complete Message : ORA-06512: at \"SYS.DBMS_QOPATCH\", line 2309 |  |  | Action: Please investigate immediately."
+  },
+  {
+    "timestamp": "2026-07-20 15:46:39",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.comarthi"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4P287CA0118.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:16:39.542Z 08DEE53D21CCEB6E]')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 15:46:27 |  | ORA Error Code   : ORA-29400 | Complete Message : ORA-29400: data cartridge error |  |  | Action: Please investigate immediately."
+  },
+  {
+    "timestamp": "2026-07-20 15:46:45",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.comarthi"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4P287CA0119.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:16:45.364Z 08DEE54CA839858A]')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 15:46:27 |  | ORA Error Code   : ORA-06510 | Complete Message : ORA-06510: PL/SQL: unhandled user-defined exception |  |  | Action: Please investigate immediat"
+  },
+  {
+    "timestamp": "2026-07-20 15:46:51",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.comarthi"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4PR01CA0081.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T10:16:51.496Z 08DEE53926B36FF1]')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 15:46:27 |  | ORA Error Code   : ORA-29913 | Complete Message : ORA-29913: error in executing ODCIEXTTABLEFETCH callout |  |  | Action: Please investigate imme"
+  },
+  {
+    "timestamp": "2026-07-20 15:46:57",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "orcl",
+    "server": "orcl",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.comarthi"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN3PR01CA0165.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T10:16:57.722Z 08DEE55BC5F2F9B3]')",
+    "body_preview": "Server Name: orcl | Database Name: orcl | Host Name: orcl | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 15:46:51 |  | Problem: The Oracle Database instance 'orcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 15:47:03",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "orcl",
+    "server": "orcl",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.comarthi"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0188.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:17:03.445Z 08DEE5510D498B24]')",
+    "body_preview": "Server Name: orcl | Database Name: orcl | Host Name: orcl | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 15:46:51 |  | Problem: The Oracle Listener for DB 'orcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 16:01:22",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.comarthi"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0140.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T10:31:22.483Z 08DEE53883ACF2FD]')",
+    "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 16:01:16 |  | ORA Error Code   : ORA-12012 | Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_1"
+  },
+  {
+    "timestamp": "2026-07-20 16:07:48",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.comarthi"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0302.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:37:48.523Z 08DEE5004D9739A7]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.comarthi | Sent At: 2026-07-20 16:07:36 |  | \u2014 DB Health Dashboard Alert "
+  },
+  {
+    "timestamp": "2026-07-20 16:08:41",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0167.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:38:40.536Z 08DEE5562E33C8AD]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 16:08:29 |  | ORA Error Code   : ORA-12012 | Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_1"
+  },
+  {
+    "timestamp": "2026-07-20 16:08:48",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0167.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:38:48.235Z 08DEE5562E33C8B9]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:08:31 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:09:19",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0221.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:39:18.728Z 08DEE55665DBD2A4]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 16:09:07 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 16:09:30",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0310.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:39:30.121Z 08DEE54212E376DA]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 16:09:07 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 16:13:08",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Graph API Error [ErrorAccessDenied]: Access is denied. Check credentials and try again.",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:13:06 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:14:06",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Graph API Error [ErrorAccessDenied]: Access is denied. Check credentials and try again.",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:14:04 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:19:45",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0154.INDP287.PROD.OUTLOOK.COM 2026-07-20T10:49:45.526Z 08DEE5392DC535AC]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:19:33 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:30:34",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Client ID (Azure App) is not configured. Please fill in the Email Alerts form.",
+    "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 16:30:34 |  | ORA Error Code   : ORA-12012 | Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_1"
+  },
+  {
+    "timestamp": "2026-07-20 16:30:34",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Client ID (Azure App) is not configured. Please fill in the Email Alerts form.",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 16:30:34 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 16:30:34",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Client ID (Azure App) is not configured. Please fill in the Email Alerts form.",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 16:30:34 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 16:30:35",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Client ID (Azure App) is not configured. Please fill in the Email Alerts form.",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 16:30:34 |  | ORA Error Code   : ORA-06512 | Complete Message : ORA-06512: at \"SYS.DBMS_QOPATCH\", line 2309 |  |  | Action: Please investigate immediately."
+  },
+  {
+    "timestamp": "2026-07-20 16:30:35",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Client ID (Azure App) is not configured. Please fill in the Email Alerts form.",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 16:30:34 |  | ORA Error Code   : ORA-29400 | Complete Message : ORA-29400: data cartridge error |  |  | Action: Please investigate immediately."
+  },
+  {
+    "timestamp": "2026-07-20 16:30:35",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Client ID (Azure App) is not configured. Please fill in the Email Alerts form.",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 16:30:34 |  | ORA Error Code   : ORA-06510 | Complete Message : ORA-06510: PL/SQL: unhandled user-defined exception |  |  | Action: Please investigate immediat"
+  },
+  {
+    "timestamp": "2026-07-20 16:30:35",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Client ID (Azure App) is not configured. Please fill in the Email Alerts form.",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 16:30:34 |  | ORA Error Code   : ORA-29913 | Complete Message : ORA-29913: error in executing ODCIEXTTABLEFETCH callout |  |  | Action: Please investigate imme"
+  },
+  {
+    "timestamp": "2026-07-20 16:30:35",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "orcl",
+    "server": "orcl",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Client ID (Azure App) is not configured. Please fill in the Email Alerts form.",
+    "body_preview": "Server Name: orcl | Database Name: orcl | Host Name: orcl | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 16:30:35 |  | Problem: The Oracle Database instance 'orcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 16:30:35",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "orcl",
+    "server": "orcl",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Client ID (Azure App) is not configured. Please fill in the Email Alerts form.",
+    "body_preview": "Server Name: orcl | Database Name: orcl | Host Name: orcl | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 16:30:35 |  | Problem: The Oracle Listener for DB 'orcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 16:30:37",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Client ID (Azure App) is not configured. Please fill in the Email Alerts form.",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:30:37 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:32:34",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4PR01CA0090.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:02:34.428Z 08DEE53E747C6671]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:32:22 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:32:40",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PNYP287CA0111.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:02:40.427Z 08DEE540615A488E]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 16:32:29 |  | ORA Error Code   : ORA-12012 | Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_1"
+  },
+  {
+    "timestamp": "2026-07-20 16:32:50",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4PR01CA0090.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:02:49.634Z 08DEE53E747C66C2]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:32:33 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:34:19",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0185.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:04:19.140Z 08DEE54A87E1A2FA]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 16:34:07 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 16:34:31",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0217.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:04:31.207Z 08DEE54E3F59F545]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 16:34:07 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 16:41:36",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0018.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:11:36.850Z 08DEE5507AA1B471]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:41:24 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:41:54",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0351.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:11:54.580Z 08DEE53EE97A297F]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:41:42 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:42:45",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0295.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:12:45.334Z 08DEE54E28253358]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:42:32 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:44:02",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Graph API Error [ErrorAccessDenied]: Access is denied. Check credentials and try again.",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:44:00 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:45:39",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0228.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:15:39.355Z 08DEE546729256F7]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:45:27 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:45:54",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0003.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:15:54.902Z 08DEE53AA0DE4339]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 16:45:43 |  | ORA Error Code   : ORA-12012 | Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_1"
+  },
+  {
+    "timestamp": "2026-07-20 16:45:55",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0015.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:15:55.795Z 08DEE544FB77B4B1]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:45:44 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:51:02",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Tenant. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0110.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:21:02.337Z 08DEE53BA88E755A]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 16:50:50 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 16:51:13",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.3 Authentication unsuccessful [MA0PR01CA0091.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:21:13.617Z 08DEE544ED92EB52]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 16:50:50 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 16:52:00",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "Sender Refused: Server rejected sender 'yuvarani.skannan@kasadara.com'. Detail: (530, b'5.7.57 Client not authenticated to send mail. Error: 535 5.7.3 Authentication unsuccessful [PN4PR01CA0032.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:22:00.957Z 08DEE5542BF09D44]', 'yuvarani.skannan@kasadara.com')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:51:49 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:57:54",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA5P287CA0334.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:27:54.392Z 08DEE50216ED8EEE]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:57:48 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:58:01",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA5P287CA0327.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:28:01.773Z 08DEE552EBB9EB18]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:57:56 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:58:04",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA5P287CA0334.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:28:04.552Z 08DEE50216ED8F00]')",
+    "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 16:57:53 |  | ORA Error Code   : ORA-12012 | Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_1"
+  },
+  {
+    "timestamp": "2026-07-20 16:58:25",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [PN3PR01CA0119.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:28:25.567Z 08DEE56445B50AAD]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 16:58:19 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 16:59:06",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA5P287CA0155.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:29:06.724Z 08DEE564129CBC48]')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 16:59:01 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 16:59:12",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA5P287CA0149.INDP287.PROD.OUTLOOK.COM 2026-07-20T11:29:12.604Z 08DEE5396852B45C]')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 16:59:01 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 17:05:26",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [PN3PR01CA0161.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:35:26.370Z 08DEE549380679E9]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 17:05:20 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 17:05:35",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA0PR01CA0101.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:35:35.370Z 08DEE55C6D660F4A]')",
+    "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 17:05:29 |  | ORA Error Code   : ORA-12012 | Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_1"
+  },
+  {
+    "timestamp": "2026-07-20 17:05:36",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA0PR01CA0105.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:35:36.365Z 08DEE5047804D749]')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 17:05:30 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 17:05:40",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA0PR01CA0047.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:35:39.919Z 08DEE5651EC04575]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: yuvarani.skannan@kasadara.com | To: mohanraj.krishnasamy@kasadara.com, arthi.ashokkumar@kasadara.com | Sent At: 2026-07-20 17:05:34 |  | \u2014 "
+  },
+  {
+    "timestamp": "2026-07-20 17:05:42",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [MA0PR01CA0048.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:35:42.078Z 08DEE553CDE7D5BF]')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 17:05:30 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 17:07:49",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com",
+      "arthi.ashokkumar@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, the user credentials were incorrect. [PN2PR01CA0198.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T11:37:49.212Z 08DEE55658C29CEC]')",
+    "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 17:07:43 |  | ORA Error Code   : ORA-12012 | Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_1"
+  },
+  {
+    "timestamp": "2026-07-20 18:39:10",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0094.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T13:09:10.876Z 08DEE537F76999E7]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: mohanraj.krishnasamy@kasadara.com | To: yuvarani.skannan@kasadara.com  | Sent At: 2026-07-20 18:39:04 |  | \u2014 DB Health Dashboard Alert Engi"
+  },
+  {
+    "timestamp": "2026-07-20 20:45:03",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4P287CA0073.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:15:04.267Z 08DEE5661496B094]')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 20:44:58 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 20:45:09",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN0PR01CA0037.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T15:15:09.957Z 08DEE5484E13C7C1]')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 20:44:58 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 21:14:05",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN2PR01CA0196.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T15:44:06.256Z 08DEE66E17E13568]')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 21:14:00 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 21:14:11",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA1PR01CA0184.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T15:44:12.166Z 08DEE5515268BFB7]')",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 21:14:00 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 21:14:17",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0303.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:44:17.909Z 08DEE55379C2D193]')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 21:14:11 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 21:14:23",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0008.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:44:23.625Z 08DEE670A3A3E40C]')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 21:14:11 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 21:14:28",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0126.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:44:29.339Z 08DEE55D3E0A6454]')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 21:14:23 |  | ORA Error Code   : ORA-06512 | Complete Message : ORA-06512: at \"SYS.DBMS_QOPATCH\", line 2309 |  |  | Action: Please investigate immediately."
+  },
+  {
+    "timestamp": "2026-07-20 21:14:39",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [DM6PR07CA0077.namprd07.prod.outlook.com 2026-07-20T15:44:39.187Z 08DEE57F770DEC6B]')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 21:14:23 |  | ORA Error Code   : ORA-29400 | Complete Message : ORA-29400: data cartridge error |  |  | Action: Please investigate immediately."
+  },
+  {
+    "timestamp": "2026-07-20 21:14:45",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PNYPR01CA0067.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T15:44:45.476Z 08DEE500B344E3CD]')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 21:14:23 |  | ORA Error Code   : ORA-06510 | Complete Message : ORA-06510: PL/SQL: unhandled user-defined exception |  |  | Action: Please investigate immediat"
+  },
+  {
+    "timestamp": "2026-07-20 21:14:50",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0025.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:44:51.195Z 08DEE55FDFAD9136]')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 21:14:23 |  | ORA Error Code   : ORA-29913 | Complete Message : ORA-29913: error in executing ODCIEXTTABLEFETCH callout |  |  | Action: Please investigate imme"
+  },
+  {
+    "timestamp": "2026-07-20 21:14:56",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "orcl",
+    "server": "orcl",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0245.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:44:57.145Z 08DEE00CB458B621]')",
+    "body_preview": "Server Name: orcl | Database Name: orcl | Host Name: orcl | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 21:14:50 |  | Problem: The Oracle Database instance 'orcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-20 21:15:02",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "orcl",
+    "server": "orcl",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0236.INDP287.PROD.OUTLOOK.COM 2026-07-20T15:45:03.009Z 08DEE548686BAAE9]')",
+    "body_preview": "Server Name: orcl | Database Name: orcl | Host Name: orcl | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-20 21:14:50 |  | Problem: The Oracle Listener for DB 'orcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-20 21:15:52",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0004.INDPRD01.PROD.OUTLOOK.COM 2026-07-20T15:45:53.211Z 08DEE567890F5DB9]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: mohanraj.krishnasamy@kasadara.com | To: yuvarani.skannan@kasadara.com | Sent At: 2026-07-20 21:15:47 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-20 21:35:51",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4P287CA0062.INDP287.PROD.OUTLOOK.COM 2026-07-20T16:05:51.623Z 08DEE558EB9225BB]')",
+    "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-20 21:35:43 |  | ORA Error Code   : ORA-12012 | Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j002_1"
+  },
+  {
+    "timestamp": "2026-07-21 10:44:29",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0245.INDP287.PROD.OUTLOOK.COM 2026-07-21T05:14:28.979Z 08DEE00CB45CEE96]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server: smtp.office365.com:587 | From: mohanraj.krishnasamy@kasadara.com | To: yuvarani.skannan@kasadara.com | Sent At: 2026-07-21 10:44:23 |  | \u2014 DB Health Dashboard Alert Engin"
+  },
+  {
+    "timestamp": "2026-07-21 16:37:05",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0274.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:05.257Z 08DEE6D5011F0DF3]')",
+    "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-21 16:36:59 |  | ORA Error Code   : ORA-12012 | Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_1"
+  },
+  {
+    "timestamp": "2026-07-21 16:37:11",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0267.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:07:10.914Z 08DEE68C4339B4DA]')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-21 16:37:05 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-21 16:37:17",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "10.10.4.164",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0271.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:07:16.597Z 08DEE6D87C3A92EB]')",
+    "body_preview": "Server Name: 10.10.4.164 | Database Name: fa182 | Host Name: 10.10.4.164 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-21 16:37:05 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-21 16:37:23",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN2PR01CA0210.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:22.919Z 08DEE6CB874CA512]')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-21 16:37:17 |  | ORA Error Code   : ORA-06512 | Complete Message : ORA-06512: at \"SYS.DBMS_QOPATCH\", line 2309 |  |  | Action: Please investigate immediately."
+  },
+  {
+    "timestamp": "2026-07-21 16:37:28",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN2PR01CA0208.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:28.684Z 08DEE6E7F7F69ED8]')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-21 16:37:17 |  | ORA Error Code   : ORA-29400 | Complete Message : ORA-29400: data cartridge error |  |  | Action: Please investigate immediately."
+  },
+  {
+    "timestamp": "2026-07-21 16:37:34",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0249.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:34.639Z 08DEE6CF39ABEBF5]')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-21 16:37:17 |  | ORA Error Code   : ORA-06510 | Complete Message : ORA-06510: PL/SQL: unhandled user-defined exception |  |  | Action: Please investigate immediat"
+  },
+  {
+    "timestamp": "2026-07-21 16:37:40",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "ORCL_Arthi",
+    "server": "ORCL_Arthi",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0250.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:40.342Z 08DEE6D58C341342]')",
+    "body_preview": "Server Name  : ORCL_Arthi | Database Name: ORCL_Arthi | Host Name    : ORCL_Arthi | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-21 16:37:17 |  | ORA Error Code   : ORA-29913 | Complete Message : ORA-29913: error in executing ODCIEXTTABLEFETCH callout |  |  | Action: Please investigate imme"
+  },
+  {
+    "timestamp": "2026-07-21 16:37:46",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "orcl",
+    "server": "orcl",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA0PR01CA0052.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:07:46.299Z 08DEE5DE9F827E57]')",
+    "body_preview": "Server Name: orcl | Database Name: orcl | Host Name: orcl | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-21 16:37:40 |  | Problem: The Oracle Database instance 'orcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-21 16:37:52",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "orcl",
+    "server": "orcl",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0080.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:07:52.414Z 08DEE2A9172B1F8B]')",
+    "body_preview": "Server Name: orcl | Database Name: orcl | Host Name: orcl | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-21 16:37:40 |  | Problem: The Oracle Listener for DB 'orcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-21 17:19:01",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "unknown",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [PN4P287CA0080.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:49:00.775Z 08DEE6C82D5D1D56]')",
+    "body_preview": "Server Name: unknown | Database Name: kasorcl | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-21 17:18:54 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-21 17:19:06",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "unknown",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0069.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:49:06.704Z 08DEE6CCF7C0A14B]')",
+    "body_preview": "Server Name: unknown | Database Name: kasorcl | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-21 17:18:54 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-21 17:19:13",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa182",
+    "server": "unknown",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0048.INDPRD01.PROD.OUTLOOK.COM 2026-07-21T11:49:12.756Z 08DEE6D5424D5363]')",
+    "body_preview": "Server Name: unknown | Database Name: fa182 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-21 17:19:07 |  | Problem: The Oracle Database instance 'fa182' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-21 17:19:19",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa182",
+    "server": "unknown",
+    "to": [
+      "yuvarani.skannan@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5P287CA0174.INDP287.PROD.OUTLOOK.COM 2026-07-21T11:49:18.968Z 08DEE6B315434584]')",
+    "body_preview": "Server Name: unknown | Database Name: fa182 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-21 17:19:07 |  | Problem: The Oracle Listener for DB 'fa182' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-21 20:12:11",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-21 20:12:11 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-21 20:12:11",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-21 20:12:11 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-21 20:23:36",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "SA",
+    "server": "10.10.10.11",
+    "to": [],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name  : 10.10.10.11 | Database Name: SA | Host Name    : 10.10.10.11 | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-21 20:23:36 |  | ORA Error Code   : ORA-12012 | Complete Message : Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_183544"
+  },
+  {
+    "timestamp": "2026-07-22 13:25:23",
+    "subject": "\ud83e\uddea Test Alert \u2014 DB Health Dashboard",
+    "alert_type": "Test Alert",
+    "db_name": "",
+    "server": "",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "failed",
+    "error": "SMTP Authentication Failed: Wrong username or password. Detail: (535, b'5.7.139 Authentication unsuccessful, SmtpClientAuthentication is disabled for the Mailbox. Visit https://aka.ms/smtp_auth_disabled for more information. [MA5PR01CA0209.INDPRD01.PROD.OUTLOOK.COM 2026-07-22T07:55:21.899Z 08DEE6D31FABF37A]')",
+    "body_preview": "This is a TEST email from the DB Health Dashboard. |  | If you received this email, your SMTP configuration is working correctly. |  | SMTP Server : smtp.office.365.com:587 | From        : yuvarani.skannan@kasadara.com | To          : mohanraj.krishnasamy@kasadara.com | Sent At     : 2026-07-22 13:25:17 |  | \u2014 DB Hea"
+  },
+  {
+    "timestamp": "2026-07-22 13:45:34",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-22 13:45:34 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-22 13:45:34",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-22 13:45:34 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-22 19:36:06",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-22 19:36:06 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-22 19:36:06",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-22 19:36:06 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-22 20:53:09",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-22 20:53:09 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-22 20:53:09",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-22 20:53:09 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-22 22:00:08",
+    "subject": "Critical Alert - Blocking Session Detected",
+    "alert_type": "Blocking Session",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : Blocking Session | Severity     : Critical | Date & Time  : 2026-07-22 22:00:08 |  | Blocking Sessions Detected: 1 |  | Session Details: |   SID=2 Serial=58882 User=None Blocking SID=249 Status=ACTIVE |  | Action: Investigate "
+  },
+  {
+    "timestamp": "2026-07-23 17:48:25",
+    "subject": "Critical Alert - ORA Error Detected",
+    "alert_type": "ORA Error",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : ORA Error | Severity     : Critical | Date & Time  : 2026-07-23 17:48:25 |  | ORA Error Code   : ORA-0 | Complete Message :   Result = ORA-0 |  |  | Action: Please investigate immediately."
+  },
+  {
+    "timestamp": "2026-07-24 19:48:32",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-24 19:48:32 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-07-24 19:48:32",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-07-24 19:48:32 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-07-27 18:07:31",
+    "subject": "Critical Alert - Blocking Session Detected",
+    "alert_type": "Blocking Session",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name  : 10.10.10.11 | Database Name: kasorcl | Host Name    : 10.10.10.11 | Alert Type   : Blocking Session | Severity     : Critical | Date & Time  : 2026-07-27 18:07:31 |  | Blocking Sessions Detected: 1 |  | Session Details: |   SID=870 Serial=32659 User=SYS Blocking SID=2 Status=ACTIVE |  | Action: Investigate b"
+  },
+  {
+    "timestamp": "2026-08-03 15:01:04",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "Arthi",
+    "server": "Welcome123",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: Welcome123 | Database Name: Arthi | Host Name: Welcome123 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-03 15:01:04 |  | Problem: The Oracle Database instance 'Arthi' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-03 15:01:04",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "Arthi",
+    "server": "Welcome123",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: Welcome123 | Database Name: Arthi | Host Name: Welcome123 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-03 15:01:04 |  | Problem: The Oracle Listener for DB 'Arthi' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-03 15:07:45",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "Arthi",
+    "server": "None",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: None | Database Name: Arthi | Host Name: None | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-03 15:07:45 |  | Problem: The Oracle Database instance 'Arthi' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-03 15:07:45",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "Arthi",
+    "server": "None",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: None | Database Name: Arthi | Host Name: None | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-03 15:07:45 |  | Problem: The Oracle Listener for DB 'Arthi' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-03 15:24:16",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "sa",
+    "server": "Welcome123",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: Welcome123 | Database Name: sa | Host Name: Welcome123 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-03 15:24:16 |  | Problem: The Oracle Database instance 'sa' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-03 15:24:16",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "sa",
+    "server": "Welcome123",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: Welcome123 | Database Name: sa | Host Name: Welcome123 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-03 15:24:16 |  | Problem: The Oracle Listener for DB 'sa' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-03 21:00:16",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-03 21:00:16 |  | Problem: The Oracle Database instance 'kasorcl' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-03 21:00:16",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "kasorcl",
+    "server": "10.10.10.11",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: 10.10.10.11 | Database Name: kasorcl | Host Name: 10.10.10.11 | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-03 21:00:16 |  | Problem: The Oracle Listener for DB 'kasorcl' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:44",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa129",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa129 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:43 |  | Problem: The Oracle Database instance 'fa129' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:44",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa129",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa129 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:43 |  | Problem: The Oracle Listener for DB 'fa129' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:44",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa169",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa169 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:44 |  | Problem: The Oracle Database instance 'fa169' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:44",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa169",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa169 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:44 |  | Problem: The Oracle Listener for DB 'fa169' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:44",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa171",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa171 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:44 |  | Problem: The Oracle Database instance 'fa171' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:45",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa171",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa171 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:44 |  | Problem: The Oracle Listener for DB 'fa171' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:45",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa173",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa173 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:45 |  | Problem: The Oracle Database instance 'fa173' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:45",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa173",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa173 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:45 |  | Problem: The Oracle Listener for DB 'fa173' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:45",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa175",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa175 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:45 |  | Problem: The Oracle Database instance 'fa175' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:45",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa175",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa175 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:45 |  | Problem: The Oracle Listener for DB 'fa175' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:46",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa181",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa181 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:46 |  | Problem: The Oracle Database instance 'fa181' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:46",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa181",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa181 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:46 |  | Problem: The Oracle Listener for DB 'fa181' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:46",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa183",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa183 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:46 |  | Problem: The Oracle Database instance 'fa183' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:46",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa183",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa183 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:46 |  | Problem: The Oracle Listener for DB 'fa183' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:47",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa184",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa184 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:47 |  | Problem: The Oracle Database instance 'fa184' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:47",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa184",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa184 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:47 |  | Problem: The Oracle Listener for DB 'fa184' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:47",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa185",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa185 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:47 |  | Problem: The Oracle Database instance 'fa185' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:47",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa185",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa185 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:47 |  | Problem: The Oracle Listener for DB 'fa185' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:48",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa186",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa186 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:47 |  | Problem: The Oracle Database instance 'fa186' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:48",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa186",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa186 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:47 |  | Problem: The Oracle Listener for DB 'fa186' is DOWN."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:48",
+    "subject": "Critical Alert - Database Down",
+    "alert_type": "Database Down",
+    "db_name": "fa187",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa187 | Host Name: unknown | Alert Type: Database Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:48 |  | Problem: The Oracle Database instance 'fa187' is DOWN or unreachable."
+  },
+  {
+    "timestamp": "2026-08-10 16:25:48",
+    "subject": "Critical Alert - Listener Down",
+    "alert_type": "Listener Down",
+    "db_name": "fa187",
+    "server": "unknown",
+    "to": [
+      "mohanraj.krishnasamy@kasadara.com"
+    ],
+    "status": "disabled",
+    "error": "",
+    "body_preview": "Server Name: unknown | Database Name: fa187 | Host Name: unknown | Alert Type: Listener Down | Severity: Critical | Status: DOWN | Date & Time: 2026-08-10 16:25:48 |  | Problem: The Oracle Listener for DB 'fa187' is DOWN."
+  }
+]

@@ -1,0 +1,107 @@
+{
+  "kasorcl": {
+    "db": "UP",
+    "listener": "UP",
+    "backup": "PENDING",
+    "balance_ts": [
+      {
+        "name": "SYSTEM",
+        "pct": 2.9,
+        "used_mb": 949.06,
+        "free_mb": 31818.92,
+        "total_mb": 32767.98,
+        "allocated_mb": 950.0,
+        "location": "/home/oracle/u01/app/oracle/oradata/KASORCL/datafile/o1_mf_system_o4wf2co6_.dbf"
+      },
+      {
+        "name": "SYSAUX",
+        "pct": 2.13,
+        "used_mb": 696.75,
+        "free_mb": 32071.23,
+        "total_mb": 32767.98,
+        "allocated_mb": 750.0,
+        "location": "/home/oracle/u01/app/oracle/oradata/KASORCL/datafile/o1_mf_sysaux_o4wf34qc_.dbf"
+      },
+      {
+        "name": "USERS",
+        "pct": 0.13,
+        "used_mb": 42.13,
+        "free_mb": 32725.86,
+        "total_mb": 32767.98,
+        "allocated_mb": 45.0,
+        "location": "/home/oracle/u01/app/oracle/oradata/KASORCL/datafile/o1_mf_users_o4wf3ntq_.dbf"
+      },
+      {
+        "name": "HRDATA",
+        "pct": 0.01,
+        "used_mb": 2.56,
+        "free_mb": 32765.42,
+        "total_mb": 32767.98,
+        "allocated_mb": 5120.0,
+        "location": "/home/oracle/u01/app/oracle/oradata/KASORCL/datafile/HRDATA_01.dbf"
+      },
+      {
+        "name": "SHDATA",
+        "pct": 0.01,
+        "used_mb": 1.75,
+        "free_mb": 32766.23,
+        "total_mb": 32767.98,
+        "allocated_mb": 5120.0,
+        "location": "/home/oracle/u01/app/oracle/oradata/KASORCL/datafile/SHDATA_01.dbf"
+      }
+    ],
+    "full_ts": [],
+    "drives": [],
+    "processes": [],
+    "system_res": {
+      "num_cpus": 10,
+      "cpu_host_used_pct": 0.3,
+      "cpu_host_free_pct": 99.7,
+      "cpu_oracle_used_pct": 0.0,
+      "ram_total_gb": 9.82,
+      "ram_used_gb": 9.44,
+      "ram_free_gb": 0.38,
+      "ram_oracle_gb": 2.5,
+      "session_count": 104
+    },
+    "arc_pct": 38.48,
+    "arc_configured": true,
+    "arc_used_mb": 0.0,
+    "arc_limit_mb": 0.0,
+    "arc_free_mb": 0.0,
+    "has_blocking": false,
+    "blocking_details": [],
+    "ora_errors": [
+      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_3036790.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_1323\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n",
+      "Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorcl/kasorcl/trace/kasorcl_j003_3011738.trc:\nORA-12012: error on auto execute of job \"SYS\".\"ORA$AT_SQ_SQL_SW_1303\"\nORA-38153: Software edition is incompatible with SQL plan management.\nORA-06512: at \"SYS.DBMS_SPM_INTERNAL\", line 6014\nORA-06512: at \"SYS.DBMS_SPM\", line 2781\nORA-06512: at line 34\n"
+    ],
+    "deadlock_detected": false,
+    "session_maxed": false,
+    "alert_log_errors": [],
+    "tooltip_reasons": [
+      "ORA error: Errors in file /home/oracle/u01/app/oracle/diag/rdbms/kasorc"
+    ],
+    "last_refresh": "2026-09-04 13:30:55",
+    "arc_log_type": "FRA",
+    "arc_dest_name": "/home/oracle/u01/app/oracle/fast_recovery_area",
+    "arc_limit_gb": 8.06,
+    "arc_used_gb": 3.1,
+    "arc_free_gb": 4.960000000000001,
+    "standby_dests": [],
+    "primary_seqs": {
+      "1": 48
+    },
+    "reporting_status": "DOWN",
+    "reporting_listener": "UP",
+    "reporting_db_name": "orcl_arthi",
+    "reporting_configured": true,
+    "reporting_error_message": "ORA-12631: Username retrieval failed",
+    "reporting_response_time": 9437,
+    "reporting_checked_at": "2026-09-04 13:31:06",
+    "reporting_username": "arthi",
+    "reporting_password": "Arthi123",
+    "standby_configured": false,
+    "standby_log_gap": {},
+    "log_gap_alert": false
+  }
+}

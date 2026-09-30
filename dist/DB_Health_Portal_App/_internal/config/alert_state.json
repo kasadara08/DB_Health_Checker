@@ -1,0 +1,656 @@
+{
+    "10.10.10.11:kasorcl": {
+        "db_down": false,
+        "listener_down": false,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [
+            "ORA-12012",
+            "ORA-0"
+        ],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa182": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "ORCL_Arthi:ORCL_Arthi": {
+        "db_down": false,
+        "listener_down": false,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [
+            "ORA-06512",
+            "ORA-29400",
+            "ORA-06510",
+            "ORA-29913"
+        ],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "orcl:orcl": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:kasorcl": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:fa182": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.10.11:SA": {
+        "db_down": false,
+        "listener_down": false,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [
+            "ORA-12012"
+        ],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "192.168.14.109:ORCL_Arthi": {
+        "db_down": false,
+        "listener_down": false,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "localhost:orcl": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:orcl": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "Welcome123:Arthi": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "None:Arthi": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "Welcome123:sa": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:fa129": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:fa169": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:fa171": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:fa173": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:fa175": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:fa181": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:fa183": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:fa184": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:fa185": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:fa186": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:fa187": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa129": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa169": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:fa129r": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa183": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa184": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa185": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa186": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa188": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa189": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa173": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa190": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa175": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa181": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa171": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa187": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa114": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:fa99": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5phlp": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5chgop": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5bgep": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5pspp": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5detp": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5jfcp": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5dedotp": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5despp": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5detcp": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5stplp": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5tulsap": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5sdcp": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5dalsp": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5normp": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5tempep": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5cccp": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5hngfrp": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "10.10.4.164:m5strpsp": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:orcl_yuva": {
+        "db_down": false,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "192.168.14.109:orcl_yuva": {
+        "db_down": true,
+        "listener_down": false,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "unknown:orcl_arthi": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "192.168.14.212:orcl_yuva": {
+        "db_down": true,
+        "listener_down": true,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [
+            "ORA-1013"
+        ],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    },
+    "192.168.14.109:orcl_arthi": {
+        "db_down": false,
+        "listener_down": false,
+        "tablespaces": {},
+        "arc_log_alert": false,
+        "mount_points": {},
+        "ora_errors_sent": [
+            "ORA-609"
+        ],
+        "deadlock_alert": false,
+        "blocking_alert": false
+    }
+}
